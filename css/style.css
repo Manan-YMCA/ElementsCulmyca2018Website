@@ -24,3 +24,15 @@ body, html {
 nav {
 	position: fixed;
 }
+
+/* Always in center of the viewport */
+#eclogo {
+	position: absolute;
+	top: 0; bottom: 0; left: 0; right: 0;
+	margin: auto;
+}
+
+#layer2 {
+	height: 97vh; /* The value of value greater than 97vh makes it larger than the current viewport */
+	width: 100%;
+}

@@ -1,13 +1,28 @@
-.container
+#box
 {
-background-color: MediumSeaGreen;
-margin:auto;
-overflow:hidden;
-width: 20%
+width: 200px;
+height: 200px;
+position: relative;
+border-radius: 300px;
+border-color: red;
+border-style: solid;
+padding: 50px;
+border-spacing: 10px;
+border-width: 6px;
+ 
+font-family:digital,arial,verdana; 
 
 }
 
 p {
+  color: red;
+  font-size: 30px;
+  padding: 1px;
+  width: auto;
+  display: inline-block;
+  font-family:'digital';
+  
+  font-weight: bold;
   text-align: center;
-  font-size: 35px;
+  padding-top:46px; 
 }

@@ -22,12 +22,12 @@ var x = setInterval(function() {
     var seconds = Math.floor((remaining % (1000 * 60)) / 1000);
     
     // Output the result in an element with id="demo"
-    document.getElementById("pg").innerHTML = days + " : " + hours + " : "
-    + minutes + " : " + seconds ;
+    document.getElementById("pg").innerHTML = days*24 + ":"
+    + minutes + ":" + seconds ;
     
     // If the count down is over, write some text 
     if (remaining < 0) {
         clearInterval(x);
-        document.getElementById("pg").innerHTML = "TIMER EXPIRED";
-           }
+        document.getElementById("pg").innerHTML = "PG EXPIRED";
+    }
 }, 1000);

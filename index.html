@@ -6,61 +6,52 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="stylesheet" type="text/css" href="css/footer_style.css">
-
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/footer_style.css">
 </head>
 <body>
 <!-- The nav bar -->
-<nav class="navbar navbar-inverse" style="position: fixed;width:100%" >
-  <div class="container-fluid" style="background-color:white">
-    <!--left navigation bar-->
-    <ul class="nav navbar-nav" >
-      <li ><a href="#">About</a></li>
-      <li ><a href="#">Events</a></li>
-      <li ><a href="#">Register</a></li>
-    </ul>
-    <!--right navigation bar-->
-    <ul class="nav navbar-nav navbar-right" >
-      <li><a href="#">Sponsors</a></li>
-      <li><a href="#">The Team</a></li>
-      <li><a href="#"> Reach us</a></li>
-    </ul>
-  </div>
+<nav>
+  <!--left navigation bar-->
+  <ul class="nav navbar-nav navbar-left" >
+    <li ><a href="#">About</a></li>
+    <li ><a href="#">Events</a></li>
+    <li ><a href="#">Register</a></li>
+  </ul>
+  <!--right navigation bar-->
+  <ul class="nav navbar-nav navbar-right" >
+    <li><a href="#">Sponsors</a></li>
+    <li><a href="#">The Team</a></li>
+    <li><a href="#"> Reach us</a></li>
+  </ul>
 </nav>
 
 <!-- The Home -->
 <div id="home">
-	<!-- Layer 1 the icons -->
-<i class="fa fa-camera-retro fa-3x" aria-hidden="true"></i>
-<i class="fa fa-code fa-3x" aria-hidden="true"></i>
-<img id="eclogo" src="images/eclogo.png">
-
-<i class="fa fa-film fa-3x" aria-hidden="true"></i>
-<span class="timer">T</span>
-	</div>
+  <!-- Layer 1 the icons -->
+  <div class="layer1">
+    <i class="fa fa-camera-retro fa-3x" aria-hidden="true"></i>
+    <i class="fa fa-code fa-3x" aria-hidden="true"></i>
+    <i class="fa fa-film fa-3x" aria-hidden="true"></i>
+    <p id="timer">
+      <span id='pg'></span>
+    </p>
+  </div>
 
 
 	<!-- Layer 2 EC logo -->
-<!--	<div id="layer2">
-		 <!--<img id="eclogo" src="images/eclogo.png"> -->
-	</div>
+  <div id="layer2">
+  		 <img id="eclogo" src="images/eclogo.png">
+  </div>
 
 
 	<!-- The social links -->
 	<div class="footer">
- 
-   <a href="#" class="fa fa-facebook-square" aria-hidden="true"></a>
-   
-     <a href="#" class="fa fa-instagram" aria-hidden="true"></a>
-   
-     <a href="#" class="fa fa-twitter" aria-hidden="true"></a>
-     
- <a href="#" class="fa fa-snapchat-ghost" aria-hidden="true"></a>
-
-    </div>
+    <a href="#" class="fa fa-facebook-square" aria-hidden="true"></a>
+    <a href="#" class="fa fa-instagram" aria-hidden="true"></a>
+    <a href="#" class="fa fa-twitter" aria-hidden="true"></a> 
+    <a href="#" class="fa fa-snapchat-ghost" aria-hidden="true"></a>
+  </div>
 </div>
 </body>
+<script src="js/timer.js"></script>
 </html>

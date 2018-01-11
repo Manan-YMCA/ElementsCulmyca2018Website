@@ -36,3 +36,48 @@ nav {
 	top: 0; bottom: 0; left: 0; right: 0;
 	margin: auto;
 }
+.fa.fa-camera-retro  {
+	border-radius: 100px 100px 100px 100px;
+	border-width: 5px;
+	border-style: solid;
+	padding: 20px;
+	left:1000px;
+	top:500px;
+	position: absolute;
+	color: red;
+
+}
+.fa.fa-code {
+	border-radius: 100px 100px 100px 100px;
+	border-width: 5px;
+	border-style: solid;
+	padding: 20px;
+	left:100px;
+	top:200px;
+	position: absolute;
+	color: red;
+
+}
+.fa.fa-film{
+	border-radius: 100px 100px 100px 100px;
+	border-width: 5px;
+	border-style: solid;
+	padding: 20px;
+	left:1000px;
+	top:250px;
+	position: absolute;
+	color: red;
+
+}
+
+.timer {
+	border-radius: 100px 100px 100px 100px;
+	border-width: 10px;
+	border-style: solid;
+	padding: 80px;
+	left:100px;
+	top:400px;
+	position: absolute;
+	color: red;
+	font-size: 10px;
+}

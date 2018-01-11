@@ -1,0 +1,13 @@
+.container
+{
+background-color: MediumSeaGreen;
+margin:auto;
+overflow:hidden;
+width: 20%
+
+}
+
+p {
+  text-align: center;
+  font-size: 35px;
+}

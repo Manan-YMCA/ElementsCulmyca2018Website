@@ -40,7 +40,7 @@
 
 	<!-- Layer 2 EC logo -->
   <div id="layer2">
-  		 <img id="eclogo" src="images/eclogo.png">
+  		 <img id="eclogo" src="images/logo.png">
   </div>
 
 
@@ -54,4 +54,26 @@
 </div>
 </body>
 <script src="js/timer.js"></script>
+<script>
+// The parallax
+var count = 0;
+$("body").mousemove(function( event ) {
+  if(count%3 != 0)
+  {
+    count++;
+    return 0;
+  }
+  count++;
+  var top  = $(window).scrollTop();
+  var parX = event.pageX/100; 
+  var parY = event.pageY/100;
+  $("#eclogo").css({
+    'transform': 'translate(-'+parX+'%,-'+parY+'%)'
+  });
+  $(".layer1 > *").css({
+    'transform': 'translate(-'+parX*2+'%,-'+parY*2+'%)'
+  });
+})
+
+</script>
 </html>

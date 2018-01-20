@@ -24,12 +24,15 @@ a:link, a:visited, a:hover, a:active {
 	list-style-type: none;
 	width: 40%;
 	padding: 0px;
+	position: fixed;;
+	z-index: +10
 }
 
 .navbar-right {
 	float: right;
 	text-align: right;
 	margin-right: 24px;
+	right: 0px
 }
 
 .navbar-left {
@@ -45,17 +48,9 @@ a:link, a:visited, a:hover, a:active {
 }
 
 #home {
-	background-image: url('../images/redpoint.png');
-	background-size: cover;
 	width: 100%;
 	height: 100%;
 }
-
-nav {
-	position: fixed;
-	width: 100%;
-}
-
 
 #eclogo {
 	position: absolute;
@@ -90,6 +85,10 @@ nav {
 	color : #da2131;
 }
 
+.progress {
+	color: #da2131 !important;
+}
+
 .fa.fa-film{
 	border-radius: 50%;
 	border-width: 5px;
@@ -101,6 +100,23 @@ nav {
 	color : #da2131;
 }
 
+#about {
+	width: 100%;
+	height: 100%
+}
+
+#events {
+	width: 100%;
+	height: 100%;
+}
+
+
+/* Font awesome fix */
+.reveal i{
+    font-family: 'FontAwesome';
+    font-style: normal;
+    font-size: 32px;
+}
 
 /* For the timer - Risabg css */
 

@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/footer_style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="js/timer.js"></script>
 </head>
 <body>
 <!-- The nav bar -->
@@ -39,10 +40,7 @@
       </div>
 
 
-    	<!-- Layer 2 EC logo -->
-      <div id="layer2">
-      		 <img id="eclogo" src="images/logo.png">
-      </div>
+
 
 
     	<!-- The social links -->
@@ -71,9 +69,26 @@
 
   </div>
 </div>
+
+<!-- Layer 2 EC logo -->
+<img id="eclogo" src="images/logo.png">
 </body>
-<script src="js/timer.js"></script>
 <script>
+$(function(){
+  setTimeout(function(){
+    $(".layer1 > *").each(function(i, el) {
+      setTimeout(function(){
+        $(el).css({
+          'transform': 'translate(0,0)',
+          'opacity': '1'
+        });
+      },100*i)
+    });
+    setTimeout(function(){
+      $(".layer1 > *").css('transition', 'transform ease-out .2s');
+    },800)
+  },500)
+})
 // The parallax
 var count = 0;
 $("body").mousemove(function( event ) {
@@ -87,7 +102,7 @@ $("body").mousemove(function( event ) {
   var parX = event.pageX/100; 
   var parY = event.pageY/100;
   $("#eclogo").css({
-    'transform': 'translate(-'+parX+'%,-'+parY+'%)'
+    'transform': 'translate('+(-(parX + 50))+'%,'+(-(parY + 50)) +'%)'
   });
   $(".layer1 > *").css({
     'transform': 'translate(-'+parX*2+'%,-'+parY*2+'%)'
@@ -107,6 +122,63 @@ Reveal.initialize({
 });
 
 // Start modifications
+Reveal.addEventListener( 'slidechanged', function( event ) {
+  if(!Reveal.isFirstSlide())
+  {
+    setTimeout(function(){
+      $('#eclogo').css({
+        'top' : '10%',
+        'transform': 'translate(-50%,-50%) scale(.4)'
+      });
+    },500)
+    $("body").off('mousemove');
 
+    // The parallax
+      var count = 0;
+      $("body").mousemove(function( event ) {
+        if(count%3 != 0)
+        {
+          count++;
+          return 0;
+        }
+        count++;
+        var top  = $(window).scrollTop();
+        var parX = event.pageX/100; 
+        var parY = event.pageY/100;
+        $("#eclogo").css({
+          'transform': 'translate('+(-(parX + 50))+'%,'+(-(parY + 50)) +'%) scale(.4)'
+        });
+      })
+  } else {
+      setTimeout(function(){
+        $('#eclogo').css({
+          'top' : '50%'
+        });
+        setTimeout(function(){
+          $("#eclogo").css('transform', 'translate(-50%,-50%) scale(1)');
+        },400)
+      },500)
+      $("body").off('mousemove');
+      // The parallax
+      var count = 0;
+      $("body").mousemove(function( event ) {
+        if(count%3 != 0)
+        {
+          count++;
+          return 0;
+        }
+        count++;
+        var top  = $(window).scrollTop();
+        var parX = event.pageX/100; 
+        var parY = event.pageY/100;
+        $("#eclogo").css({
+          'transform': 'translate('+(-(parX + 50))+'%,'+(-(parY + 50)) +'%)'
+        });
+        $(".layer1 > *").css({
+          'transform': 'translate(-'+parX*2+'%,-'+parY*2+'%)'
+        });
+      })
+  }
+} );
 </script>
 </html>

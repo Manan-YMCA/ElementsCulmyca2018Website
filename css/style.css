@@ -25,7 +25,9 @@ a:link, a:visited, a:hover, a:active {
 	width: 40%;
 	padding: 0px;
 	position: fixed;;
-	z-index: +10
+	z-index: +10;
+	color: white;
+	margin:auto;
 }
 
 .navbar-right {
@@ -43,8 +45,13 @@ a:link, a:visited, a:hover, a:active {
 .nav > li {
 	display: inline-block;
 	font-weight: bolder;
-	margin: 0px 20px;
+	padding: 10px 20px;
 	font-size: 18px;
+	border-bottom: 2px solid #e23d3d;
+}
+
+.nav > li:hover {
+	border: 2px solid #e23d3d;
 }
 
 #home {
@@ -53,13 +60,20 @@ a:link, a:visited, a:hover, a:active {
 }
 
 #eclogo {
-	position: absolute;
-	top: 0; bottom: 0; left: 0; right: 0;
+	position: fixed;
+	z-index: +1;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
 	margin: auto;
+	transition: transform ease-out .2s, top ease-out .5s;
 }
 
 .layer1 > * {
-	border-color: #da2131
+	border-color: #d53a3a;
+	transform: scale(1.2);
+	opacity: 0;
+	transition: transform ease-out .5s, opacity ease-out .5s;
 }
 
 .fa.fa-camera-retro  {
@@ -70,7 +84,7 @@ a:link, a:visited, a:hover, a:active {
 	right: 22%;
 	top: 72%;
 	position: absolute;
-	color : #da2131;
+	color : #d53a3a;
 
 }
 
@@ -82,11 +96,11 @@ a:link, a:visited, a:hover, a:active {
 	left:10%;
 	top:26%;
 	position: absolute;
-	color : #da2131;
+	color : #d53a3a;
 }
 
 .progress {
-	color: #da2131 !important;
+	color: #d53a3a !important;
 }
 
 .fa.fa-film{
@@ -97,7 +111,7 @@ a:link, a:visited, a:hover, a:active {
 	right:16%;
 	top:35%;
 	position: absolute;
-	color : #da2131;
+	color : #d53a3a;
 }
 
 #about {
@@ -126,11 +140,11 @@ a:link, a:visited, a:hover, a:active {
 }
 
 #timer {
-	color : #da2131;
+	color : #d53a3a;
 	width: auto;
 	display: block;
 	text-align: center;
-	border : 5px solid #da2131;
+	border : 5px solid #d53a3a;
 	border-radius: 50%;
 	position: absolute;
 	left: 10%;

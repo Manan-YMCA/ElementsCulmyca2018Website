@@ -60,12 +60,22 @@ a:link, a:visited, a:hover, a:active {
 	font-weight: bolder;
 	padding: 10px 20px;
 	font-size: 18px;
-	border-bottom: 2px solid #e23d3d;
 	margin: 0px 4px;
 }
 
-.nav > li:hover {
-	border: 2px solid #e23d3d;
+.navbar-left > li, .navbar-right > li {
+	transition: all .2s;
+	border-bottom: 0px solid #f4b720;
+}
+
+.navbar-left > li:hover {
+	border-bottom: 2px solid #d53a3a;
+	color: #d53a3a ;	
+}
+
+.navbar-right > li:hover {
+	border-bottom: 2px solid #f4b720 ;
+	color: #f4b720  ;	
 }
 
 #home {

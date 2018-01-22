@@ -39,7 +39,7 @@ a:link, a:visited, a:hover, a:active {
 	padding: 0px;
 	position: fixed;;
 	z-index: +10;
-	color: white;
+	color: black;
 	margin:auto;
 }
 
@@ -88,6 +88,8 @@ a:link, a:visited, a:hover, a:active {
 	transform: scale(1.2);
 	opacity: 0;
 	transition: transform ease-out .5s, opacity ease-out .5s;
+	box-shadow: 0px 0px 5px 1px black;
+	text-shadow: 0px 0px 2px black;
 }
 
 .fa.fa-camera-retro  {

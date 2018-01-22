@@ -64,8 +64,8 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .navbar-left > li, .navbar-right > li {
-	transition: all .2s;
-	border-bottom: 0px solid #f4b720;
+	transition: none;
+	border-bottom: 0px solid #eb6a27;
 }
 
 .navbar-left > li:hover {
@@ -74,8 +74,8 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .navbar-right > li:hover {
-	border-bottom: 2px solid #f4b720 ;
-	color: #f4b720  ;	
+	border-bottom: 2px solid #eb6a27 ;
+	color: #eb6a27  ;	
 }
 
 #home {
@@ -94,12 +94,19 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .layer1 > * {
-	border-color: #d53a3a;
 	transform: scale(1.2);
 	opacity: 0;
 	transition: transform ease-out .5s, opacity ease-out .5s;
 	box-shadow: 0px 0px 5px 1px black;
 	text-shadow: 0px 0px 2px black;
+}
+
+.rb {
+	border-color: #eb6a27;
+}
+
+.lb {
+	border-color: #d53a3a;
 }
 
 .fa.fa-camera-retro  {
@@ -110,7 +117,7 @@ a:link, a:visited, a:hover, a:active {
 	right: 22%;
 	top: 72%;
 	position: absolute;
-	color : #d53a3a;
+	color : #eb6a27;
 
 }
 
@@ -137,7 +144,7 @@ a:link, a:visited, a:hover, a:active {
 	right:16%;
 	top:35%;
 	position: absolute;
-	color : #d53a3a;
+	color : #eb6a27;
 }
 
 #about {

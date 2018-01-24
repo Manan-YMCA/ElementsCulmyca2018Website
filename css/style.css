@@ -165,7 +165,7 @@ a:link, a:visited, a:hover, a:active {
     font-size: 32px;
 }
 
-/* For the timer - Risabg css */
+/* For the timer - Rishabh css */
 
 @font-face {
 	font-family: digi;
@@ -197,3 +197,11 @@ a:link, a:visited, a:hover, a:active {
 	font-family: digi;
 }
 
+/* Events circle */
+.circle {
+  background: linear-gradient(to bottom right, #00eeaa, #00aaee);
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  margin: 0;
+}

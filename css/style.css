@@ -205,3 +205,31 @@ a:link, a:visited, a:hover, a:active {
   width: 300px;
   margin: 0;
 }
+
+/* Arc 3 */
+.arcthree1 { position:absolute;
+  background: red;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  top:5%;
+  left: 68%; 
+}
+.arcthree2 { position:absolute;
+  background:red;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  top:50%;
+  left: 70%;
+  
+}
+.arcthree3 { position:absolute;
+  background: red;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  top:95%;
+  left: 66%;
+}
+

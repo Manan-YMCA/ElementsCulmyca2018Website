@@ -210,16 +210,16 @@ a:link, a:visited, a:hover, a:active {
 .arcthree1 { position:absolute;
   background: red;
   border-radius: 50%;
-  height: 140px;
-  width: 140px;
+  height: 100px;
+  width: 100px;
   top:5%;
   left: 68%; 
 }
 .arcthree2 { position:absolute;
   background:red;
   border-radius: 50%;
-  height: 140px;
-  width: 140px;
+  height: 100px;
+  width: 100px;
   top:50%;
   left: 70%;
   
@@ -227,8 +227,8 @@ a:link, a:visited, a:hover, a:active {
 .arcthree3 { position:absolute;
   background: red;
   border-radius: 50%;
-  height: 140px;
-  width: 140px;
+  height: 100px;
+  width: 100px;
   top:95%;
   left: 66%;
 }

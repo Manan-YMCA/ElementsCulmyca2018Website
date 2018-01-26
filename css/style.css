@@ -239,7 +239,48 @@ a:link, a:visited, a:hover, a:active {
   top:75%;
   left: 68%;
 }
+.arc4one
+{
+position: absolute;
+background:red;
+border-radius: 50%;
+height: 100px;
+width:100px;
+top:6%;
+left:87%;
+}
+.arc4two
+{
+position: absolute;
+background:red;
+border-radius: 50%;
+height: 100px;
+width:100px;
+top:29%;
+left:89%;
 
+}
+.arc4three
+{
+position: absolute;
+background:red;
+border-radius: 50%;
+height: 100px;
+width:100px;
+top:54%;
+left:90%;
+}
+.arc4four
+{
+position: absolute;
+background:red;
+border-radius: 50%;
+height: 100px;
+width:100px;
+top:78%;
+left:87%;
+
+}
 .arcs {
 	transform: translateY(-50%);
 }

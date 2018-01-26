@@ -290,3 +290,41 @@ left:87%;
   transform: translateY(-50%);
 }
 
+
+/*Arc 2 circles8*/
+.arc21 {
+	top: 9%;
+	left:46%;
+	background: red;
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	border-radius: 50%;
+}
+.arc22 {
+	top: 32%;
+	left:50%;
+	background: red;
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	border-radius: 50%;
+}
+.arc23 {
+	top: 56%;
+	left:52%;
+	background: red;
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	border-radius: 50%;
+}
+.arc24 {
+	top: 75%;
+	left:46%;
+	background: red;
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	border-radius: 50%;
+}

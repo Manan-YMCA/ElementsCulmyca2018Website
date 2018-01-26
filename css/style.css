@@ -211,36 +211,41 @@ a:link, a:visited, a:hover, a:active {
 }
 
 /* Arc 3 Circles*/
+.arcfirst1 { 
+  top:25%;
+  left: 28%; 
+}
+
+.arcfirst2 { 
+  top:50%;
+  left: 30%;
+}
+
+.arcfirst3 { 
+  top:75%;
+  left: 28%;
+}
+
 .arcthree1 { 
-  position:absolute;
-  background: red;
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
   top:25%;
   left: 68%; 
 }
 .arcthree2 { 
-  position:absolute;
-  background:red;
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
   top:50%;
   left: 70%;
   
 }
 .arcthree3 { 
-  position:absolute;
-  background: red;
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
   top:75%;
   left: 68%;
 }
 
 .arcs {
-	transform: translateY(-50%);
+  position:absolute;
+  background:red;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  transform: translateY(-50%);
 }
 

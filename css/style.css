@@ -155,6 +155,7 @@ a:link, a:visited, a:hover, a:active {
 #events {
 	width: 100%;
 	height: 100%;
+	position: relative;
 }
 
 
@@ -203,19 +204,24 @@ a:link, a:visited, a:hover, a:active {
   border-radius: 50%;
   height: 300px;
   width: 300px;
-  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%,-50%)
 }
 
 /* Arc 3 Circles*/
-.arcthree1 { position:absolute;
+.arcthree1 { 
+  position:absolute;
   background: red;
   border-radius: 50%;
   height: 100px;
   width: 100px;
-  top:5%;
+  top:25%;
   left: 68%; 
 }
-.arcthree2 { position:absolute;
+.arcthree2 { 
+  position:absolute;
   background:red;
   border-radius: 50%;
   height: 100px;
@@ -224,12 +230,17 @@ a:link, a:visited, a:hover, a:active {
   left: 70%;
   
 }
-.arcthree3 { position:absolute;
+.arcthree3 { 
+  position:absolute;
   background: red;
   border-radius: 50%;
   height: 100px;
   width: 100px;
-  top:95%;
-  left: 66%;
+  top:75%;
+  left: 68%;
+}
+
+.arcs {
+	transform: translateY(-50%);
 }
 

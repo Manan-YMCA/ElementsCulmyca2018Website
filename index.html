@@ -5,10 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="css/reveal.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/footer_style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="js/timer.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
 </head>
 <body>
 <!-- The nav bar -->
@@ -28,13 +29,13 @@
 <div class="reveal">
   <div class="slides">
     <!-- The Home -->
-    <section id="home" data-background-image='images/redpoint.png'>
+    <section id="home" data-background-image='images/home.jpg'>
       <!-- Layer 1 the icons -->
       <div class="layer1">
-        <i class="fa fa-camera-retro fa-3x" aria-hidden="true"></i>
-        <i class="fa fa-code fa-3x" aria-hidden="true"></i>
-        <i class="fa fa-film fa-3x" aria-hidden="true"></i>
-        <p id="timer">
+        <i class="fa fa-camera-retro fa-3x rb" aria-hidden="true"></i>
+        <i class="fa fa-code fa-3x lb" aria-hidden="true"></i>
+        <i class="fa fa-film fa-3x rb" aria-hidden="true"></i>
+        <p id="timer" class="lb">
           <span id='pg'></span>
         </p>
       </div>
@@ -49,7 +50,7 @@
     </section>
 
     <!-- About -->
-    <section id="about" data-background-image='images/a1.png'>
+    <section id="about" data-background-image='images/redpoint.png'>
       <section>
         The about section
       </section>
@@ -59,8 +60,69 @@
     </section>
 
     <!--Events -->
-    <section id="events" data-background-image='images/a2.png'>
-      <section>The events section</section>
+    <section id="events" data-background-image='images/events/ehome.jpg' >
+      	The events section
+      	<div class="circle">
+          <div class="ctext">
+            &nbsp;&nbsp;&nbsp;Events
+          </div>
+        </div>
+        <div class="arcfirst1 arcs ar1" sid="it1">
+          <img src="images/icons/sae.png" class="inicon">
+          <span class="intext" id="it1">Cars?</span>
+        </div>
+        <div class="arcfirst2 arcs ar1" sid="it2">
+          <img src="images/icons/srijan1.png" class="inicon">
+          <span class="intext" id="it2">Art</span>
+        </div>
+        <div class="arcfirst3 arcs ar1" sid="it3">
+          <img src="images/icons/microbird.png" class="inicon">
+          <span class="intext" id="it3">Electronics</span>
+        </div>
+        <div class="arc21 arcs ar2" sid="it4">
+          <img src="images/icons/natraja.png" class="inicon">
+          <span class="intext" id="it4">Dance</span>
+        </div>
+        <div class="arc22 arcs ar2" sid="it5">
+          <img src="images/icons/vividha.png" class="inicon">
+          <span class="intext" id="it5">Drama</span>
+        </div>
+        <div class="arc23 arcs ar2" sid="it6">
+          <img src="images/icons/vivekanand.png" class="inicon">
+          <span class="intext" id="it6">Life</span>
+        </div>
+        <div class="arcthree1 arcs ar3" sid="it7">
+          <img src="images/icons/tarannum.png" class="inicon">
+          <span class="intext" id="it7">Music</span>
+        </div>
+        <div class="arcthree2 arcs ar3" sid="it8">
+          <img src="images/icons/jhalak1.png" class="inicon">
+          <span class="intext" id="it8">Photography</span>
+        </div>
+        <div class="arcthree3 arcs ar3" sid="it9">
+          <img src="images/icons/ieee.png" class="inicon">
+          <span class="intext" id="it9">Innovation</span>
+        </div>
+        <div class="arcthree4 arcs ar3" sid="it10">
+          <img src="images/icons/manan.png" class="inicon">
+          <span class="intext" id="it10">Coding</span>
+        </div>
+        <div class="arc4one arcs ar4" sid="it11">
+          <img src="images/icons/ananya.png" class="inicon">
+          <span class="intext" id="it11">Literature</span>
+        </div>
+        <div class="arc4two arcs ar4" sid="it12">
+          <img src="images/icons/eklavya.png" class="inicon">
+          <span class="intext" id="it12">Sports</span>
+        </div>
+        <div class="arc4three arcs ar4" sid="it13">
+          <img src="images/icons/mechnext.png" class="inicon">
+          <span class="intext" id="it13">Mechanics</span>
+        </div>
+        <div class="arc4four arcs ar4" sid="it14">
+          <img src="images/icons/samarpan.png" class="inicon">
+          <span class="intext" id="it14">Electicity</span>
+        </div>
     </section>
 
   </div>
@@ -69,6 +131,7 @@
 <!-- Layer 2 EC logo -->
 <img id="eclogo" src="images/logo.png">
 </body>
+
 <script>
 $(function(){
   setTimeout(function(){
@@ -119,33 +182,10 @@ Reveal.initialize({
 
 // Start modifications
 Reveal.addEventListener( 'slidechanged', function( event ) {
-  if(!Reveal.isFirstSlide())
+  var curs = Reveal.getState();
+  var hors = curs.indexh;
+  if(Reveal.isFirstSlide())
   {
-    setTimeout(function(){
-      $('#eclogo').css({
-        'top' : '10%',
-        'transform': 'translate(-50%,-50%) scale(.4)'
-      });
-    },500)
-    $("body").off('mousemove');
-
-    // The parallax
-      var count = 0;
-      $("body").mousemove(function( event ) {
-        if(count%3 != 0)
-        {
-          count++;
-          return 0;
-        }
-        count++;
-        var top  = $(window).scrollTop();
-        var parX = event.pageX/100; 
-        var parY = event.pageY/100;
-        $("#eclogo").css({
-          'transform': 'translate('+(-(parX + 40))+'%,'+(-(parY + 52.5)) +'%) scale(.4)'
-        });
-      })
-  } else {
       setTimeout(function(){
         $('#eclogo').css({
           'top' : '50%'
@@ -174,7 +214,77 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
           'transform': 'translate(-'+parX*2+'%,-'+parY*2+'%)'
         });
       })
+  } else if (hors == 2) {
+
+    $("body").off('mousemove');
+    // The parallax
+      var count = 0;
+      $("body").mousemove(function( event ) {
+        if(count%3 != 0)
+        {
+          count++;
+          return 0;
+        }
+        count++;
+        var top  = $(window).scrollTop();
+        var parX = event.pageX/100; 
+        var parY = event.pageY/100;
+        $("#eclogo").css({
+          'transform': 'translate('+(-(parX + 40))+'%,'+(-(parY + 45)) +'%) scale(.4)'
+        });
+        $(".ar1").css({
+          'transform': 'translate('+(-(parX*3 + 50))+'%,'+(-(parY*3 + 50)) +'%) scale(1)'
+        });
+        $(".ar2").css({
+          'transform': 'translate('+(-(parX*2 + 50))+'%,'+(-(parY*2 + 50)) +'%) scale(1)'
+        });
+        $(".ar3").css({
+          'transform': 'translate('+(-(parX*1.5 + 50))+'%,'+(-(parY*1.5 + 50)) +'%) scale(1)'
+        });
+        $(".ar4").css({
+          'transform': 'translate('+(-(parX + 50))+'%,'+(-(parY + 50)) +'%) scale(1)'
+        });
+        $(".circle").css({
+          'transform': 'translate('+(-(parX + 40))+'%,'+(-(parY + 50)) +'%) scale(1)'
+        });
+      })  
+
+  //hover effects
+  $(".arcs").hover(function() {
+    var sid = $(this).attr('sid');
+    $("#"+sid).css('opacity', '1');
+  }, function() {
+    var sid = $(this).attr('sid');
+    $("#"+sid).css('opacity', '0');
+  });
+
+  } else {
+    setTimeout(function(){
+      $('#eclogo').css({
+        'top' : '10%',
+        'transform': 'translate(-50%,-50%) scale(.4)'
+      });
+    },500)
+    $("body").off('mousemove');
+
+    // The parallax
+      var count = 0;
+      $("body").mousemove(function( event ) {
+        if(count%3 != 0)
+        {
+          count++;
+          return 0;
+        }
+        count++;
+        var top  = $(window).scrollTop();
+        var parX = event.pageX/100; 
+        var parY = event.pageY/100;
+        $("#eclogo").css({
+          'transform': 'translate('+(-(parX + 40))+'%,'+(-(parY + 45)) +'%) scale(.4)'
+        });
+      })  
   }
 } );
 </script>
 </html>
+

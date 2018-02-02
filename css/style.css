@@ -165,7 +165,8 @@ a:link, a:visited, a:hover, a:active {
 	text-align: justify;
 	margin-right: 70px;
 	letter-spacing: 0.5px;
-	font-family: normal;
+	font-family:comic sans ms;
+	color:white;
 
 }
 #events {

@@ -392,5 +392,22 @@ a:link, a:visited, a:hover, a:active {
 
 
 /* About-Culmyca */
-.culmycatext h3 {font-size:25px;font-family:Algerian;color:white;position: absolute;text-align:justify;left:50%;right:5%;top:12%;}
-.culmycatext p {font-size:20px;font-family:comic sans ms;color:white;position: absolute;text-align:justify;left:50%;right:5%;top:75%;}
+
+#pculmyca {
+	float: left;
+        font-size:18px;
+	position: absolute;
+	margin-left: 530px;
+	margin-top: 0px;
+	text-align: justify;
+	margin-right: 70px;
+	letter-spacing: 0.5px;
+	font-family:comic sans ms;
+	color:white;
+
+}
+
+#imageculmyca{
+	float: left;
+	margin-left: 90px;
+}

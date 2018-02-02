@@ -386,3 +386,10 @@ a:link, a:visited, a:hover, a:active {
       box-shadow: 0 0 0 0 rgba(204,169,44, 0);
   }
 }
+
+
+
+
+/* About-Culmyca */
+.culmycatext h3 {font-size:25px;font-family:Algerian;color:white;position: absolute;text-align:justify;left:50%;right:5%;top:12%;}
+.culmycatext p {font-size:20px;font-family:comic sans ms;color:white;position: absolute;text-align:justify;left:50%;right:5%;top:75%;}

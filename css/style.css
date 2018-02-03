@@ -171,11 +171,11 @@ a:link, a:visited, a:hover, a:active {
 	width: 54%;
 	font-family:'geomanistregular' !important;
 	font-weight: lighter !important;
-	line-height: 1.2em !important;
+	line-height: 1.4em !important;
 	color:white;
 	text-align: left;
 	padding-left: 4% !important;
-	letter-spacing: 1px;
+	letter-spacing: 1.5px;
 }
 
 #events, #ehome {

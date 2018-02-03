@@ -320,6 +320,14 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
     $("#"+sid).css('opacity', '0');
   });
 
+  //The up arrow to events
+  if (hors == 2)
+  {
+    $(".navigate-up").click(function() {
+      Reveal.slide( 2, 0);
+    });
+  }
+
   $(".arcs").click(function() {
     var sid = $(this).attr('sid');
     var des = parseInt(sid.replace(/[^0-9\.]/g, ''), 10);

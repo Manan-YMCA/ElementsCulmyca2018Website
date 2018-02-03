@@ -174,7 +174,8 @@ a:link, a:visited, a:hover, a:active {
 	line-height: 1.2em !important;
 	color:white;
 	text-align: left;
-	padding-left: 4% !important
+	padding-left: 4% !important;
+	letter-spacing: 1px;
 }
 
 #events, #ehome {

@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="js/timer.js"></script>
   <link rel="stylesheet" type="text/css" href="css/style.css">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
+  <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.js"></script>
 </head>
 <body>
 <!-- The nav bar -->
@@ -78,7 +79,7 @@
     <!--Events -->
     <section id="events">
 
-      <section id="ehome" data-background-image='images/events/ehome.jpg'>
+      <section id="ehome" data-background-image='images/events/ehome.jpg' >
       	<div class="circle">
           <div class="ctext">
             &nbsp;&nbsp;&nbsp;Events
@@ -89,7 +90,7 @@
           <span class="intext" id="it1">Automobiles</span>
         </div>
         <div class="arcfirst2 arcs ar1" sid="it2">
-          <img src="images/icons/srijan1.png" class="inicon">
+          <img src="images/icons/srijan.png" class="inicon">
           <span class="intext" id="it2">Arts</span>
         </div>
         <div class="arcfirst3 arcs ar1" sid="it3">
@@ -113,7 +114,7 @@
           <span class="intext" id="it7">Music</span>
         </div>
         <div class="arcthree2 arcs ar3" sid="it8">
-          <img src="images/icons/jhalak1.png" class="inicon">
+          <img src="images/icons/jhalak.png" class="inicon">
           <span class="intext" id="it8">Photography &amp; Designing</span>
         </div>
         <div class="arcthree3 arcs ar3" sid="it9">
@@ -142,8 +143,28 @@
         </div>
       </section>
 
-      <section data-background-image='images/events/SAE.jpg'>
-        Automobiles
+      <section data-background-image='images/events/SAE.jpg' class="cat-section">
+        <div class="circle-cat">
+          <img src="images/icons/sae.png">
+        </div>
+        <div class="cat-right" data-simplebar>
+          <div class="cat-card">
+            <span class="e-name">Event Name</span>
+            <hr>
+          </div>
+          <div class="cat-card">
+            <span class="e-name">Event Name</span>
+            <hr>
+          </div>
+          <div class="cat-card">
+            <span class="e-name">Event Name</span>
+            <hr>
+          </div>
+          
+        </div>
+        <div class="cat-head">
+          Automobiles
+        </div>
       </section>
       <section data-background-image='images/events/srijan.jpg'>
         Arts
@@ -208,6 +229,22 @@ $(function(){
       $(".layer1 > *").css('transition', 'transform ease-out .2s');
     },800)
   },500)
+
+  // Get the events
+  $.ajax({
+    url: 'http://ec2018.herokuapp.com/api/v1/event/*/Technical/*',
+    type: 'GET'
+  })
+  .done(function(msg) {
+    console.log(msg);
+  })
+  .fail(function() {
+    console.log("error");
+  })
+  .always(function() {
+    console.log("complete");
+  });
+  
 })
 // The parallax
 var count = 0;
@@ -311,30 +348,31 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
         });
       })  
 
-  //hover effects
-  $(".arcs").hover(function() {
-    var sid = $(this).attr('sid');
-    $("#"+sid).css('opacity', '1');
-  }, function() {
-    var sid = $(this).attr('sid');
-    $("#"+sid).css('opacity', '0');
-  });
-
-  //The up arrow to events
-  if (hors == 2)
-  {
-    $(".navigate-up").click(function() {
-      Reveal.slide( 2, 0);
+    //hover effects
+    $(".arcs").hover(function() {
+      var sid = $(this).attr('sid');
+      $("#"+sid).css('opacity', '1');
+    }, function() {
+      var sid = $(this).attr('sid');
+      $("#"+sid).css('opacity', '0');
     });
-  }
 
-  $(".arcs").click(function() {
-    var sid = $(this).attr('sid');
-    var des = parseInt(sid.replace(/[^0-9\.]/g, ''), 10);
-    Reveal.slide( 2, des);
-  });
+    //The up arrow to events
+    if (hors == 2)
+    {
+      $(".navigate-up").click(function() {
+        Reveal.slide( 2, 0);
+      });
+    }
+
+    $(".arcs").click(function() {
+      var sid = $(this).attr('sid');
+      var des = parseInt(sid.replace(/[^0-9\.]/g, ''), 10);
+      Reveal.slide( 2, des);
+    });
 
   } else {
+    $(".navigate-up").off('click');
     setTimeout(function(){
       $('#eclogo').css({
         'top' : '10%',

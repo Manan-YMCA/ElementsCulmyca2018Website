@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Elements Culmyca 2018</title>
@@ -10,7 +10,6 @@
   <script src="js/timer.js"></script>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
-  <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.js"></script>
 </head>
 <body>
 <!-- The nav bar -->
@@ -143,11 +142,11 @@
         </div>
       </section>
 
-<section data-background-image='images/events/SAE.jpg' class="cat-section">
+      <section data-background-image='images/events/SAE.jpg' class="cat-section">
         <div class="circle-cat">
           <img src="images/icons/sae.png">
         </div>
-        <div class="cat-right" data-simplebar>
+        <div class="cat-right">
           <div class="cat-card">
             <span class="e-name">Event Name</span>
             <hr>
@@ -169,7 +168,7 @@
       <div class="circle-cat">
           <img src="images/icons/srijan.png">
         </div>
-        <div class="cat-right" data-simplebar>
+        <div class="cat-right">
           <div class="cat-card">
             <span class="e-name">Event Name</span>
             <hr>
@@ -188,22 +187,10 @@
         </div>
         </section>
       <section data-background-image='images/events/manan.jpg' class="cat-section">
-          <div class="circle-cat">
+        <div class="circle-cat">
           <img src="images/icons/manan.png">
         </div>
-        <div class="cat-right" data-simplebar>
-          <div class="cat-card">
-            <span class="e-name">Event Name</span>
-            <hr>
-          </div>
-          <div class="cat-card">
-            <span class="e-name">Event Name</span>
-            <hr>
-          </div>
-          <div class="cat-card">
-            <span class="e-name">Event Name</span>
-            <hr>
-          </div>
+        <div class="cat-right" id='cat-manan'>
          </div>
         <div class="cat-head">
           Coding
@@ -213,7 +200,7 @@
          <div class="circle-cat">
           <img src="images/icons/natraja.png">
         </div>
-        <div class="cat-right" data-simplebar>
+        <div class="cat-right">
           <div class="cat-card">
             <span class="e-name">Event Name</span>
             <hr>
@@ -235,7 +222,7 @@
          <div class="circle-cat">
           <img src="images/icons/vividha.png">
         </div>
-        <div class="cat-right" data-simplebar>
+        <div class="cat-right">
           <div class="cat-card">
             <span class="e-name">Event Name</span>
             <hr>
@@ -257,7 +244,7 @@
          <div class="circle-cat">
           <img src="images/icons/vivekanand.png">
         </div>
-        <div class="cat-right" data-simplebar>
+        <div class="cat-right">
           <div class="cat-card">
             <span class="e-name">Event Name</span>
             <hr>
@@ -279,7 +266,7 @@
           <div class="circle-cat">
           <img src="images/icons/tarannum.png">
         </div>
-        <div class="cat-right" data-simplebar>
+        <div class="cat-right">
           <div class="cat-card">
             <span class="e-name">Event Name</span>
             <hr>
@@ -301,7 +288,7 @@
           <div class="circle-cat">
           <img src="images/icons/jhalak.png">
         </div>
-        <div class="cat-right" data-simplebar>
+        <div class="cat-right">
           <div class="cat-card">
             <span class="e-name">Event Name</span>
             <hr>
@@ -323,7 +310,7 @@
          <div class="circle-cat">
           <img src="images/icons/IEEE.png">
         </div>
-        <div class="cat-right" data-simplebar>
+        <div class="cat-right">
           <div class="cat-card">
             <span class="e-name">Event Name</span>
             <hr>
@@ -345,7 +332,7 @@
         <div class="circle-cat">
           <img src="images/icons/microbird.png">
         </div>
-        <div class="cat-right" data-simplebar>
+        <div class="cat-right">
           <div class="cat-card">
             <span class="e-name">Event Name</span>
             <hr>
@@ -367,7 +354,7 @@
          <div class="circle-cat">
           <img src="images/icons/ananya.png">
         </div>
-        <div class="cat-right" data-simplebar>
+        <div class="cat-right">
           <div class="cat-card">
             <span class="e-name">Event Name</span>
             <hr>
@@ -389,7 +376,7 @@
         <div class="circle-cat">
           <img src="images/icons/eklavya.png">
         </div>
-        <div class="cat-right" data-simplebar>
+        <div class="cat-right">
           <div class="cat-card">
             <span class="e-name">Event Name</span>
             <hr>
@@ -411,7 +398,7 @@
          <div class="circle-cat">
           <img src="images/icons/mechnext.png">
         </div>
-        <div class="cat-right" data-simplebar>
+        <div class="cat-right">
           <div class="cat-card">
             <span class="e-name">Event Name</span>
             <hr>
@@ -433,8 +420,8 @@
      <div class="circle-cat">
           <img src="images/icons/samarpan.png">
         </div>
-        <div class="cat-right" data-simplebar>
-          <div class="cat-card">
+        <div class="cat-right">
+          <div class="cat-card" onclick="showevent('event-id')">
             <span class="e-name">Event Name</span>
             <hr>
           </div>
@@ -458,8 +445,31 @@
 
 <!-- Layer 2 EC logo -->
 <img id="eclogo" src="images/logo.png">
-</body>
 
+<!-- The modals for every event category -->
+<div class="e-wosh">
+  <div class="e-wosh-close" onclick="closewosh()">
+    <i class="fa fa-arrow-circle-o-left"></i>
+  </div>
+  <div class="wosh-data">
+    <div class="cat-data-head cat-act-title">Event heading</div><br>
+    <div class="cat-data-desc-head">Description</div>
+    <div class="cat-data-desc cat-act-desc">
+      Lorem ipsum dolor sit amet, cum ex commodo adversarium, cu nam ullum placerat eloquentiam. Id mutat albucius oporteat per, nominavi mnesarchum eu his. Te eam saperet ornatus voluptaria, ei illum delenit mei. Officiis interpretaris per at. Eu discere scripserit vel, vim instructior definitiones no.
+    </div><br>
+    <div class="cat-data-desc-head">Rules</div>
+    <div class="cat-data-desc cat-act-rules">
+      Some sh*tty Rules.<br>
+      Te eam saperet ornatus voluptaria, ei illum delenit mei. Officiis interpretaris per at. Eu discere scripserit vel, vim instructior definitiones no.
+    </div>
+    <br><br>
+    <div class="cat-data-desc-head">Date - <span class="cat-data-tandd">00 March'18</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cat-data-desc-head">Time - <span class="cat-data-tandd">00:00 AM</span></div>
+    <div class="cat-data-desc-head">Venue - <span class="cat-data-tandd">Electrical Chowk</span></div><br><br>
+    <button class="register">Register</button>
+  </div>
+</div>
+
+</body>
 <script>
 $(function(){
   setTimeout(function(){
@@ -478,11 +488,24 @@ $(function(){
 
   // Get the events
   $.ajax({
-    url: 'http://ec2018.herokuapp.com/api/v1/event/*/Technical/*',
+    url: 'https://elementsculmyca2018.herokuapp.com/api/v1/events/getevent/*/*',
     type: 'GET'
   })
   .done(function(msg) {
-    console.log(msg);
+    msg = JSON.parse(msg);
+    var i;
+    for (i = 0; i < msg.data.length; i++)
+      {
+        console.log(msg.data[i]);
+        switch (msg.data[i].clubname) {
+          case "Manan":
+            $("#cat-manan").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div></div>');
+            break;
+        }
+      }
+    $("#cat-manan").attr('data-simplebar', '');
+    // Getting the script
+    $.getScript("https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.js");
   })
   .fail(function() {
     console.log("error");
@@ -645,6 +668,48 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
       })  
   }
 } );
+
+// Function for full view
+function showevent(id) {
+  var desc = $("#desc"+ id).text();
+  var title = $("#title"+id).text();
+  $(".cat-act-desc").text(desc);
+  $(".cat-act-title").text(title);
+
+  $(".cat-right").css({
+    'transform': 'translateY(-50%) scale(.9)',
+    'opacity': '0'
+  });
+
+  $(".e-wosh").css({
+    'opacity': '1',
+    'z-index': '10',
+    'transform': 'scale(1)'
+  });
+
+  $('.e-wosh *').each(function(i){
+      var t = $(this);
+      setTimeout(function(){ t.css({'transform': 'translate3d(0px, 0px, 0px)','opacity':'1'}); }, (i+1) * 50);
+  });
+  
+}
+
+function closewosh() {
+  $(".cat-right").css({
+    'transform': 'translateY(-50%) scale(1)',
+    'opacity': '1'
+  });
+
+  $(".e-wosh").css({
+    'opacity': '0',
+    'transform': 'scale(1.1)'
+  });
+
+  setTimeout(function(){
+    $(".e-wosh").css('z-index', '-1');
+    $('.e-wosh *').css({'transform': 'translate3d(-10px, 0px, 0px)','opacity':'0'})
+  },350)
+}
 </script>
 </html>
 

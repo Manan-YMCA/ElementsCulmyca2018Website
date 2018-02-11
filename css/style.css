@@ -447,6 +447,7 @@ a:link, a:visited, a:hover, a:active {
 	transform: translateY(-50%);
 	max-height: 75%;
 	text-align: center;
+	transition: transform ease-out .5s, opacity ease-out .25s;
 }
 
 .cat-head {
@@ -464,6 +465,7 @@ a:link, a:visited, a:hover, a:active {
 	border-radius: 10px 0px 10px 0px;
 	display: inline-block;
 	margin: 2% !important;
+	cursor: pointer;
 }
 
 .cat-section {
@@ -473,4 +475,86 @@ a:link, a:visited, a:hover, a:active {
 .e-name {
 	font-size: 24px !important;
 	font-weight: bolder !important;
+}
+
+.e-wosh {
+	width: 100%;
+	position: fixed;
+	height: 100%;
+	z-index: -1;
+	top: 0px;
+	right: 0px;
+	opacity: 0;
+	transform: scale(1.1);
+	background-color: rgba(20,20,20,.4);
+	transition: transform ease-out .5s, opacity ease-out .35s;
+}
+
+.e-wosh-close {
+	color: white;
+	font-size: 44px;
+	left: 10%;
+	top: 15%;
+	position: absolute;
+	cursor: pointer;
+}
+
+.e-wosh-close:hover {
+	transform: translateX(-5px);
+}
+
+.wosh-data {
+	color: white;
+	font-size: 20px;
+	right: 0px;
+	padding-right: 2%;
+	top: 15%;
+	position: absolute;
+	width: 80%
+}
+
+.cat-data-head {
+	font-size: 32px;
+	font-weight: bolder;
+	font-family: 'geomanistregular';
+	letter-spacing: 2px
+}
+
+.cat-data-desc-head {
+	font-size: 30px;
+	font-weight: lighter;
+	line-height: 1.4
+}
+
+.cat-data-desc {
+	font-size: 16px;
+	line-height: 1.4;
+}
+
+.cat-data-tandd {
+	font-size: 26px
+}
+
+.register {
+	border: 2px solid white;
+	border-radius: 40px;
+	font-size: 26px;
+	padding: 4px 40px;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.register:hover {
+	border-color: #a3a3a3;
+	transform: translate3d(5px,-5px,5px);
+}
+
+.e-wosh * {
+	opacity: 0;
+	transform: translate3d(-10px, 0px, 0px);
+	transition: all 1s;
+}
+
+.hid-data {
+	display: none
 }

@@ -417,7 +417,7 @@
         </div>
       </section>
       <section data-background-image='images/events/samarpan.jpg' class="cat-section">
-     <div class="circle-cat">
+        <div class="circle-cat">
           <img src="images/icons/samarpan.png">
         </div>
         <div class="cat-right">
@@ -438,6 +438,30 @@
         Electrical
         </div>
       </section>
+    </section>
+
+    <section id="register" data-background-image='images/register/wallpaper.jpg'>
+        <div id="reg-right">
+          <br>
+          <form action="" onsubmit="return false;" id="regform">
+            <label>Name(s)</label><br>
+            <input type="text" name="name"><br><br>
+            <label>Email ID</label><br>
+            <input type="text" name="name"><br><br>
+            <label>Phone No.</label><br>
+            <input type="text" name="name"><br><br>
+            <label>College/University</label><br>
+            <input type="text" name="name"><br><br>
+            <label>For Event</label><br>
+            <select id="events-list"> 
+              <option>Not selected</option>
+            </select><br><br>
+            <button type="button" class="register">Register</button>
+          </form>
+        </div>
+        <div id="reg-left">
+          <img src="images/register/icon.png" style="width: 90%">
+        </div>
     </section>
 
  </div>
@@ -463,9 +487,9 @@
       Te eam saperet ornatus voluptaria, ei illum delenit mei. Officiis interpretaris per at. Eu discere scripserit vel, vim instructior definitiones no.
     </div>
     <br><br>
-    <div class="cat-data-desc-head">Date - <span class="cat-data-tandd">00 March'18</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cat-data-desc-head">Time - <span class="cat-data-tandd">00:00 AM</span></div>
-    <div class="cat-data-desc-head">Venue - <span class="cat-data-tandd">Electrical Chowk</span></div><br><br>
-    <button class="register">Register</button>
+    <div class="cat-data-desc-head">Date - <span class="cat-data-tandd">00 March'18</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cat-data-desc-head">Time - <span class="cat-data-tandd cat-act-timing">00:00 AM</span></div>
+    <div class="cat-data-desc-head">Venue - <span class="cat-data-tandd cat-act-venue">Electrical Chowk</span></div><br><br>
+    <button class="register" onclick="register_open()" id="register-btn">Register</button>
   </div>
 </div>
 
@@ -497,9 +521,10 @@ $(function(){
     for (i = 0; i < msg.data.length; i++)
       {
         console.log(msg.data[i]);
+        $("#events-list").append('<option value="'+msg.data[i]._id+'"">'+msg.data[i].title+'</option>')
         switch (msg.data[i].clubname) {
           case "Manan":
-            $("#cat-manan").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div></div>');
+            $("#cat-manan").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">From '+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
             break;
         }
       }
@@ -547,7 +572,7 @@ Reveal.initialize({
   controlsLayout: 'edges',
 });
 
-
+var upactivate = 0;
 // Start modifications
 Reveal.addEventListener( 'slidechanged', function( event ) {
   var curs = Reveal.getState();
@@ -627,17 +652,21 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
     });
 
     //The up arrow to events
-    if (hors == 2)
-    {
-      $(".navigate-up").click(function() {
-        Reveal.slide( 2, 0);
-      });
-    }
 
     $(".arcs").click(function() {
       var sid = $(this).attr('sid');
       var des = parseInt(sid.replace(/[^0-9\.]/g, ''), 10);
       Reveal.slide( 2, des);
+      upactivate = 1;
+      if (hors == 2 && upactivate == 1)
+      {
+        $(".navigate-up").click(function() {
+          Reveal.slide( 2, 0);
+          upactivate = 0;
+        });
+      } else {
+        $(".navigate-up").off('click');
+      }
     });
 
   } else {
@@ -673,8 +702,15 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
 function showevent(id) {
   var desc = $("#desc"+ id).text();
   var title = $("#title"+id).text();
+  var rules = $("#rules"+id).text();
+  var venue = $("#venue"+id).text();
+  var timing = $("#timing"+id).text();
   $(".cat-act-desc").text(desc);
   $(".cat-act-title").text(title);
+  $(".cat-act-rules").text(rules);
+  $(".cat-act-venue").text(venue);
+  $(".cat-act-timing").text(timing);
+  $("#register-btn").attr('onclick', "register_open('"+id+"')");
 
   $(".cat-right").css({
     'transform': 'translateY(-50%) scale(.9)',
@@ -692,6 +728,12 @@ function showevent(id) {
       setTimeout(function(){ t.css({'transform': 'translate3d(0px, 0px, 0px)','opacity':'1'}); }, (i+1) * 50);
   });
   
+}
+
+function register_open(id) {
+  closewosh();
+  $("#events-list").val(id);
+  Reveal.slide( 3, 0);
 }
 
 function closewosh() {

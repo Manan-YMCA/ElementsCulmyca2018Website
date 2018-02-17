@@ -510,7 +510,8 @@ a:link, a:visited, a:hover, a:active {
 	padding-right: 2%;
 	top: 15%;
 	position: absolute;
-	width: 80%
+	width: 80%;
+	transition: all ease-out .5s !important;
 }
 
 .cat-data-head {
@@ -557,4 +558,41 @@ a:link, a:visited, a:hover, a:active {
 
 .hid-data {
 	display: none
+}
+
+/* The register page */
+#reg-left {
+	width: 35%;
+	float: left;
+}
+
+#reg-right {
+	width: 35%;
+	float: left;
+}
+
+.ex-head {
+	font-size: 32px !important;
+	font-weight: lighter !important;
+}
+
+#regform {
+	font-size: 20px;
+	text-align: left;
+	font-weight: bold;
+	margin: 5%;
+}
+
+#regform > input, select {
+	margin: 8px 0px;
+	border-radius: 20px;
+	padding: 4px 20px;
+	border: 2px solid white;
+	background-color: #5050508f;
+	min-width: 300px;
+	font-size: 16px;
+}
+
+#register {
+	padding-left: 18%
 }

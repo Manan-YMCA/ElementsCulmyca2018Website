@@ -160,10 +160,35 @@ a:link, a:visited, a:hover, a:active {
 	height: 100%;
 }
 
-.imageymca{
-	float: left;
-	box-shadow: 0px 0px 5px 2px #ff4d4d;
+
+.imageymca { float:left;
+  box-shadow: 0px 0px 5px 2px #ff4d4d;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
 }
+.imageymca:hover{
+  -webkit-animation-name: about-hang-sink, about-hang;
+  animation-name: about-hang-sink, about-hang;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
+}
+
+
+
 
 .aboutymca {
 	padding: 6% !important;
@@ -457,6 +482,7 @@ a:link, a:visited, a:hover, a:active {
 	font-size: 32px !important;
 }
 
+
 .cat-card {
 	width: 250px;
 	min-height: 200px;
@@ -466,6 +492,17 @@ a:link, a:visited, a:hover, a:active {
 	display: inline-block;
 	margin: 2% !important;
 	cursor: pointer;
+}
+
+.cat-card:hover{
+  -webkit-animation-name: hvr-pop;
+  animation-name: cat-cardpop;
+  -webkit-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
 }
 
 .cat-section {
@@ -536,6 +573,7 @@ a:link, a:visited, a:hover, a:active {
 	font-size: 26px
 }
 
+
 .register {
 	border: 2px solid white;
 	border-radius: 40px;
@@ -547,7 +585,15 @@ a:link, a:visited, a:hover, a:active {
 
 .register:hover {
 	border-color: #a3a3a3;
-	transform: translate3d(5px,-5px,5px);
+-webkit-animation-name: buttonpulse;
+  animation-name: buttonpulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+	
 }
 
 .e-wosh * {
@@ -596,3 +642,113 @@ a:link, a:visited, a:hover, a:active {
 #register {
 	padding-left: 18%
 }
+
+
+
+/*Animations*/
+
+
+
+/*about images*/
+
+@-webkit-keyframes about-hang {
+  0% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+
+  50% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+}
+
+@keyframes about-hang {
+  0% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+ 
+  }
+
+  50% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+
+  }
+
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+
+  }
+}
+
+@-webkit-keyframes about-hang-sink {
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+
+  }
+}
+
+@keyframes about-hang-sink {
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+
+  }
+}
+
+
+/*cat-card*/
+
+@-webkit-keyframes cat-cardpop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
+@keyframes cat-cardpop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+}
+
+
+
+
+/*register button*/
+
+
+@-webkit-keyframes buttonpulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+@keyframes buttonpulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+

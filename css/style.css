@@ -78,12 +78,12 @@ a:link, a:visited, a:hover, a:active {
 
 .navbar-left > li:hover {
 	border-bottom: 2px solid #ec4a3b;
-	color: #ec4a3b ;	
+	color: #ec4a3b ;
 }
 
 .navbar-right > li:hover {
 	border-bottom: 2px solid #ec4a3b ;
-	color: #ec4a3b  ;	
+	color: #ec4a3b  ;
 }
 
 #home {
@@ -218,7 +218,7 @@ a:link, a:visited, a:hover, a:active {
 	border-radius: 50%;
 	position: absolute;
 	left: 10%;
-	top: 60%; 
+	top: 60%;
 	min-height: 220px;
 	min-width: 220px;
 }
@@ -237,35 +237,35 @@ a:link, a:visited, a:hover, a:active {
 /* Events circle */
 
 /* Arc 3 Circles*/
-.arcfirst1 { 
+.arcfirst1 {
   top:32%;
-  left: 28%; 
+  left: 28%;
 }
 
-.arcfirst2 { 
+.arcfirst2 {
   top:50%;
   left: 30%;
 }
 
-.arcfirst3 { 
+.arcfirst3 {
   top:68%;
   left: 28%;
 }
 
-.arcthree1 { 
+.arcthree1 {
   top:20%;
-  left: 68%; 
+  left: 68%;
 }
-.arcthree2 { 
+.arcthree2 {
   top:40%;
   left: 70%;
-  
+
 }
-.arcthree3 { 
+.arcthree3 {
   top: 60%;
   left: 70%;
 }
-.arcthree4 { 
+.arcthree4 {
   top: 80%;
   left: 68%;
 }
@@ -601,6 +601,70 @@ a:link, a:visited, a:hover, a:active {
 }
 
 
+/* Reach Us page */
+#reach-us{
+  padding-top: 40px;
+  padding-left: 6%;
+}
+
+#reach-us-ymca-logo{
+  height: 100px;
+  width: 100px;
+  float: left;
+}
+
+#reach-us-header{
+  padding-bottom: 60px;
+}
+
+#reach-us-heading{
+  font-weight: bold;
+  font-size: 45px;
+  font-family: 'open sans';
+  text-align: center;
+  line-height: 1.5em;
+}
+
+#reach-us-subheading{
+  font-weight: bold;
+  font-size: 20px;
+  font-family: 'open sans';
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+#reach-us-text-content{
+  float: left;
+  width: 45%;
+	font-family:'geomanistregular' !important;
+	font-weight: lighter !important;
+	line-height: 1.2em !important;
+  font-size: 25px;
+	color:white;
+	text-align: left;
+	letter-spacing: 2px;
+  clear: both;
+}
+
+.dist-right{
+  float: right;
+  position: relative;
+  right: 50px;
+}
+
+#reach-us-heading2{
+  font-weight: bold;
+  font-size: 32px;
+  font-family: 'open sans';
+  padding-bottom: 5px;
+}
+
+#googleMap{
+  width: 40%;
+  height: 400px;
+  position: relative;
+  left: 20px;
+}
 
 /*Animations*/
 
@@ -655,4 +719,3 @@ a:link, a:visited, a:hover, a:active {
     transform: scale(0.9);
   }
 }
-

@@ -599,46 +599,6 @@ a:link, a:visited, a:hover, a:active {
 #register {
 	padding-left: 18%
 }
-<<<<<<< HEAD
-.flex-container {
-  display: flex;
-  justify-content: center;
-
-}
-
-.flex-container > div {
-  background-color: #f1f1f1;
-  width: 100px;
-  margin: 10px;
-  text-align: center;
-  line-height: 75px;
-  font-size: 30px;
-}
-
-.team_class.slide.img{
-height: 100px;
-width: 100px;
-
-}
-.slider {
-    
-    margin: 0 auto;
-}
-
-.slider>div img{
-	border-radius: 50%;
-	border-style: solid;
-	border-width: 5px;
-	border-color: 5px;
-	margin: auto;
-	height: 100px;
-	width: 100px
-} 
-
-.content {
-	margin: auto;
-	padding: 20px;
-=======
 
 
 /* Reach Us page */
@@ -758,5 +718,31 @@ width: 100px;
     -webkit-transform: scale(0.9);
     transform: scale(0.9);
   }
->>>>>>> 3f4687e070c93a101ae902f4a9843a42ef332bae
+}
+
+
+/*team page*/
+.team_class.slide.img{
+height: 100px;
+width: 100px;
+
+}
+.slider {
+    
+    margin: 0 auto;
+}
+
+.slider>div img{
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 5px;
+	border-color: 5px;
+	margin: auto;
+	height: 100px;
+	width: 100px
+} 
+
+.content {
+	margin: auto;
+	padding: 20px;
 }

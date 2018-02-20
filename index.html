@@ -10,6 +10,9 @@
   <script src="js/timer.js"></script>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
+  <link rel="stylesheet" type="text/css" href="css/slick.css">
+   <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+  
 </head>
 <body>
 <!-- The nav bar -->
@@ -464,8 +467,71 @@
         </div>
     </section>
 
- </div>
+    <section id="team" data-background-image="images/register/wallpaper.jpg">
+      <div class="content">
+       <div class="slider">
+  <div>
+    <img src="http://kenwheeler.github.io/slick/img/fonz1.png"  style="text-align: center;" />
+    <h1>Pranav Mahajan</h1>
+    
+  </div>
+  <div>
+    <img src="http://kenwheeler.github.io/slick/img/fonz2.png"  style="text-align: center;" />
+    <h1>Pranav Mahajan</h1>
+  </div>
+  <div>
+    <img src="http://kenwheeler.github.io/slick/img/fonz3.png"  />
+    <h1>Pranav Mahajan</h1>
+  </div>
+  <div>
+    <img src="http://kenwheeler.github.io/slick/img/fonz1.png"  />
+    <h1>Pranav Mahajan</h1>
+  </div>
+  
+   
 </div>
+<div class="content">
+  <div class="slider">
+    <div>
+ <img src="http://kenwheeler.github.io/slick/img/fonz1.png"  />
+    <h1>Pranav Mahajan</h1>
+  </div>
+  <div>
+    <img src="http://kenwheeler.github.io/slick/img/fonz2.png"  />
+    <h1>Pranav Mahajan</h1>
+  </div>
+  <div>
+    <img src="http://kenwheeler.github.io/slick/img/fonz3.png"  />
+    <h1>Pranav Mahajan</h1>
+  </div>
+  <div>
+    <img src="http://kenwheeler.github.io/slick/img/fonz1.png" />
+    <h1>Pranav Mahajan</h1>
+  </div>
+</div>
+<div class="content">
+  <div class="slider">
+    <div>
+ <img src="http://kenwheeler.github.io/slick/img/fonz1.png"  />
+    <h1>Pranav Mahajan</h1>
+  </div>
+  <div>
+    <img src="http://kenwheeler.github.io/slick/img/fonz2.png"  />
+    <h1>Pranav Mahajan</h1>
+  </div>
+  <div>
+    <img src="http://kenwheeler.github.io/slick/img/fonz3.png"  />
+    <h1>Pranav Mahajan</h1>
+  </div>
+  <div>
+    <img src="http://kenwheeler.github.io/slick/img/fonz1.png"  />
+    <h1>Pranav Mahajan</h1>
+  </div>
+</div>
+      
+    </section>
+
+
 
 <!-- Layer 2 EC logo -->
 <img id="eclogo" src="images/logo.png">
@@ -561,6 +627,7 @@ $("body").mousemove(function( event ) {
 })
 </script>
 <script src="js/reveal.js"></script>
+<script src="js/slick.js"></script>
 <script>
 Reveal.initialize({
   width: "100%",
@@ -752,6 +819,48 @@ function closewosh() {
     $('.e-wosh *').css({'transform': 'translate3d(-10px, 0px, 0px)','opacity':'0'})
   },350)
 }
+
+
+$(document).ready(function(event) {
+
+$(".slider").slick({
+    dots: true,
+  infinite: true,
+slidesToShow: 3,
+slidesToScroll: 3,
+cssEase: "ease",
+autoplay: true,
+autoplaySpeed: 3000,
+ responsive: [
+    {
+      breakpoint: 1080,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true,
+        cssEase :"ease",
+        autoplay:true,
+        autoplaySpeed: 3000
+      }
+    },
+    {
+      breakpoint: 720,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+         cssEase :"ease",
+        autoplay:true,
+        autoplaySpeed: 3000
+
+      }
+    }
+    ]
+});
+
+});
+  
+
 </script>
 </html>
 

@@ -5,7 +5,14 @@
   <title>Elements Culmyca 2018</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+   <script src="js/preload.js"></script>
   <link rel="stylesheet" href="css/reveal.css">
+   
+
+
+
+
   <link rel="stylesheet" type="text/css" href="css/footer_style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="js/timer.js"></script>
@@ -15,6 +22,14 @@
       <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
 </head>
 <body>
+<!--preloader-->
+<div id="preloader">
+<div id="status">
+
+  </div>
+</div>
+
+
 <!-- The nav bar -->
 <!--left navigation bar-->
 <ul class="nav navbar-nav navbar-left" >
@@ -434,6 +449,26 @@
 </div>
 
 </body>
+
+
+<!--script for preloader-->
+ <script type="text/javascript">
+var images = ["images/home.jpg","images/about/ac.jpg","images/about/wallpaper.jpg","images/about/ay.jpg","images/events/ananya.jpg","images/events/ehome.jpg","images/events/eklavya.jpg","images/events/IEEE.jpg","images/events/jhalak.jpg","images/events/manan.jpg","images/events/mechnext.jpg","images/events/microbird.jpg","images/events/natraja.jpg","images/events/SAE.jpg","images/events/samarpan.jpg","images/events/srijan.jpg","images/events/tarunnun.jpg","images/events/vivekanand.jpg","images/events/vividha.jpg","images/register/wallpaper.jpg","images/back.jpg","images/back.png","images/back2.jpg","images/bg.jpg","images/bg2.jpg","images/homeo.jpg"];
+
+$.preload(images);
+
+$.preload(images,{
+  eachOnLoad: function(){
+    //console.log("loaded");
+  $('#preloader').hide();
+  }
+
+});
+
+</script>
+
+
+
 <script>
 $(function(){
   setTimeout(function(){

@@ -410,7 +410,7 @@ a:link, a:visited, a:hover, a:active {
 
 #pculmyca {
 	float: left;
-    font-size:18px;
+  font-size:18px;
 	position: absolute;
 	margin-left: 530px;
 	margin-top: 0px;
@@ -603,8 +603,7 @@ a:link, a:visited, a:hover, a:active {
 
 /* Reach Us page */
 #reach-us{
-  padding-top: 40px;
-  padding-left: 6%;
+  transform: scale(0.8);
 }
 
 #reach-us-ymca-logo{
@@ -614,7 +613,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 #reach-us-header{
-  padding-bottom: 60px;
+  padding-bottom: 5%;
 }
 
 #reach-us-heading{
@@ -622,7 +621,7 @@ a:link, a:visited, a:hover, a:active {
   font-size: 45px;
   font-family: 'open sans';
   text-align: center;
-  line-height: 1.5em;
+  line-height: 1.1em;
 }
 
 #reach-us-subheading{
@@ -630,7 +629,8 @@ a:link, a:visited, a:hover, a:active {
   font-size: 20px;
   font-family: 'open sans';
   text-align: center;
-  padding-bottom: 5px;
+  padding-top: 10px;
+  line-height: 1.3em;
 }
 
 #reach-us-text-content{
@@ -646,12 +646,6 @@ a:link, a:visited, a:hover, a:active {
   clear: both;
 }
 
-.dist-right{
-  float: right;
-  position: relative;
-  right: 50px;
-}
-
 #reach-us-heading2{
   font-weight: bold;
   font-size: 32px;
@@ -663,7 +657,7 @@ a:link, a:visited, a:hover, a:active {
   width: 40%;
   height: 400px;
   position: relative;
-  left: 20px;
+  left: 5%;
 }
 
 /*Animations*/
@@ -728,7 +722,7 @@ width: 100px;
 
 }
 .slider {
-    
+
     margin: 0 auto;
 }
 
@@ -740,7 +734,7 @@ width: 100px;
 	margin: auto;
 	height: 100px;
 	width: 100px
-} 
+}
 
 .content {
 	margin: auto;
@@ -754,8 +748,8 @@ width: 100px;
 	left:0;
 	right:0;
 	bottom:0;
-	background-color:#fff; 
-	z-index:99; 
+	background-color:#fff;
+	z-index:99;
 }
 
 #status {
@@ -764,7 +758,7 @@ width: 100px;
 	position:absolute;
 	left:50%; /* centers the loading animation horizontally on the screen */
 	top:50%; /* centers the loading animation vertically on the screen */
-	background-image:url(../images/status.gif); 
+	background-image:url(../images/status.gif);
 	background-repeat:no-repeat;
 	background-position:center;
 	margin:-100px 0 0 -100px;

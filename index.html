@@ -5,7 +5,14 @@
   <title>Elements Culmyca 2018</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+   <script src="js/preload.js"></script>
   <link rel="stylesheet" href="css/reveal.css">
+
+
+
+
+
   <link rel="stylesheet" type="text/css" href="css/footer_style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="js/timer.js"></script>
@@ -15,6 +22,14 @@
       <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
 </head>
 <body>
+<!--preloader-->
+<div id="preloader">
+<div id="status">
+
+  </div>
+</div>
+
+
 <!-- The nav bar -->
 <!--left navigation bar-->
 <ul class="nav navbar-nav navbar-left" >
@@ -318,7 +333,7 @@
   <div>
     <img src="http://kenwheeler.github.io/slick/img/fonz1.png"  style="text-align: center;" />
     <h1>Pranav Mahajan</h1>
-    
+
   </div>
   <div>
     <img src="http://kenwheeler.github.io/slick/img/fonz2.png"  style="text-align: center;" />
@@ -340,7 +355,7 @@
  <img src="http://kenwheeler.github.io/slick/img/fonz1.png"  />
     <h1>Pranav Mahajan</h1>
   </div>
-</div> 
+</div>
 </div>
 <div class="content">
   <div class="slider">
@@ -363,7 +378,7 @@
    <div>
  <img src="http://kenwheeler.github.io/slick/img/fonz1.png"  />
     <h1>Pranav Mahajan</h1>
-  </div>    
+  </div>
     <div>
  <img src="http://kenwheeler.github.io/slick/img/fonz1.png"  />
     <h1>Pranav Mahajan</h1>
@@ -419,12 +434,20 @@
         Email: culmycaelements@gmail.com <br/>
         <br/><br/>
 
+<<<<<<< HEAD
         <h4 id="reach-us-heading2">How To Reach Us:</h4>
         <br/>
         By Air: Indira Gandhi International Airport : <span class="dist-right">45km</span> <br/>
         By Train: Old Faridabad Railway Station : <span class="dist-right">5km</span> <br/>
         By Bus: Ballabgarh : <span class="dist-right">3km</span> <br/>
         By Metro: Escorts Mujesar : <span class="dist-right">0.2km</span>
+=======
+        <h3 id="reach-us-heading2">How To Reach Us:</h3>
+        By Air: Indira Gandhi International Airport : 45km <br/>
+        By Train: Old Faridabad Railway Station : 05km <br/>
+        By Bus: Ballabgarh : 03km <br/>
+        By Metro: Escorts Mujesar : 0.2km
+>>>>>>> 6eca3fc6d32755a2144d09df0af0f643bf728831
       </div>
 
       <div id="googleMap"></div>
@@ -460,6 +483,26 @@
 </div>
 
 </body>
+
+
+<!--script for preloader-->
+ <script type="text/javascript">
+var images = ["images/home.jpg","images/about/ac.jpg","images/about/wallpaper.jpg","images/about/ay.jpg","images/events/ananya.jpg","images/events/ehome.jpg","images/events/eklavya.jpg","images/events/IEEE.jpg","images/events/jhalak.jpg","images/events/manan.jpg","images/events/mechnext.jpg","images/events/microbird.jpg","images/events/natraja.jpg","images/events/SAE.jpg","images/events/samarpan.jpg","images/events/srijan.jpg","images/events/tarunnun.jpg","images/events/vivekanand.jpg","images/events/vividha.jpg","images/register/wallpaper.jpg","images/back.jpg","images/back.png","images/back2.jpg","images/bg.jpg","images/bg2.jpg","images/homeo.jpg"];
+
+$.preload(images);
+
+$.preload(images,{
+  eachOnLoad: function(){
+    //console.log("loaded");
+  $('#preloader').hide();
+  }
+
+});
+
+</script>
+
+
+
 <script>
 $(function(){
   setTimeout(function(){
@@ -762,7 +805,7 @@ $(document).ready(function(event) {
 
 $(".slider").slick({
     dots: true,
-  
+
 slidesToShow: 5,
 slidesToScroll: 1,
 cssEase: "ease",
@@ -774,7 +817,7 @@ autoplaySpeed: 3000,
       settings: {
         slidesToShow: 5,
         slidesToScroll: 1,
-        
+
         dots: true,
         cssEase :"ease",
         autoplay:true,

@@ -638,6 +638,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 #reach-us-text-content{
+margin-top:3%;
   float: left;
   width: 45%;
 	font-family:'geomanistlight' !important;
@@ -651,6 +652,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 #reach-us-heading2{
+margin-top:6%;
   font-weight: bold;
   font-size: 32px;
   font-family: 'geomanistlight' !important;

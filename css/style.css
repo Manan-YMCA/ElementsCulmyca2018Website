@@ -11,6 +11,10 @@
     font-family: 'geomanistregular';
     src: url('fonts/Geomanist-Regular.otf');
 }
+@font-face {
+    font-family: 'geomanistlight';
+    src: url('fonts/Geomanist-Light.otf');
+}
 
 * {
 	font-family: 'open sans';
@@ -636,10 +640,10 @@ a:link, a:visited, a:hover, a:active {
 #reach-us-text-content{
   float: left;
   width: 45%;
-	font-family:'geomanistregular' !important;
+	font-family:'geomanistlight' !important;
 	font-weight: lighter !important;
 	line-height: 1.2em !important;
-  font-size: 25px;
+  font-size: 20px;
 	color:white;
 	text-align: left;
 	letter-spacing: 2px;
@@ -655,7 +659,7 @@ a:link, a:visited, a:hover, a:active {
 #reach-us-heading2{
   font-weight: bold;
   font-size: 32px;
-  font-family: 'open sans';
+  font-family: 'geomanistlight' !important;
   padding-bottom: 5px;
 }
 

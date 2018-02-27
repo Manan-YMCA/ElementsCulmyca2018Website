@@ -642,6 +642,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 #reach-us-text-content{
+margin-top:3%;
   float: left;
   width: 45%;
 	font-family:'geomanistlight' !important;
@@ -655,6 +656,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 #reach-us-heading2{
+margin-top:6%;
   font-weight: bold;
   font-size: 32px;
   font-family: 'geomanistlight' !important;
@@ -724,29 +726,34 @@ a:link, a:visited, a:hover, a:active {
 
 
 /*team page*/
-.team_class.slide.img{
-height: 100px;
-width: 100px;
-
-}
-.slider {
-
-    margin: 0 auto;
+#team {
+	height: 100% !important;
 }
 
-.slider>div img{
+#team > div {
+	width: 100%;
+	height: 80%;
+	position: absolute;
+	padding: 4% 0% !important;
+}
+
+#team img {
 	border-radius: 50%;
-	border-style: solid;
-	border-width: 5px;
-	border-color: 5px;
-	margin: auto;
-	height: 100px;
-	width: 100px
+	width: 75%;
+	height: 75%;
 }
 
-.content {
-	margin: auto;
-	padding: 20px;
+.team-card {
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+	font-size: 24px !important;
+	display: inline-block;
+	margin: 2% !important;
+}
+
+.simplebar-scrollbar {
+	opacity: .7 !important
 }
 
 /*preloader*/

@@ -480,7 +480,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .reveal div {
-  vertical-align: top !important;
+  vertical-align: top;
 }
 
 .cat-section {

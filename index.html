@@ -466,7 +466,10 @@
     <br><br>
     <div class="cat-data-desc-head">Date - <span class="cat-data-tandd">00 March'18</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cat-data-desc-head">Time - <span class="cat-data-tandd cat-act-timing">00:00 AM</span></div>
 
-    <div class="cat-data-desc-head">Venue - <span class="cat-data-tandd cat-act-venue">Electrical Chowk</span></div><br><br>
+    <div class="cat-data-desc-head">Venue - <span class="cat-data-tandd cat-act-venue">Electrical Chowk</span></div><br>
+    <div class="cat-data-desc-head"><span class="cat-data-tandd cat-act-prizes">1500</span></div><br>
+    <div class="cat-data-desc-head"><span class="cat-data-tandd cat-act-coordinators"></span></div>
+
     <button class="register" onclick="register_open()" id="register-btn">Register</button>
   </div>
 </div>
@@ -536,7 +539,7 @@ $(function(){
             $("#cat-vividha").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">From '+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
             break;
           case "Ananya":
-            $("#cat-ananya").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">From '+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
+            $("#cat-ananya").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">From '+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div><div class="hid-data" id="prizes'+msg.data[i]._id+'">Prizes - ' +msg.data[i].prizes.prize1+" " +msg.data[i].prizes.prize2+" "+msg.data[i].prizes.prize3+'</div><div class="hid-data" id="coordinators'+msg.data[i]._id+'">Coordinators '+msg.data[i].coordinators[0].name+msg.data[i].coordinators[0].phone+" "+msg.data[i].coordinators[1].name+msg.data[i].coordinators[1].phone+'</div></div>');
             break;
           case "Srijan":
             $("#cat-srijan").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">From '+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
@@ -739,11 +742,20 @@ function showevent(id) {
   var rules = $("#rules"+id).text();
   var venue = $("#venue"+id).text();
   var timing = $("#timing"+id).text();
+  var prizes = $("#prizes"+id).text();
+  var coordinators = $('#coordinators'+id).text();
+
+
+
+  //To convert datae
+
   $(".cat-act-desc").text(desc);
   $(".cat-act-title").text(title);
   $(".cat-act-rules").text(rules);
   $(".cat-act-venue").text(venue);
   $(".cat-act-timing").text(timing);
+  $(".cat-act-prizes").text(prizes);
+  $(".cat-act-coordinators").text(coordinators);
   $("#register-btn").attr('onclick', "register_open('"+id+"')");
   $(".cat-right").css({
     'transform': 'translateY(-50%) scale(.9)',

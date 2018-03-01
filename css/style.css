@@ -479,6 +479,10 @@ a:link, a:visited, a:hover, a:active {
 	cursor: pointer;
 }
 
+.reveal div {
+  vertical-align: top;
+}
+
 .cat-section {
 	height: 100%;
 }

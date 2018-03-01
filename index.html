@@ -1,5 +1,4 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
   <title>Elements Culmyca 2018</title>
@@ -433,7 +432,6 @@
         By Train: Old Faridabad Railway Station : <span class="dist-right">5km</span> <br/>
         By Bus: Ballabgarh : <span class="dist-right">3km</span> <br/>
         By Metro: Escorts Mujesar : <span class="dist-right">0.2km</span>
-
       </div>
 
       <div id="googleMap"></div>
@@ -464,7 +462,7 @@
       Te eam saperet ornatus voluptaria, ei illum delenit mei. Officiis interpretaris per at. Eu discere scripserit vel, vim instructior definitiones no.
     </div>
     <br><br>
-    <div class="cat-data-desc-head">Date - <span class="cat-data-tandd">00 March'18</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cat-data-desc-head">Time - <span class="cat-data-tandd cat-act-timing">00:00 AM</span></div>
+    <div class="cat-data-desc-head"><span class="cat-data-tandd"></span></span><span class="cat-data-desc-head"><span class="cat-data-tandd cat-act-timing">00:00 AM</span></div>
 
     <div class="cat-data-desc-head">Venue - <span class="cat-data-tandd cat-act-venue">Electrical Chowk</span></div><br>
     <div class="cat-data-desc-head"><span class="cat-data-tandd cat-act-prizes">1500</span></div><br>
@@ -480,17 +478,13 @@
 <!--script for preloader-->
  <script type="text/javascript">
 var images = ["images/home.jpg","images/about/ac.jpg","images/about/wallpaper.jpg","images/about/ay.jpg","images/events/ananya.jpg","images/events/ehome.jpg","images/events/eklavya.jpg","images/events/IEEE.jpg","images/events/jhalak.jpg","images/events/manan.jpg","images/events/mechnext.jpg","images/events/microbird.jpg","images/events/natraja.jpg","images/events/SAE.jpg","images/events/samarpan.jpg","images/events/srijan.jpg","images/events/tarunnun.jpg","images/events/vivekanand.jpg","images/events/vividha.jpg","images/register/wallpaper.jpg","images/back.jpg","images/back.png","images/back2.jpg","images/bg.jpg","images/bg2.jpg","images/homeo.jpg"];
-
 $.preload(images);
-
 $.preload(images,{
   eachOnLoad: function(){
     //console.log("loaded");
   $('#preloader').hide();
   }
-
 });
-
 </script>
 
 
@@ -541,21 +535,17 @@ $(function(){
             $("#cat-vividha").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">From '+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
             break;
           case "Ananya":
-            $("#cat-ananya").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">From '+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div>'+
+            $("#cat-ananya").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div>'+
 
               ((msg.data[i].prizes.prize1==null || msg.data[i].prizes.prize2==null ||msg.data[i].prizes.prize3==null)?" "
-
-              :'<div class="hid-data" id="prizes'+msg.data[i]._id+'">Prize1 ' +msg.data[i].prizes.prize1 +" "+ 'Prize2 '+msg.data[i].prizes.prize2+" "+"Prize3 "+msg.data[i].prizes.prize3+'</div>')+ 
+              :'<div class="hid-data" id="prizes'+msg.data[i]._id+'">1st Prize Rs.' +msg.data[i].prizes.prize1 +" "+ '2nd Prize Rs.'+msg.data[i].prizes.prize2+" "+"3rd Prize Rs."+msg.data[i].prizes.prize3+'</div>')+ 
               
               ((msg.data[i].coordinators[idx].phone == 0)?" "
-
               :'<div class="hid-data" id="coordinators'+msg.data[i]._id+'">Coordinators '+msg.data[i].coordinators[0].name+" "+
               msg.data[i].coordinators[0].phone+" "+msg.data[i].coordinators[1].name+" "+msg.data[i].coordinators[1].phone+'</div>')
               +
                ((msg.data[i].coordinators[idx].name !=0 && msg.data[i].coordinators[idx1].phone == 0)?
-
               '<div class="hid-data" id="coordinators'+msg.data[i]._id+'">Coordinators '+msg.data[i].coordinators[0].name+" "+msg.data[i].coordinators[0].phone+'</div>':" ")
-
               +'</div>');
             break;
           case "Srijan":
@@ -761,20 +751,54 @@ function showevent(id) {
   var timing = $("#timing"+id).text();
   var prizes = $("#prizes"+id).text();
   var coordinators = $('#coordinators'+id).text();
+  var arrayOfTime = $("#timing"+id).text().split(' To ');
+  var months = ["January","Feburary","March","April","May","June","July","August","September","October","November","December"];
+  var d1 = new Date(arrayOfTime[0]*1000);
+  //Time 1
+var flag1 = "AM";
+var flag2 = "AM";
+  var hours = d1.getHours();
+  var minutes = "0"+d1.getMinutes();
+  var seconds = "0" + d1.getSeconds();
+  if(hours>12) {
+    hours = hours%12;
+    flag1 = "PM"
+
+  }
+  if(hours == 12){
+    flag1 = "PM"
+  }
+  var time1= hours + ':' + minutes.substr(-2) + flag1;
+  //Time 2
+   var d2 = new Date(arrayOfTime[1]*1000);
+  var hours1 = d2.getHours();
+  if(hours1>12) {
+    hours1 = hours1%12;
+    flag2 = "PM";
+  }
+  if(hours1 == 12) {
+    flag2 = "PM";
+  }
+  var minutes1 = "0"+d2.getMinutes();
+  var seconds1 = "0" + d2.getSeconds();
+  var time2 =hours1 + ':' + minutes1.substr(-2) + flag2;
 
 
+  var date = d1.getDate();
+  var day = d1.getDay();
+  var month = d1.getMonth();
+  var main = "Date - "+date+" "+months[month]+"'18"+" "+" Time- "+time1+" To "+time2;
 
   
 
+  
   $(".cat-act-desc").text(desc);
   $(".cat-act-title").text(title);
   $(".cat-act-rules").text(rules);
   $(".cat-act-venue").text(venue);
-  $(".cat-act-timing").text(timing);
+  $(".cat-act-timing").text(main);
   $(".cat-act-prizes").text(prizes);
-
   $(".cat-act-coordinators").text(coordinators);
-
   $("#register-btn").attr('onclick', "register_open('"+id+"')");
   $(".cat-right").css({
     'transform': 'translateY(-50%) scale(.9)',
@@ -819,13 +843,9 @@ function myMap() {
   var marker = new google.maps.Marker({position:myCenter});
   marker.setMap(map);
 }
-
-
 $(document).ready(function(event) {
-
 $(".slider").slick({
     dots: true,
-
 slidesToShow: 5,
 slidesToScroll: 1,
 cssEase: "ease",
@@ -837,7 +857,6 @@ autoplaySpeed: 3000,
       settings: {
         slidesToShow: 5,
         slidesToScroll: 1,
-
         dots: true,
         cssEase :"ease",
         autoplay:true,
@@ -852,17 +871,11 @@ autoplaySpeed: 3000,
          cssEase :"ease",
         autoplay:true,
         autoplaySpeed: 3000
-
       }
     }
     ]
 });
-
 });
-
-
-
-
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7rJmV_1a3RHlDEGThAFmyMIUdwOBVQJ8&callback=myMap"></script>
 </html>

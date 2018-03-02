@@ -61,6 +61,10 @@ a:link, a:visited, a:hover, a:active {
 	margin-left: 24px;
 }
 
+#open-menu {
+		display: none;
+	}
+
 .nav > li {
 	display: inline-block;
 	font-weight: bolder;
@@ -776,4 +780,70 @@ a:link, a:visited, a:hover, a:active {
 	background-repeat:no-repeat;
 	background-position:center;
 	margin:-100px 0 0 -100px;
+}
+
+
+
+/*Resonsive Start */
+
+@media screen and (max-width: 600px)
+{
+	.nav > li {
+		display: none;
+	}
+
+	.navbar-left {
+		margin-left: 0px;
+	}
+
+	#open-menu {
+		display: inline-block !important;
+	}
+
+	.fa.fa-camera-retro  {
+		border-radius: 50%;
+		border-width: 5px;
+		border-style: solid;
+		padding: 20px;
+		right: 14%;
+		top: 72%;
+		position: absolute;
+		color : #ec4a3b;
+	}
+
+	.fa.fa-code {
+		border-radius: 50%;
+		border-width: 5px;
+		border-style: solid;
+		padding: 20px;
+		left:10%;
+		top:10%;
+		position: absolute;
+		color : #ec4a3b;
+	}
+	.fa.fa-film{
+		border-radius: 50%;
+		border-width: 5px;
+		border-style: solid;
+		padding: 20px;
+		right:16%;
+		top:18%;
+		position: absolute;
+		color : #ec4a3b;
+	}
+
+	#timer {
+		color : #ec4a3b;
+		width: auto;
+		display: block;
+		text-align: center;
+		border : 5px solid #ec4a3b;
+		border-radius: 50%;
+		position: absolute;
+		left: -1%;
+		top: 60%;
+		transform: scale(.7) !important;
+		min-height: 220px;
+		min-width: 220px;
+	}
 }

@@ -64,7 +64,7 @@
     <section id="about" data-background-image='images/about/wallpaper.jpg'>
       <!-- about ymca -->
       <section class="aboutymca">
-        <img class="imageymca" src="images/about/ay.jpg" width="30%">
+        <img class="imageymca" src="images/about/ay.jpg">
         <p class="pymca">
           <span style="font-weight: lighter;font-size: 32px;font-family: 'open sans'">About YMCA</span>
           <br><br>The YMCA University of Science &amp; Technology, Faridabad erstwhile YMCA Institute Of Engineering, was established as a joint venture of the National Council of YMCAs of India, Govt of Haryana, and the Central Agencies for Development Aid, Bonn, Germany. It started as an Indo-German project with an aim to impart technical education to a developing India on German pattern. In December 2009 it was awarded the status of state university by the state government, thus making it an autonomous institution. YMCAUST has ben conferred “Best Upcoming University” award by Asociated Chamber of Commerce and Industry of India in Feb'14 under National Education Excellence Awards 2014. <br>
@@ -73,7 +73,7 @@
 
       <!--about culmyca -->
       <section class="aboutymca">
-        <img class="imageymca" src="images/about/ac.jpg" width="30%">
+        <img class="imageymca" src="images/about/ac.jpg">
         <p class="pymca"><span style="font-weight: lighter;font-size: 32px;font-family: 'open sans'">About Culmyca</span>
         <br><br>Elements Culmyca, the annual inter college cultech festival of YMCAUST has grown on to become one of the most popular college festivals of NCR.
          With 1000+ participating students, 40+ participating colleges and an expected footfall of over 10000, ELEMENTS CULMYCA'18 guarentees to be a sure hit.
@@ -500,6 +500,15 @@ $(function(){
       $(".layer1 > *").css('transition', 'transform ease-out .2s');
     },800)
   },500)
+
+
+//get string after hash
+  var afterhash= window.location.hash.substr(1);
+  console.log("type "+afterhash);
+
+
+      
+
   // Get the events
   $.ajax({
     url: 'https://elementsculmyca2018.herokuapp.com/api/v1/events/getevent/*/*',
@@ -652,6 +661,22 @@ $(function(){
         
         }
       }
+    //function to search event which is typed after #
+     function searchevents (afterhash, events) {
+    for (var j=0; j<events.length; j++) {
+        if (events[j].eventname.match(afterhash)) return events[j].index ;
+    
+    }
+    return -1;
+}
+     if(afterhash.length!=0)
+     {
+     var indexx=searchevents (afterhash, events); 
+     console.log("indexxx after hash "+indexx);
+     if(indexx!=-1)
+     {
+     Reveal.slide( 2, indexx);
+      }}
       //for events with index in console
        for (var i = events.length - 1; i >= 0; i--) {
               console.log("EventName: " + events[i].eventname + " Index: " + events[i].index);
@@ -804,10 +829,19 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
   } else {
     $(".navigate-up").off('click');
     setTimeout(function(){
-      $('#eclogo').css({
+      if ($(window).width() < 600)
+      {
+        $('#eclogo').css({
+          'top' : '5%',
+          'transform': 'translate(-50%,-50%) scale(.4)'
+        });
+      } else {
+        $('#eclogo').css({
         'top' : '10%',
         'transform': 'translate(-50%,-50%) scale(.4)'
       });
+      }
+      
     },500)
     $("body").off('mousemove');
     // The parallax

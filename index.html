@@ -432,7 +432,7 @@
 
       <div id="googleMap"></div>
     </section>
-    <section id="sponsors" data-background-image='images/sponsor1.jpg'>
+    <section id="sponsors" data-background-image='images/background.jpg'>
       <p style="margin: auto;color:white">If you want to work with us click here</p>
     </section>
  </div>
@@ -461,7 +461,7 @@
     <div class="cat-data-desc-head"><span class="cat-data-tandd"></span></span><span class="cat-data-desc-head"><span class="cat-data-tandd cat-act-timing">00:00 AM</span></div>
 
     <div class="cat-data-desc-head">Venue - <span class="cat-data-tandd cat-act-venue">Electrical Chowk</span></div><br>
-    <div class="cat-data-desc-head"><span class="cat-data-tandd cat-act-prizes">1500</span></div><br>
+    <div class="cat-data-desc-head"><span class="cat-data-tandd cat-act-prizes"></span></div><br>
     <div class="cat-data-desc-head"><span class="cat-data-tandd cat-act-coordinators"></span></div>
 
     <button class="register" onclick="register_open()" id="register-btn">Register</button>
@@ -507,6 +507,7 @@ $(function(){
   })
   .done(function(msg) {
     msg = JSON.parse(msg);
+    console.log(msg);
     var i;
     var events = [];
     var idx = 0;
@@ -517,7 +518,7 @@ $(function(){
         $("#events-list").append('<option value="'+msg.data[i]._id+'"">'+msg.data[i].title+'</option>')
         switch (msg.data[i].clubname) {
           case "Manan":
-            $("#cat-manan").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">From '+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
+            $("#cat-manan").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
                 events.push({
                   "eventname": msg.data[i].title,
                   "index": 3  
@@ -525,7 +526,7 @@ $(function(){
             break;
           
           case "Microbird":
-            $("#cat-microbird").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">From '+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
+            $("#cat-microbird").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
                 events.push({
                   "eventname": msg.data[i].title,
                   "index": 14
@@ -533,7 +534,7 @@ $(function(){
               break;
           
           case "Mechnext":
-           $("#cat-mechnext").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">From '+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
+           $("#cat-mechnext").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
                 events.push({
                   "eventname": msg.data[i].title,
                   "index": 1
@@ -541,7 +542,7 @@ $(function(){
             break;
           
           case "Samarpan":
-           $("#cat-samarpan").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">From '+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
+           $("#cat-samarpan").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
               events.push({
                 "eventname": msg.data[i].title,
                 "index": 10
@@ -549,7 +550,7 @@ $(function(){
               break;
           
           case "Vividha":
-           $("#cat-vividha").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">From '+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
+           $("#cat-vividha").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc.slice(0,102)+" ..."+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
               events.push({
                 "eventname": msg.data[i].title,
                 "index": 5
@@ -557,18 +558,20 @@ $(function(){
             break;
           
           case "Ananya":
-           $("#cat-ananya").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div>')/*+
+           $("#cat-ananya").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div>')+
 
-              ((msg.data[i].prizes.prize1==null || msg.data[i].prizes.prize2==null ||msg.data[i].prizes.prize3==null)?" "
-              :'<div class="hid-data" id="prizes'+msg.data[i]._id+'">1st Prize Rs.' +msg.data[i].prizes.prize1 +" "+ '2nd Prize Rs.'+msg.data[i].prizes.prize2+" "+"3rd Prize Rs."+msg.data[i].prizes.prize3+'</div>')+ 
+             
+              /*'<div class="hid-data" id="prizes'+msg.data[i]._id+'">'+" "+msg.data[i].prizes.prize1+'</div>' */
               
-              ((msg.data[i].coordinators[idx].phone == 0)?" "
+             /* ((msg.data[i].coordinators[idx].phone == 0)?" "
               :'<div class="hid-data" id="coordinators'+msg.data[i]._id+'">Coordinators '+msg.data[i].coordinators[0].name+" "+
               msg.data[i].coordinators[0].phone+" "+msg.data[i].coordinators[1].name+" "+msg.data[i].coordinators[1].phone+'</div>')
               +
                ((msg.data[i].coordinators[idx].name !=0 && msg.data[i].coordinators[idx1].phone == 0)?
               '<div class="hid-data" id="coordinators'+msg.data[i]._id+'">Coordinators '+msg.data[i].coordinators[0].name+" "+msg.data[i].coordinators[0].phone+'</div>':" ")
-              +'</div>');*/
+
+              +'</div>';*/
+
               events.push({
                 "eventname": msg.data[i].title,
                 "index": 11
@@ -577,7 +580,7 @@ $(function(){
             break;
           
           case "Srijan":
-            $("#cat-srijan").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">From '+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
+            $("#cat-srijan").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
               events.push({
                 "eventname": msg.data[i].title,
                 "index": 2
@@ -585,7 +588,7 @@ $(function(){
           
             break;
           case "Taranuum":
-            $("#cat-tarannum").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">From '+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
+            $("#cat-tarannum").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
               events.push({
                 "eventname": msg.data[i].title,
                 "index": 7
@@ -593,17 +596,17 @@ $(function(){
             break;
           
           case "Nataraja":
-            $("#cat-natraja").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">From '+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');        
+            $("#cat-natraja").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');        
               events.push({
                 "eventname": msg.data[i].title,
                 "index": 4
               });
             break;
           case "NSS":
-            $("#cat-manan").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">From '+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
+            $("#cat-manan").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
             break;
           case "Eklavya":
-            $("#cat-eklavya").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">From '+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
+            $("#cat-eklavya").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
               events.push({
                 "eventname": msg.data[i].title,
                 "index": 12
@@ -611,7 +614,7 @@ $(function(){
             break;
           
           case "IEEE":
-            $("#cat-ieee").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">From '+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
+            $("#cat-ieee").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
               events.push({
                 "eventname": msg.data[i].title,
                 "index": 9
@@ -619,7 +622,7 @@ $(function(){
                 
             break;
           case "Vivekanand Manch":
-           $("#cat-vivekanand").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">From '+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
+           $("#cat-vivekanand").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
               events.push({
                 "eventname": msg.data[i].title,
                 "index": 6
@@ -628,14 +631,14 @@ $(function(){
             break;
           
           case "SAE/BAJA":
-            $("#cat-sae").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">From '+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
+            $("#cat-sae").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
               events.push({
                 "eventname": msg.data[i].title,
                 "index": 13
               });
             break;
           case "Jhalak":
-           $("#cat-jhalak").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">From '+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
+           $("#cat-jhalak").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
               events.push({
                 "eventname": msg.data[i].title,
                 "index": 8
@@ -643,7 +646,7 @@ $(function(){
             break;
           
           case "Brixx":
-           $("#cat-manan").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">From '+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
+           $("#cat-manan").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+msg.data[i].desc+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div></div>');
 
             break;
         
@@ -837,12 +840,14 @@ function showevent(id) {
   var arrayOfTime = $("#timing"+id).text().split(' To ');
   var months = ["January","Feburary","March","April","May","June","July","August","September","October","November","December"];
   var d1 = new Date(arrayOfTime[0]*1000);
+  console.log(d1.toLocaleString());
+  
   //Time 1
-var flag1 = "AM";
-var flag2 = "AM";
+  var flag1 = "AM";
+  var flag2 = "AM";
   var hours = d1.getHours();
   var minutes = "0"+d1.getMinutes();
-  var seconds = "0" + d1.getSeconds();
+  minutes = minutes + 30;
   if(hours>12) {
     hours = hours%12;
     flag1 = "PM"
@@ -851,10 +856,12 @@ var flag2 = "AM";
   if(hours == 12){
     flag1 = "PM"
   }
-  var time1= hours + ':' + minutes.substr(-2) + flag1;
+  var time1= (hours) + ':' + minutes.substr(-2) + flag1;
   //Time 2
    var d2 = new Date(arrayOfTime[1]*1000);
+   console.log(d2.toLocaleString());
   var hours1 = d2.getHours();
+    minutes1 = Math.abs(minutes1 - 30).toString();
   if(hours1>12) {
     hours1 = hours1%12;
     flag2 = "PM";
@@ -863,24 +870,20 @@ var flag2 = "AM";
     flag2 = "PM";
   }
   var minutes1 = "0"+d2.getMinutes();
-  var seconds1 = "0" + d2.getSeconds();
-  var time2 =hours1 + ':' + minutes1.substr(-2) + flag2;
+  var time2 = (hours1) + ':' + minutes1.substr(-2) + flag2;
 
 
-  var date = d1.getDate();
-  var day = d1.getDay();
-  var month = d1.getMonth();
+  var date = d2.getDate();
+  var day = d2.getDay();
+  var month = d2.getMonth();
   var main = "Date - "+date+" "+months[month]+"'18"+" "+" Time- "+time1+" To "+time2;
-
-  
-
   
   $(".cat-act-desc").text(desc);
   $(".cat-act-title").text(title);
   $(".cat-act-rules").text(rules);
   $(".cat-act-venue").text(venue);
   $(".cat-act-timing").text(main);
-  $(".cat-act-prizes").text(prizes);
+  //$(".cat-act-prizes").text(prizes);
   $(".cat-act-coordinators").text(coordinators);
   $("#register-btn").attr('onclick', "register_open('"+id+"')");
   $(".cat-right").css({

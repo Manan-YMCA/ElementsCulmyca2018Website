@@ -442,6 +442,10 @@ a:link, a:visited, a:hover, a:active {
 {
 	white-space:pre-wrap;
 }
+.cat-data-desc 
+{
+	white-space:pre-wrap;
+}
 
 .circle-cat {
 	border-radius: 50%;

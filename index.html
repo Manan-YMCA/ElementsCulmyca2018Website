@@ -662,25 +662,38 @@ $(function(){
         }
       }
     //function to search event which is typed after #
-     function searchevents (afterhash, events) {
-    for (var j=0; j<events.length; j++) {
-        if (events[j].eventname.match(afterhash)) return events[j].index ;
-    
+    function searchevents (afterhash, events) {
+      for (var j=0; j<events.length; j++) {
+              if (events[j].eventname.match(afterhash)) return events[j].index ;
+          }
+          return -1;
     }
-    return -1;
-}
-     if(afterhash.length!=0)
-     {
-     var indexx=searchevents (afterhash, events); 
-     console.log("indexxx after hash "+indexx);
-     if(indexx!=-1)
-     {
-     Reveal.slide( 2, indexx);
-      }}
-      //for events with index in console
-       for (var i = events.length - 1; i >= 0; i--) {
+    if(afterhash.length!=0)
+    {
+       var indexx=searchevents (afterhash, events); 
+       console.log("indexxx after hash "+indexx);
+       if(indexx!=-1)
+       {
+          Reveal.slide( 2, indexx);
+          if ($(window).width() < 600)
+          {
+            $('#eclogo').css({
+              'top' : '7.5%',
+              'transform': 'translate(-50%,-50%) scale(.4)'
+            });
+          } else {
+            $('#eclogo').css({
+              'top' : '10%',
+              'transform': 'translate(-50%,-50%) scale(.4)'
+            });
+          }
+       }
+    }
+    //for events with index in console
+    for (var i = events.length - 1; i >= 0; i--) 
+        {
               console.log("EventName: " + events[i].eventname + " Index: " + events[i].index);
-            }
+        }
 
 
     $(".cat-right, .wosh-data").attr('data-simplebar', '');
@@ -837,9 +850,9 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
         });
       } else {
         $('#eclogo').css({
-        'top' : '10%',
-        'transform': 'translate(-50%,-50%) scale(.4)'
-      });
+          'top' : '10%',
+          'transform': 'translate(-50%,-50%) scale(.4)'
+        });
       }
       
     },500)

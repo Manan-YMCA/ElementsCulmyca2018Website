@@ -857,8 +857,9 @@ a:link, a:visited, a:hover, a:active {
 	}
 
 	.imageymca {
-		width: 90%;
-		margin: 16% 0% 10% 0% !important;
+		width: 60%;
+		margin: 0% 0% 6% 44% !important;
+		transform: translateX(-50%);
 	}
 
 	.pymca {
@@ -867,6 +868,11 @@ a:link, a:visited, a:hover, a:active {
 		text-align: center;
 		height: 300px;
 		overflow-y: auto;
+		font-size: 14px !important;
+	}
+
+	.pymca > span {
+		font-size: 26px !important;
 	}
 
 	.footer {
@@ -987,4 +993,37 @@ a:link, a:visited, a:hover, a:active {
 		display: block;
 		margin-top: 8px !important
 	}
+
+	.circle-cat {
+		left: 10%;
+		width: 30%;
+	}
+
+	.cat-card {
+		transform: scale(.8);
+		transform-origin: top;
+	}
+
+	.e-wosh-close {
+		left: 10%;
+		top: 6%
+	}
+
+	.cat-data-desc {
+		font-size: 14px;
+	}
+
+	.cat-data-head {
+		font-size: 26px;
+	}
+
+	.cat-data-desc-head{
+		font-size: 24px;
+	}
+
+	.register {
+		font-size: 20px;
+	}
+
+
 }

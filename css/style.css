@@ -865,5 +865,12 @@ a:link, a:visited, a:hover, a:active {
 		width: 90%;
 		padding-left: initial !important;
 		text-align: center;
+		height: 300px;
+		overflow-y: auto;
+	}
+
+	.footer {
+		top: 5px;
+		bottom: initial;
 	}
 }

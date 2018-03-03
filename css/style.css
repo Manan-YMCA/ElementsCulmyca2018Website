@@ -176,6 +176,7 @@ a:link, a:visited, a:hover, a:active {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
+  width: 30%;
 }
 
 .aboutymca {
@@ -845,5 +846,16 @@ a:link, a:visited, a:hover, a:active {
 		transform: scale(.7) !important;
 		min-height: 220px;
 		min-width: 220px;
+	}
+
+	.imageymca {
+		width: 90%;
+		margin: 16% 0% 10% 0% !important;
+	}
+
+	.pymca {
+		width: 90%;
+		padding-left: initial !important;
+		text-align: center;
 	}
 }

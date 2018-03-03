@@ -858,7 +858,7 @@ a:link, a:visited, a:hover, a:active {
 
 	.imageymca {
 		width: 60%;
-		margin: 6% 0% 6% 44% !important;
+		margin: 8% 0% 6% 44% !important;
 		transform: translateX(-50%);
 	}
 
@@ -989,7 +989,7 @@ a:link, a:visited, a:hover, a:active {
 	}
 
 	.intext {
-		opacity: 1;
+		opacity: 1 !important;
 		display: block;
 		margin-top: 8px !important
 	}
@@ -1002,6 +1002,7 @@ a:link, a:visited, a:hover, a:active {
 	.cat-card {
 		transform: scale(.8);
 		transform-origin: top;
+		margin: 2% 2% -10% 2% !important;
 	}
 
 	.e-wosh-close {

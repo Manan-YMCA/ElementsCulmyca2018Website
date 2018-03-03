@@ -436,6 +436,13 @@ a:link, a:visited, a:hover, a:active {
 }
 
 /* The event categories */
+/*css for break issue*/
+
+ .cat-act-rules
+{
+	white-space:pre-wrap;
+}
+
 .circle-cat {
 	border-radius: 50%;
 	width: 15%;
@@ -507,6 +514,7 @@ a:link, a:visited, a:hover, a:active {
 	transform: scale(1.1);
 	background-color: rgba(20,20,20,.4);
 	transition: transform ease-out .5s, opacity ease-out .35s;
+	padding-right: 2%;
 }
 
 .e-wosh-close {
@@ -526,10 +534,10 @@ a:link, a:visited, a:hover, a:active {
 	color: white;
 	font-size: 20px;
 	right: 0px;
-	padding-right: 2%;
 	top: 15%;
-	position: absolute;
+	position: absolute !important;
 	width: 80%;
+	height: 75%;
 	transition: all ease-out .5s !important;
 }
 
@@ -849,13 +857,174 @@ a:link, a:visited, a:hover, a:active {
 	}
 
 	.imageymca {
-		width: 90%;
-		margin: 16% 0% 10% 0% !important;
+		width: 60%;
+		margin: 8% 0% 6% 44% !important;
+		transform: translateX(-50%);
 	}
 
 	.pymca {
 		width: 90%;
 		padding-left: initial !important;
 		text-align: center;
+		height: 300px;
+		overflow-y: auto;
+		font-size: 14px !important;
 	}
+
+	.pymca > span {
+		font-size: 26px !important;
+	}
+
+	.footer {
+		top: 5px;
+		bottom: initial;
+	}
+
+	#eclogo {
+		width: 50%
+	}
+
+	/* The events solar system */
+	.circle {
+		display: none;
+	}
+
+	.arcs {
+		transform: scale(.75);
+	}
+
+	/* Events circle */
+
+	/* Arc 3 Circles*/
+	.arcfirst1 {
+	  top:initial;
+	  bottom:12%;
+	  left: 10%;
+	}
+
+	.arcfirst2 {
+	  top:initial;
+	  bottom: 10%;
+	  left: 35%;
+	}
+
+	.arcfirst3 {
+	  top:initial;
+	  bottom: 12%;
+	  left: 60%;
+	}
+
+	.arc21 {
+	  top:initial;
+	  bottom: 32%;
+	  left: 6%;
+	}
+	.arc22 {
+	  top:initial;
+	  bottom:30%;
+	  left: 35%;
+
+	}
+	.arc23 {
+	  top:initial;
+	  bottom: 32%;
+	  left: 64%;
+	}
+	.arc24 {
+	  top:initial;
+	  bottom: 80%;
+	  left: 68%;
+	}
+
+	.arc4one
+	{
+		top:initial;
+		bottom:72%;
+		left:-1%;
+	}
+
+	.arc4two
+	{
+		top:initial;
+		bottom:70%;
+		left:23%;
+	}
+
+	.arc4three
+	{
+		top:initial;
+		bottom:70%;
+		left:48%;
+	}
+
+	.arc4four
+	{
+		top:initial;
+		bottom:72%;
+		left:72%;
+	}
+
+
+	/*Arc 2 circles8*/
+	.arcthree1 {
+		top:initial;
+		bottom: 52%;
+		left:-1%;
+	}
+	.arcthree2 {
+		top:initial;
+		bottom: 50%;
+		left:23%;
+	}
+	.arcthree3 {
+		top:initial;
+		bottom: 50%;
+		left:48%;
+	}
+
+	.arcthree4 {
+		top:initial;
+		bottom: 52%;
+		left:72%;
+	}
+
+	.intext {
+		opacity: 1 !important;
+		display: block;
+		margin-top: 8px !important
+	}
+
+	.circle-cat {
+		left: 10%;
+		width: 30%;
+	}
+
+	.cat-card {
+		transform: scale(.8);
+		transform-origin: top;
+		margin: 2% 2% -10% 2% !important;
+	}
+
+	.e-wosh-close {
+		left: 10%;
+		top: 6%
+	}
+
+	.cat-data-desc {
+		font-size: 14px;
+	}
+
+	.cat-data-head {
+		font-size: 26px;
+	}
+
+	.cat-data-desc-head{
+		font-size: 24px;
+	}
+
+	.register {
+		font-size: 20px;
+	}
+
+
 }

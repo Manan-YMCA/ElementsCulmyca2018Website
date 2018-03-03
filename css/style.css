@@ -436,6 +436,13 @@ a:link, a:visited, a:hover, a:active {
 }
 
 /* The event categories */
+/*css for break issue*/
+
+ .cat-act-rules
+{
+	white-space:pre-wrap;
+}
+
 .circle-cat {
 	border-radius: 50%;
 	width: 15%;

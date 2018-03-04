@@ -566,21 +566,12 @@ a:link, a:visited, a:hover, a:active {
 .cat-data-tandd {
 	font-size: 26px
 }
-<<<<<<< HEAD
 .registerbutton { font-size:26px;
-=======
-
-
-.register{
-  display: inline-block;
-  position: relative;
-  color: white;
-  font-size: 26px;
->>>>>>> a387243664f3233439cc34ea3928a81aa77637d0
 	padding: 4px 40px;
 	border: 2px solid white;
 	background-color:transparent;
  	border-radius: 40px;
+ 	display:inline-block;
 }
 
 .e-wosh * {

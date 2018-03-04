@@ -568,14 +568,67 @@ a:link, a:visited, a:hover, a:active {
 }
 
 
-.register {
-	border: 2px solid white;
-	border-radius: 40px;
-	font-size: 26px;
+.register{
+  display: inline-block;
+  position: relative;
+  color: purple;
+  font-size: 26px;
 	padding: 4px 40px;
-	background-color: transparent;
-	cursor: pointer;
+  cursor: pointer;
+  margin: 20px 30px;
+  background: transparent;
+ 
+  
 }
+.s{
+  display: block;
+  padding: 25px 80px;
+}
+.register::before, .register::after{
+  content:"";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: white;
+}
+
+.s::before, .s::after{
+  content:"";
+  width:3px;
+  height:0;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: white;
+}
+.register:hover::before, .register:hover::after{
+  width: 100%;
+}
+.register:hover .s::before, .register:hover .s::after{
+  height: 100%;
+}
+
+.register::after{
+  right:0;
+  bottom: 0;
+  transition-duration: 0.4s;
+}
+.register .s::after{
+  right:0;
+  bottom: 0;
+  transition-duration: 0.4s;
+}
+.register::before{
+  left: 0;
+  top: 0;
+  transition-duration: 0.4s;
+}
+.register .s::before{
+  left: 0;
+  top: 0;
+  transition-duration: 0.4s;
+}
+
 
 .e-wosh * {
 	opacity: 0;
@@ -686,59 +739,7 @@ a:link, a:visited, a:hover, a:active {
   height: 330px;
 }
 
-/*Animations*/
 
-
-
-/*about images*/
-
-
-/*cat-card*/
-
-@-webkit-keyframes cat-cardpop {
-  50% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-}
-
-@keyframes cat-cardpop {
-  50% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-
-}
-
-
-
-
-/*register button*/
-
-
-@-webkit-keyframes buttonpulse {
-  25% {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-
-  75% {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-}
-
-@keyframes buttonpulse {
-  25% {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-
-  75% {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-}
 
 
 /*team page*/
@@ -767,6 +768,36 @@ a:link, a:visited, a:hover, a:active {
 	display: inline-block;
 	margin: 2% !important;
 }
+
+.backstage{
+	font-size:37px !important;
+font-family:geomanist !important;
+
+   padding: 6px !important;
+    margin:20px !important;
+    border:5px solid white !important;
+    color: white !important;
+    display:inline-block !important;  
+}
+
+
+.backstageborder{
+
+    width: 100%;
+    padding:10px;
+
+ }
+
+.team-card-deptt {
+	width: 170px;
+	height: 170px;
+	overflow: visible;
+	font-size: 18px !important;
+	display: inline-block;
+	margin: 3% !important;
+}
+
+
 
 .simplebar-scrollbar {
 	opacity: .7 !important

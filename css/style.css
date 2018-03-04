@@ -571,7 +571,7 @@ a:link, a:visited, a:hover, a:active {
 .register{
   display: inline-block;
   position: relative;
-  color: purple;
+  color: white;
   font-size: 26px;
 	padding: 4px 40px;
   cursor: pointer;
@@ -850,7 +850,7 @@ font-family:geomanist !important;
 		border-style: solid;
 		padding: 20px;
 		right: 14%;
-		top: 72%;
+		top: 70%;
 		position: absolute;
 		color : #ec4a3b;
 	}
@@ -885,7 +885,7 @@ font-family:geomanist !important;
 		border-radius: 50%;
 		position: absolute;
 		left: -1%;
-		top: 60%;
+		top: 54%;
 		transform: scale(.7) !important;
 		min-height: 220px;
 		min-width: 220px;
@@ -1037,7 +1037,7 @@ font-family:geomanist !important;
 	.cat-card {
 		transform: scale(.8);
 		transform-origin: top;
-		margin: 2% 2% -10% 2% !important;
+		margin: 2% 2% -5% 2% !important;
 	}
 
 	.e-wosh-close {

@@ -840,11 +840,10 @@ a:link, a:visited, a:hover, a:active {
 
 .backstage{
 	font-size:37px !important;
-font-family:geomanist !important;
-
-   padding: 6px !important;
+	font-family:geomanistregular !important;
+   	padding: 6px !important;
     margin:20px !important;
-    border:5px solid white !important;
+    border-bottom:2px solid white !important;
     color: white !important;
     display:inline-block !important;  
 }

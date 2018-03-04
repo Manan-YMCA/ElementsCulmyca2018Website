@@ -952,11 +952,14 @@ a:link, a:visited, a:hover, a:active {
 		border : 5px solid #ec4a3b;
 		border-radius: 50%;
 		position: absolute;
-		left: -1%;
+		left: 2%;
 		top: 54%;
-		transform: scale(.7) !important;
-		min-height: 220px;
-		min-width: 220px;
+		min-height: 160px;
+		min-width: 160px;
+	}
+
+	#pg {
+		font-size: 16px
 	}
 
 	.imageymca {

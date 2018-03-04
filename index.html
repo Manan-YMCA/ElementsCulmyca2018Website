@@ -823,7 +823,23 @@ $(function(){
 var count = 0;
 if ($(window).width() < 600)
 {
-
+  if (window.DeviceOrientationEvent) 
+    {
+      window.addEventListener("deviceorientation", function(event) 
+      {
+        var top  = $(window).scrollTop();
+        var xValue = Math.round(event.alpha);
+        var yValue = Math.round(event.beta);
+        var parX = xValue/5;  
+        var parY = yValue/2 - 45;
+        $("#eclogo").css({
+          'transform': 'translate('+(-(parX*2 + 50))+'%,'+(-(parY*2 + 50)) +'%)'
+        });
+        $(".layer1 > *").css({
+          'transform': 'translate('+(-(parX*2))+'%,'+(-(parY*2))+'%)'
+        });
+      })
+    }
 } else {
   $("body").mousemove(function( event ) {
     if(count%3 != 0)

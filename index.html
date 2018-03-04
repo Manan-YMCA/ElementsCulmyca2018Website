@@ -828,11 +828,11 @@ if ($(window).width() < 600)
       window.addEventListener("deviceorientation", function(event) 
       {
         var top  = $(window).scrollTop();
-        var xValue = Math.round(event.alpha);
+        var xValue = Math.round(event.gamma);
         var yValue = Math.round(event.beta);
         var parX = xValue/5;  
         var parY = yValue/2 - 45;
-        $("#pg").text(parX + " " + parY)
+        $("#open-menu").text(parX + " " + parY)
         $("#eclogo").css({
           'transform': 'translate('+(-(parX*2 + 50))+'%,'+(-(parY*2 + 50)) +'%)'
         });

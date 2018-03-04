@@ -832,6 +832,7 @@ if ($(window).width() < 600)
         var yValue = Math.round(event.beta);
         var parX = xValue/5;  
         var parY = yValue/2 - 45;
+        $("#pg").text(parX + " " + parY)
         $("#eclogo").css({
           'transform': 'translate('+(-(parX*2 + 50))+'%,'+(-(parY*2 + 50)) +'%)'
         });

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>Elements Culmyca 2018</title>
@@ -533,6 +533,31 @@ $.preload(images,{
 
 
 <script>
+function deviceOrientation(event) {
+  if(count%3 != 0)
+    {
+      count++;
+      return 0;
+    }
+    count++;
+    var top  = $(window).scrollTop();
+    var xValue = Math.round(event.gamma);
+    var yValue = Math.round(event.beta);
+    var parX = xValue/5;  
+    var parY = yValue/2 - 15;
+    if (parY > 30) {
+        parY = 30;
+      } else if (parY < -30) {
+        parY = -30;
+      }
+    $("#eclogo").css({
+      'transform': 'translate('+(-(parX*2.5 + 50))+'%,'+(-(parY*2 + 50)) +'%)'
+    });
+    $(".layer1 > *").css({
+      'transform': 'translate('+(-(parX*2))+'%,'+(-(parY*2))+'%)'
+    });
+}
+
 $(function(){
   setTimeout(function(){
     $(".layer1 > *").each(function(i, el) {
@@ -825,31 +850,7 @@ if ($(window).width() < 600)
 {
   if (window.DeviceOrientationEvent) 
     {
-      window.addEventListener("deviceorientation", function(event) 
-      {
-        if(count%3 != 0)
-        {
-          count++;
-          return 0;
-        }
-        count++;
-        var top  = $(window).scrollTop();
-        var xValue = Math.round(event.gamma);
-        var yValue = Math.round(event.beta);
-        var parX = xValue/5;  
-        var parY = yValue/2 - 15;
-        if (parY > 30) {
-            parY = 30;
-          } else if (parY < -30) {
-            parY = -30;
-          }
-        $("#eclogo").css({
-          'transform': 'translate('+(-(parX*2.5 + 50))+'%,'+(-(parY*2 + 50)) +'%)'
-        });
-        $(".layer1 > *").css({
-          'transform': 'translate('+(-(parX*2))+'%,'+(-(parY*2))+'%)'
-        });
-      })
+      window.addEventListener("deviceorientation", deviceOrientation)
     }
 } else {
   $("body").mousemove(function( event ) {
@@ -923,39 +924,15 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
       } else 
       {
         var count = 0;
-        window.removeEventListener("deviceorientation");
+        window.removeEventListener('deviceorientation', deviceOrientation);
         if (window.DeviceOrientationEvent) 
         {
-          window.addEventListener("deviceorientation", function(event) 
-          {
-            if(count%3 != 0)
-            {
-              count++;
-              return 0;
-            }
-            count++;
-            var top  = $(window).scrollTop();
-            var xValue = Math.round(event.gamma);
-            var yValue = Math.round(event.beta);
-            var parX = xValue/5;  
-            var parY = yValue/2 - 15;
-            if (parY > 30) {
-                parY = 30;
-              } else if (parY < -30) {
-                parY = -30;
-              }
-            $("#eclogo").css({
-              'transform': 'translate('+(-(parX*2.5 + 50))+'%,'+(-(parY*2 + 50)) +'%)'
-            });
-            $(".layer1 > *").css({
-              'transform': 'translate('+(-(parX*2))+'%,'+(-(parY*2))+'%)'
-            });
-          })
+          window.addEventListener("deviceorientation", deviceOrientation)
         }
       }
   } else if (hors == 2) {
     $("body").off('mousemove');
-    window.removeEventListener("deviceorientation");
+    window.removeEventListener('deviceorientation', deviceOrientation);
     // The parallax
       var count = 0;
       $("body").mousemove(function( event ) {
@@ -1012,6 +989,7 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
       }
     });
   } else {
+    window.removeEventListener('deviceorientation', deviceOrientation);
     $(".navigate-up").off('click');
     setTimeout(function(){
       if ($(window).width() < 600)
@@ -1029,7 +1007,6 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
       
     },500)
     $("body").off('mousemove');
-    window.removeEventListener("deviceorientation");
     // The parallax
       var count = 0;
       $("body").mousemove(function( event ) {
@@ -1166,6 +1143,7 @@ autoplaySpeed: 3000,
     ]
 });
 });
+
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7rJmV_1a3RHlDEGThAFmyMIUdwOBVQJ8&callback=myMap"></script>

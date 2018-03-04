@@ -459,22 +459,20 @@
         &amp; Recognized by UGC Act 1956 u/s 22 to Confer Degrees]</h3>
       </div>
 
+      <div id="googleMap"></div>
       <div id="reach-us-text-content">
         NH-2, Sector 6, Mathura Road, <br/>
         Near Escorts Mujesar Metro Station, <br/>
         Faridabad, Haryana - 121006 <br/><br/>
 
         Email: culmycaelements@gmail.com <br/>
-        <br/>
-        <h4 id="reach-us-heading2">How To Reach Us:</h4>
-        <br/>
-        By Air: Indira Gandhi International Airport : <span class="dist-right">45km</span> <br/>
-        By Train: Old Faridabad Railway Station : <span class="dist-right">5km</span> <br/>
-        By Bus: Ballabgarh : <span class="dist-right">3km</span> <br/>
-        By Metro: Escorts Mujesar : <span class="dist-right">0.2km</span>
-      </div>
 
-      <div id="googleMap"></div>
+        <h4 id="reach-us-heading2">How To Reach Us:</h4>
+        By Air: Indira Gandhi International Airport : 45km <br/>
+        By Train: Old Faridabad Railway Station : 5km <br/>
+        By Bus: Ballabgarh : 3km <br/>
+        By Metro: Escorts Mujesar : 0.2km <br/><br/><br/>
+      </div>
     </section>
     <section id="sponsors" data-background-image='images/background.jpg'>
       <p style="margin: auto;color:white">If you want to work with us click here</p>
@@ -543,7 +541,7 @@ function deviceOrientation(event) {
     var top  = $(window).scrollTop();
     var xValue = Math.round(event.gamma);
     var yValue = Math.round(event.beta);
-    var parX = xValue/5;  
+    var parX = xValue/5;
     var parY = yValue/2 - 15;
     if (parY > 30) {
         parY = 30;
@@ -580,7 +578,7 @@ $(function(){
   console.log("type "+afterhash);
 
 
-      
+
 
   // Get the events
   $.ajax({
@@ -609,17 +607,17 @@ $(function(){
                '</div>');
                 events.push({
                   "eventname": msg.data[i].title,
-                  "index": 3  
+                  "index": 3
                 });
             break;
-          
+
           case "Microbird":
             $("#cat-microbird").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+
               '<div  id="mytitle'+msg.data[i]._id+'">"'+
-              
+
               msg.data[i].desc.substr(0,Math.min(msg.data[i].desc.length,200))+
 
-                
+
 
               '</div>'+
 
@@ -632,7 +630,7 @@ $(function(){
                   "index": 14
                 });
               break;
-          
+
           case "Mechnext":
            $("#cat-mechnext").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+'<div  id="mytitle'+msg.data[i]._id+'">"'+msg.data[i].desc.substr(0,Math.min(msg.data[i].desc.length,150))+((msg.data[i].desc.length > 150)?" ...":" ")+'</div>'+'<div id="mytitle1'+msg.data[i]._id+'"></div>'+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div>'+
              '<div class="hid-data" id="coordinators'+msg.data[i]._id+'">'+msg.data[i].coordinators[0].name+" "+msg.data[i].coordinators[0].phone+" "+msg.data[i].coordinators[1].name+" "+msg.data[i].coordinators[1].phone+'</div>'+
@@ -642,7 +640,7 @@ $(function(){
                   "index": 1
                 });
             break;
-          
+
           case "Samarpan":
            $("#cat-samarpan").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+'<div  id="mytitle'+msg.data[i]._id+'">"'+msg.data[i].desc.substr(0,Math.min(msg.data[i].desc.length,150))+((msg.data[i].desc.length > 150)?" ...":" ")+'</div>'+'<div id="mytitle1'+msg.data[i]._id+'"></div>'+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div>'+
                '<div class="hid-data" id="coordinators'+msg.data[i]._id+'">'+msg.data[i].coordinators[0].name+" "+msg.data[i].coordinators[0].phone+" "+msg.data[i].coordinators[1].name+" "+msg.data[i].coordinators[1].phone+'</div>'+
@@ -653,7 +651,7 @@ $(function(){
                 "index": 10
               });
               break;
-          
+
           case "Vividha":
            $("#cat-vividha").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+'<div  id="mytitle'+msg.data[i]._id+'">"'+msg.data[i].desc.substr(0,Math.min(msg.data[i].desc.length,150))+((msg.data[i].desc.length > 150)?" ...":" ")+'</div>'+'<div id="mytitle1'+msg.data[i]._id+'"></div>'+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div>'+
                '<div class="hid-data" id="coordinators'+msg.data[i]._id+'">'+msg.data[i].coordinators[0].name+" "+msg.data[i].coordinators[0].phone+" "+msg.data[i].coordinators[1].name+" "+msg.data[i].coordinators[1].phone+'</div>'+
@@ -663,15 +661,15 @@ $(function(){
                 "index": 5
               });
             break;
-          
+
           case "Ananya":
            $("#cat-ananya").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+'<div  id="mytitle'+msg.data[i]._id+'">"'+msg.data[i].desc.substr(0,Math.min(msg.data[i].desc.length,150))+((msg.data[i].desc.length > 150)?" ...":" ")+'</div>'+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div>'+
 
-             
-            
+
+
                '<div class="hid-data" id="coordinators'+msg.data[i]._id+'">'+msg.data[i].coordinators[0].name+" "+msg.data[i].coordinators[0].phone+" "+msg.data[i].coordinators[1].name+" "+msg.data[i].coordinators[1].phone+'</div>'+
 
-              
+
               +'</div>')
 
 
@@ -679,9 +677,9 @@ $(function(){
                 "eventname": msg.data[i].title,
                 "index": 11
               });
-          
+
             break;
-          
+
           case "Srijan":
             $("#cat-srijan").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+'<div  id="mytitle'+msg.data[i]._id+'">"'+msg.data[i].desc.substr(0,Math.min(msg.data[i].desc.length,150))+((msg.data[i].desc.length > 150)?" ...":" ")+'</div>'+'<div id="mytitle1'+msg.data[i]._id+'"></div>'+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div>'+
                '<div class="hid-data" id="coordinators'+msg.data[i]._id+'">'+msg.data[i].coordinators[0].name+" "+msg.data[i].coordinators[0].phone+" "+msg.data[i].coordinators[1].name+" "+msg.data[i].coordinators[1].phone+'</div>'+
@@ -690,7 +688,7 @@ $(function(){
                 "eventname": msg.data[i].title,
                 "index": 2
               });
-          
+
             break;
           case "Taranuum":
             $("#cat-tarannum").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+'<div  id="mytitle'+msg.data[i]._id+'">"'+msg.data[i].desc.substr(0,Math.min(msg.data[i].desc.length,150))+((msg.data[i].desc.length > 150)?" ...":" ")+'</div>'+'<div id="mytitle1'+msg.data[i]._id+'"></div>'+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div>'+
@@ -702,13 +700,13 @@ $(function(){
                 "index": 7
               });
             break;
-          
+
           case "Nataraja":
             $("#cat-natraja").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+'<div  id="mytitle'+msg.data[i]._id+'">"'+msg.data[i].desc.substr(0,Math.min(msg.data[i].desc.length,150))+((msg.data[i].desc.length > 150)?" ...":" ")+'</div>'+'<div id="mytitle1'+msg.data[i]._id+'"></div>'+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div>'+
               '<div class="hid-data" id="coordinators'+msg.data[i]._id+'">'+msg.data[i].coordinators[0].name+" "+msg.data[i].coordinators[0].phone+" "+msg.data[i].coordinators[1].name+" "+msg.data[i].coordinators[1].phone +'</div>'+
 
 
-              '</div>');        
+              '</div>');
               events.push({
                 "eventname": msg.data[i].title,
                 "index": 4
@@ -726,9 +724,9 @@ $(function(){
               events.push({
                 "eventname": msg.data[i].title,
                 "index": 12
-              });              
+              });
             break;
-          
+
           case "IEEE":
             $("#cat-ieee").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+'<div  id="mytitle'+msg.data[i]._id+'">"'+msg.data[i].desc.substr(0,Math.min(msg.data[i].desc.length,150))+((msg.data[i].desc.length > 150)?" ...":" ")+'</div>'+'<div id="mytitle1'+msg.data[i]._id+'"></div>'+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div>'+
                '<div class="hid-data" id="coordinators'+msg.data[i]._id+'">'+msg.data[i].coordinators[0].name+" "+msg.data[i].coordinators[0].phone+" "+msg.data[i].coordinators[1].name+" "+msg.data[i].coordinators[1].phone+'</div>'+
@@ -737,7 +735,7 @@ $(function(){
                 "eventname": msg.data[i].title,
                 "index": 9
               });
-                
+
             break;
           case "Vivekanand Manch":
            $("#cat-vivekanand").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+'<div  id="mytitle'+msg.data[i]._id+'">"'+msg.data[i].desc.substr(0,Math.min(msg.data[i].desc.length,150))+((msg.data[i].desc.length > 150)?" ...":" ")+'</div>'+'<div id="mytitle1'+msg.data[i]._id+'"></div>'+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div>'+
@@ -748,9 +746,9 @@ $(function(){
                 "eventname": msg.data[i].title,
                 "index": 6
               });
-                
+
             break;
-          
+
           case "SAE/BAJA":
             $("#cat-sae").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+'<div  id="mytitle'+msg.data[i]._id+'">"'+msg.data[i].desc.substr(0,Math.min(msg.data[i].desc.length,150))+((msg.data[i].desc.length > 150)?" ...":" ")+'</div>'+'<div id="mytitle1'+msg.data[i]._id+'"></div>'+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div>'
                 + '<div class="hid-data" id="coordinators'+msg.data[i]._id+'">'+msg.data[i].coordinators[0].name+" "+msg.data[i].coordinators[0].phone+" "+msg.data[i].coordinators[1].name+" "+msg.data[i].coordinators[1].phone+'</div>'+
@@ -768,29 +766,29 @@ $(function(){
               events.push({
                 "eventname": msg.data[i].title,
                 "index": 8
-              }); 
+              });
             break;
-          
+
           case "Brixx":
            $("#cat-manan").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+'<div  id="mytitle'+msg.data[i]._id+'">"'+msg.data[i].desc.substr(0,Math.min(msg.data[i].desc.length,150))+((msg.data[i].desc.length > 150)?" ...":" ")+'</div>' +'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div>'+
                '<div class="hid-data" id="coordinators'+msg.data[i]._id+'">'+msg.data[i].coordinators[0].name+" "+msg.data[i].coordinators[0].phone+" "+msg.data[i].coordinators[1].name+" "+msg.data[i].coordinators[1].phone+'</div>'+
             '</div>');
 
             break;
-        
+
         }
       }
     //function to search event which is typed after #
      function searchevents (afterhash, events) {
     for (var j=0; j<events.length; j++) {
         if (events[j].eventname.match(afterhash)) return events[j].index ;
-    
+
     }
     return -1;
 }
  if(afterhash.length!=0)
   {
-     var indexx=searchevents (afterhash, events); 
+     var indexx=searchevents (afterhash, events);
      console.log("indexxx after hash "+indexx);
      if(indexx!=-1)
      {
@@ -809,16 +807,16 @@ $(function(){
         }
        }
    }
-  
 
-     
+
+
 
 
 
 
      if(afterhash.length!=0)
      {
-     var indexx=searchevents (afterhash, events); 
+     var indexx=searchevents (afterhash, events);
      console.log("indexxx after hash "+indexx);
      if(indexx!=-1)
      {
@@ -849,7 +847,7 @@ $(function(){
 var count = 0;
 if ($(window).width() < 600)
 {
-  if (window.DeviceOrientationEvent) 
+  if (window.DeviceOrientationEvent)
     {
       window.addEventListener("deviceorientation", deviceOrientation)
     }
@@ -922,11 +920,11 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
             'transform': 'translate(-'+parX*2+'%,-'+parY*2+'%)'
           });
         })
-      } else 
+      } else
       {
         var count = 0;
         window.removeEventListener('deviceorientation', deviceOrientation);
-        if (window.DeviceOrientationEvent) 
+        if (window.DeviceOrientationEvent)
         {
           window.addEventListener("deviceorientation", deviceOrientation)
         }
@@ -1005,7 +1003,7 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
         'transform': 'translate(-50%,-50%) scale(.4)'
       });
       }
-      
+
     },500)
     $("body").off('mousemove');
     // The parallax
@@ -1035,7 +1033,7 @@ function showevent(id) {
   var rules = $("#rules"+id).text();
   var venue = $("#venue"+id).text();
   var timing = $("#timing"+id).text();
-  var prizes = $("#prizes"+id).text();  
+  var prizes = $("#prizes"+id).text();
   var coordinators = $('#coordinators'+id).text();
   var arrayOfTime = $("#timing"+id).text().split(' To ');
 
@@ -1044,14 +1042,14 @@ function showevent(id) {
   var d1 = new Date(parseInt(arrayOfTime[0]));
   var d2 = new Date(parseInt(arrayOfTime[1]));
 
- 
+
   var main = "Date -"+" "+d1.getDate() + " "+months[d1.getMonth()] + "'18" +"  "+ "From "+d1.toLocaleTimeString().substr(0,4)+d1.toLocaleTimeString().substr(8,10) + " To "+ d2.toLocaleTimeString().substr(0,4)+d2.toLocaleTimeString().substr(8,10);
-  
+
  if(coordinators.indexOf(" 0 ")>=0) {
   main1 =" ";
  }
 else {
- 
+
 
   main1 = "Coordinators - " + "\n" +coordinators;
 }
@@ -1060,11 +1058,11 @@ else {
   $(".cat-act-title").text(title);
   $(".cat-act-rules").text(rules);
   $(".cat-act-venue").text(venue);
-  
+
 
   $(".cat-act-timing").text(main);
   //$(".cat-act-prizes").text(prizes);
-  
+
   $(".cat-act-coordinators").text(main1);
 
   $("#register-btn").attr('onclick', "register_open('"+id+"')");

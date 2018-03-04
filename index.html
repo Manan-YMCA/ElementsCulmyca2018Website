@@ -922,31 +922,40 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
         })
       } else 
       {
+        var count = 0;
+        window.removeEventListener("deviceorientation");
         if (window.DeviceOrientationEvent) 
         {
           window.addEventListener("deviceorientation", function(event) 
           {
+            if(count%3 != 0)
+            {
+              count++;
+              return 0;
+            }
+            count++;
             var top  = $(window).scrollTop();
             var xValue = Math.round(event.gamma);
             var yValue = Math.round(event.beta);
             var parX = xValue/5;  
-            var parY = yValue/2;
+            var parY = yValue/2 - 15;
             if (parY > 30) {
                 parY = 30;
-            } else if (parY < -30) {
+              } else if (parY < -30) {
                 parY = -30;
-            }
+              }
             $("#eclogo").css({
-              'transform': 'translate('+(-(parX + 50))+'%,'+(-(parY + 50)) +'%)'
+              'transform': 'translate('+(-(parX*2.5 + 50))+'%,'+(-(parY*2 + 50)) +'%)'
             });
             $(".layer1 > *").css({
-              'transform': 'translate(-'+parX*2+'%,-'+parY*2+'%)'
+              'transform': 'translate('+(-(parX*2))+'%,'+(-(parY*2))+'%)'
             });
           })
         }
       }
   } else if (hors == 2) {
     $("body").off('mousemove');
+    window.removeEventListener("deviceorientation");
     // The parallax
       var count = 0;
       $("body").mousemove(function( event ) {
@@ -1020,6 +1029,7 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
       
     },500)
     $("body").off('mousemove');
+    window.removeEventListener("deviceorientation");
     // The parallax
       var count = 0;
       $("body").mousemove(function( event ) {

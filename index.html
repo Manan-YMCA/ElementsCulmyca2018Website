@@ -827,6 +827,12 @@ if ($(window).width() < 600)
     {
       window.addEventListener("deviceorientation", function(event) 
       {
+        if(count%3 != 0)
+        {
+          count++;
+          return 0;
+        }
+        count++;
         var top  = $(window).scrollTop();
         var xValue = Math.round(event.gamma);
         var yValue = Math.round(event.beta);
@@ -837,9 +843,8 @@ if ($(window).width() < 600)
           } else if (parY < -30) {
             parY = -30;
           }
-        $("#open-menu").text(parX + " " + parY)
         $("#eclogo").css({
-          'transform': 'translate('+(-(parX*2 + 50))+'%,'+(-(parY*2 + 50)) +'%)'
+          'transform': 'translate('+(-(parX*2.5 + 50))+'%,'+(-(parY*2 + 50)) +'%)'
         });
         $(".layer1 > *").css({
           'transform': 'translate('+(-(parX*2))+'%,'+(-(parY*2))+'%)'

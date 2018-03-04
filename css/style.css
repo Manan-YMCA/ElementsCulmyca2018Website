@@ -442,7 +442,7 @@ a:link, a:visited, a:hover, a:active {
 {
 	white-space:pre-wrap;
 }
-.cat-data-desc 
+.cat-data-desc
 {
 	white-space:pre-wrap;
 }
@@ -691,8 +691,8 @@ a:link, a:visited, a:hover, a:active {
 	border: 2px solid white;
 	background-color:transparent;
  	border-radius: 40px;
- 
-  
+
+
 }
 
 
@@ -730,7 +730,7 @@ a:link, a:visited, a:hover, a:active {
     margin:20px !important;
     border-bottom:2px solid white !important;
     color: white !important;
-    display:inline-block !important;  
+    display:inline-block !important;
 }
 
 
@@ -1013,9 +1013,17 @@ a:link, a:visited, a:hover, a:active {
 		font-size: 24px;
 	}
 
-	.register {
-		font-size: 20px;
+	#register {
+    font-size: 20px;
+    padding: 0 7%;
 	}
 
+  #regform > input, select {
+  	min-width: 250px;
+  }
+
+  #reg-left{
+    display: none;
+  }
 
 }

@@ -893,6 +893,30 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
             'transform': 'translate(-'+parX*2+'%,-'+parY*2+'%)'
           });
         })
+      } else 
+      {
+        if (window.DeviceOrientationEvent) 
+        {
+          window.addEventListener("deviceorientation", function(event) 
+          {
+            var top  = $(window).scrollTop();
+            var xValue = Math.round(event.gamma);
+            var yValue = Math.round(event.beta);
+            var parX = xValue/5;  
+            var parY = yValue/2;
+            if (parY > 30) {
+                parY = 30;
+            } else if (parY < -30) {
+                parY = -30;
+            }
+            $("#eclogo").css({
+              'transform': 'translate('+(-(parX + 50))+'%,'+(-(parY + 50)) +'%)'
+            });
+            $(".layer1 > *").css({
+              'transform': 'translate(-'+parX*2+'%,-'+parY*2+'%)'
+            });
+          })
+        }
       }
   } else if (hors == 2) {
     $("body").off('mousemove');

@@ -566,7 +566,17 @@ a:link, a:visited, a:hover, a:active {
 .cat-data-tandd {
 	font-size: 26px
 }
+<<<<<<< HEAD
 .registerbutton { font-size:26px;
+=======
+
+
+.register{
+  display: inline-block;
+  position: relative;
+  color: white;
+  font-size: 26px;
+>>>>>>> a387243664f3233439cc34ea3928a81aa77637d0
 	padding: 4px 40px;
 	border: 2px solid white;
 	background-color:transparent;
@@ -724,11 +734,10 @@ a:link, a:visited, a:hover, a:active {
 
 .backstage{
 	font-size:37px !important;
-font-family:geomanist !important;
-
-   padding: 6px !important;
+	font-family:geomanistregular !important;
+   	padding: 6px !important;
     margin:20px !important;
-    border:5px solid white !important;
+    border-bottom:2px solid white !important;
     color: white !important;
     display:inline-block !important;  
 }
@@ -803,7 +812,7 @@ font-family:geomanist !important;
 		border-style: solid;
 		padding: 20px;
 		right: 14%;
-		top: 72%;
+		top: 70%;
 		position: absolute;
 		color : #ec4a3b;
 	}
@@ -838,7 +847,7 @@ font-family:geomanist !important;
 		border-radius: 50%;
 		position: absolute;
 		left: -1%;
-		top: 60%;
+		top: 54%;
 		transform: scale(.7) !important;
 		min-height: 220px;
 		min-width: 220px;
@@ -990,7 +999,7 @@ font-family:geomanist !important;
 	.cat-card {
 		transform: scale(.8);
 		transform-origin: top;
-		margin: 2% 2% -10% 2% !important;
+		margin: 2% 2% -5% 2% !important;
 	}
 
 	.e-wosh-close {

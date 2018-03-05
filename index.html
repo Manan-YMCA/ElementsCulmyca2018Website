@@ -576,7 +576,7 @@ $(function(){
   var afterhashi= window.location.hash.substr(1);
   var afterhash=afterhashi.toUpperCase();
   console.log("type "+afterhash);
-  
+
 
 
 
@@ -596,11 +596,9 @@ $(function(){
     for (i = 0; i < msg.data.length; i++)
       {
        // console.log(msg.data[i]);
-       if(msg.data[i].eventtype === 'NA'){
-         console.log('NA blocked: ' + msg.data[i].title);
-         continue;
+       if(msg.data[i].eventtype !== 'NA'){
+        $("#events-list").append('<option value="'+msg.data[i]._id+'"">'+msg.data[i].title+'</option>');
        }
-        $("#events-list").append('<option value="'+msg.data[i]._id+'"">'+msg.data[i].title+'</option>')
         switch (msg.data[i].clubname) {
           case "Manan":
             $("#cat-manan").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+'<div id="mytitle'+msg.data[i]._id+'">"'+

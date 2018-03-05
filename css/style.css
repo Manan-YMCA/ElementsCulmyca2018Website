@@ -643,7 +643,7 @@ a:link, a:visited, a:hover, a:active {
   font-family: 'open sans';
   text-align: center;
   line-height: 1.1em;
-  margin-right: 100px;
+  margin-right: 80px;
 }
 
 #reach-us-subheading{
@@ -653,7 +653,7 @@ a:link, a:visited, a:hover, a:active {
   text-align: center;
   padding-top: 10px;
   line-height: 1.3em;
-  margin-right: 100px;
+  margin-right: 80px;
 }
 
 #reach-us-text-content{
@@ -1051,7 +1051,7 @@ a:link, a:visited, a:hover, a:active {
 
   #reach-us-ymca-logo{
     float: none;
-    margin-right: 100px;
+    margin-right: 80px;
   }
 
   #reach-us-heading{

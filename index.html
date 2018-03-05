@@ -595,6 +595,10 @@ $(function(){
     for (i = 0; i < msg.data.length; i++)
       {
        // console.log(msg.data[i]);
+       if(msg.data[i].eventtype === 'NA'){
+         console.log('NA blocked: ' + msg.data[i].title);
+         continue;
+       }
         $("#events-list").append('<option value="'+msg.data[i]._id+'"">'+msg.data[i].title+'</option>')
         switch (msg.data[i].clubname) {
           case "Manan":

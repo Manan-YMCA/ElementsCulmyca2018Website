@@ -475,7 +475,7 @@
       </div>
     </section>
     <section id="sponsors" data-background-image='images/background.jpg'>
-      <p style="margin: auto;color:white">If you want to work with us click here</p>
+      <p style="margin: auto;color:white"><a href="assets/EC.pdf" onclick="openPdf(event,'assets/EC.pdf')">If you want to work with us click here</a></p>
     </section>
  </div>
 </div>
@@ -1056,6 +1056,14 @@ function closewosh() {
     $('.e-wosh *').css({'transform': 'translate3d(-10px, 0px, 0px)','opacity':'0'})
   },350)
 }
+function openPdf(e,path) {
+    e = e || window.event;
+    e.preventDefault();
+    window.open(path,'ecpdf');
+    
+
+}
+
 </script>
 <script>
 function myMap() {

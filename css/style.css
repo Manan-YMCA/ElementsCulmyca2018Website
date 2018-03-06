@@ -643,7 +643,7 @@ a:link, a:visited, a:hover, a:active {
   font-family: 'open sans';
   text-align: center;
   line-height: 1.1em;
-  margin-right: 80px;
+  margin-right: 20%;
 }
 
 #reach-us-subheading{
@@ -653,7 +653,7 @@ a:link, a:visited, a:hover, a:active {
   text-align: center;
   padding-top: 10px;
   line-height: 1.3em;
-  margin-right: 80px;
+  margin-right: 20%;
 }
 
 #reach-us-text-content{
@@ -679,8 +679,8 @@ a:link, a:visited, a:hover, a:active {
 #googleMap{
   float: right;
   width: 35%;
-  height: 330px;
-  margin-right: 200px;
+  height: 300px;
+  margin-right: 25%;
 }
 
 /*the register button in event page*/
@@ -705,7 +705,7 @@ a:link, a:visited, a:hover, a:active {
 	width: 100%;
 	height: 80%;
 	position: absolute;
-	padding: 4% 0% !important;
+	padding: 4% 0%;
 }
 
 #team img {
@@ -1081,5 +1081,11 @@ a:link, a:visited, a:hover, a:active {
     width: 80%;
     height: 300px;
     margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 460px){
+  #team-div{
+    padding-top: 45px !important;
   }
 }

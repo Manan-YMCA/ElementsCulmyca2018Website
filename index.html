@@ -54,7 +54,7 @@
 <div class="reveal">
   <div class="slides">
     <!-- The Home -->
-    <section id="home" data-background-image='images/home.jpg'>
+    <section id="home" data-background-video='images/videoplayback.mp4' data-background-video-muted >
       <!-- Layer 1 the icons -->
       <div class="layer1">
         <i class="fa fa-camera-retro fa-3x rb" aria-hidden="true"></i>
@@ -546,6 +546,12 @@
             <div class="team-card-deptt">New Web Ninja
             </div>
           </div>
+          <div class="team-card">
+            <img src="images/team/t6.jpg">
+            Darshita Aggarwal
+            <div class="team-card-deptt">Web Developer
+            </div>
+          </div>
           
       </div>
     </section>
@@ -687,21 +693,7 @@ $(function(){
   var afterhashi= window.location.hash.substr(1);
   var afterhash=afterhashi.toUpperCase();
   console.log("type "+afterhash);
-  if (afterhash != "")
-  {
-    if ($(window).width() < 600)
-      {
-        $('#eclogo').css({
-          'top' : '5%',
-          'transform': 'translate(-50%,-50%) scale(.4)'
-        });
-      } else {
-        $('#eclogo').css({
-          'top' : '10%',
-          'transform': 'translate(-50%,-50%) scale(.4)'
-        });
-      }
-  }
+  
 
   // Get the events
   $.ajax({
@@ -1080,16 +1072,17 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
       var des = parseInt(sid.replace(/[^0-9\.]/g, ''), 10);
       Reveal.slide( 2, des);
       upactivate = 1;
-      if (hors == 2 && upactivate == 1)
-      {
-        $(".navigate-up").click(function() {
+      $(".navigate-up").click(function() {
           Reveal.slide( 2, 0);
           upactivate = 0;
         });
+    });
+    if (hors == 2 && upactivate == 1)
+      {
+        
       } else {
         $(".navigate-up").off('click');
       }
-    });
   } else {
     window.removeEventListener('deviceorientation', deviceOrientation);
     $(".navigate-up").off('click');

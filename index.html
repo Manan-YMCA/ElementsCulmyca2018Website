@@ -13,6 +13,27 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <!-- for Google -->
+      <meta name="description" content="Annual Cultural Cum Technical Fest Of YMCA University Of Science And Technology, Faridabad" />
+      <meta name="keywords" content="college,fest,elements,culmyca,ymca,2017" />
+      <meta name="author" content="Manan" />
+      <meta name="copyright" content="vipinkhushu@hotmail.com" />
+      <meta name="application-name" content="Culmyca17" />
+      <!-- for Facebook -->
+      <meta property="og:url"                content="http://www.elementsculmyca.com/" />
+      <meta property="og:type"               content="article" />
+      <meta property="og:title"              content="Elements Culmyca 2018" />
+      <meta property="og:description"        content="Annual Cultural Cum Technical Fest Of YMCA University Of Science And Technology, Faridabad" />
+      <meta property="og:image"              content="http://www.elementsculmyca.com/images/logox.png" />
+      <meta property="og:site_name"          content="Culmyca17" />
+      <meta property="fb:app_id"             content="" />
+      <!-- for Twitter -->
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content="Elements Culmyca 2017" />
+      <meta name="twitter:description" content="Annual Cultural Cum Technical Fest Of YMCA University Of Science And Technology, Faridabad" />
+      <meta name="twitter:image" content="http://www.elementsculmyca.com/images/logox.png" />
+      <link rel="apple-touch-icon" href="images/logox.png">
+      <link rel="icon" href="images/logox.png">
 </head>
 <body>
 <!--preloader-->
@@ -626,6 +647,15 @@
 </div>
 
 </body>
+<script>
+  if ($(window).width() < 600)
+  {
+    $("#home").removeAttr('data-background-video');
+    $("#home").removeAttr('data-background-video-muted');  
+    $("#home").removeAttr('data-background-video-loop');
+    $("#home").attr('data-background-image', 'images/home.jpg');
+  }
+</script>
 
 <!-- navbar navigation -->
 <script>

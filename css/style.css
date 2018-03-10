@@ -1091,3 +1091,40 @@ a:link, a:visited, a:hover, a:active {
     padding-top: 45px !important;
   }
 }
+
+
+/*css for slider in mobile*/
+#sidebar
+{
+	position: fixed;
+	width: 180px;
+	height: 100%;
+	background: #151719;
+		left:-200px;
+		transition: all 300ms linear;
+}
+
+#sidebar.active{
+	left:0px;
+}
+#open-menu.act
+{
+	left:200px;
+	top:23px;
+}
+
+#sidebar ul li
+{
+	color: rgba(230,230,230,0.9);
+	list-style: none;
+	padding:15px 20px;
+	border-bottom: 1.5px solid rgba(100,100,100,0.3);
+	font-family: sans-serif;
+
+}
+#open-menu{
+	position: absolute;
+	left:230px;
+	top: 23px;
+
+}

@@ -29,7 +29,20 @@
   <li onclick="goToSlide(1,0)"><a>About</a></li>
   <li onclick="goToSlide(2,0)"><a>Events</a></li>
   <li onclick="goToSlide(3,0)"><a>Register</a></li>
-  <li id="open-menu"><i class="fa fa-bars"></i></li>
+  <div id="sidebar">
+    <li id="open-menu" onclick="toggleSidebar()"><i class="fa fa-bars"></i></li>
+  <ul>
+ <li onclick="goToSlide(1,0)"><a>About</a></li>
+  <li onclick="goToSlide(2,0)"><a>Events</a></li>
+  <li onclick="goToSlide(3,0)"><a>Register</a></li>
+     <li onclick="goToSlide(6,0)"><a>Sponsors</a></li>
+  <li onclick="goToSlide(4,0)"><a>The Team</a></li>
+  <li onclick="goToSlide(5,0)"><a> Reach Us</a></li>
+ </ul>
+
+ 
+</div>
+  
 </ul>
 <!--right navigation bar-->
 <ul class="nav navbar-nav navbar-right" >
@@ -629,6 +642,13 @@ $.preload(images,{
 
 
 <script>
+  //for slider in mobile
+  function toggleSidebar(){
+  document.getElementById("sidebar").classList.toggle('active');
+  document.getElementById("open-menu").classList.toggle('act');
+
+}
+
 
 function deviceOrientation(event) {
   if(count%3 != 0)

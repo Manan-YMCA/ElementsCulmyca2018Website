@@ -26,16 +26,16 @@
 <!-- The nav bar -->
 <!--left navigation bar-->
 <ul class="nav navbar-nav navbar-left" >
-  <li ><a href="#about">About</a></li>
-  <li ><a href="#ehome">Events</a></li>
-  <li ><a href="#register">Register</a></li>
+  <li onclick="goToSlide(1,0)"><a>About</a></li>
+  <li onclick="goToSlide(2,0)"><a>Events</a></li>
+  <li onclick="goToSlide(3,0)"><a>Register</a></li>
   <li id="open-menu"><i class="fa fa-bars"></i></li>
 </ul>
 <!--right navigation bar-->
 <ul class="nav navbar-nav navbar-right" >
-  <li><a href="#sponsors">Sponsors</a></li>
-  <li><a href="#team">The Team</a></li>
-  <li><a href="#reach-us"> Reach Us</a></li>
+  <li onclick="goToSlide(6,0)"><a>Sponsors</a></li>
+  <li onclick="goToSlide(4,0)"><a>The Team</a></li>
+  <li onclick="goToSlide(5,0)"><a> Reach Us</a></li>
 </ul>
 
 <div class="reveal">
@@ -357,7 +357,7 @@
                 icon: "error",
               });
             }
-            
+
           })
           .fail(function() {
             console.log("error");
@@ -403,7 +403,7 @@
                 icon: "info",
               });
             }
-            
+
           })
           .fail(function() {
             console.log("error");
@@ -607,6 +607,10 @@
 
 </body>
 
+<!-- navbar navigation -->
+<script>
+  function goToSlide(x, y) {Reveal.slide(x, y);}
+</script>
 
 <!--script for preloader-->
  <script type="text/javascript">
@@ -625,7 +629,7 @@ $.preload(images,{
 
 
 <script>
-  
+
 function deviceOrientation(event) {
   if(count%3 != 0)
     {
@@ -699,16 +703,16 @@ $(function(){
     for (i = 0; i < msg.data.length; i++)
       {
        // console.log(msg.data[i]);
-       
-       
+
+
        if(msg.data[i].eventtype !== 'NA'){
         $("#events-list").append('<option value="'+msg.data[i]._id+'"">'+msg.data[i].title+'</option>');
-          
-           
+
+
 
 
        }
-      
+
         switch (msg.data[i].clubname) {
           case "Manan":
             $("#cat-manan").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+'<div id="mytitle'+msg.data[i]._id+'">"'+
@@ -756,7 +760,7 @@ $(function(){
            $("#cat-vividha").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+'<div  id="mytitle'+msg.data[i]._id+'">"'+msg.data[i].desc.substr(0,Math.min(msg.data[i].desc.length,150))+((msg.data[i].desc.length > 150)?" ...":" ")+'</div>'+'<div id="mytitle1'+msg.data[i]._id+'"></div>'+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div>'+
                '<div class="hid-data" id="coordinators'+msg.data[i]._id+'">'+msg.data[i].coordinators[0].name+" "+msg.data[i].coordinators[0].phone+" "+msg.data[i].coordinators[1].name+" "+msg.data[i].coordinators[1].phone+'</div>'+
               '<div class="hid-data" id="eventtype'+msg.data[i]._id+'">'+ ( (msg.data[i].eventtype == "NA") ? "": msg.data[i].eventtype )+'</div>'+'</div>');
-              
+
 
               events.push({
                 "eventname": msg.data[i].title,
@@ -1045,7 +1049,7 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
         });
         }
       },500)
-      
+
     //hover effects
     $(".arcs").hover(function() {
       var sid = $(this).attr('sid');
@@ -1134,7 +1138,7 @@ else {
 $("#register-btn").css("visibility","hidden");
 if( eventtype.length > 0) {
 
-      
+
       $("#register-btn").css("visibility","visible");
 }
 
@@ -1187,7 +1191,7 @@ function openPdf(e,path) {
     e = e || window.event;
     e.preventDefault();
     window.open(path,'ecpdf');
-    
+
 
 }
 

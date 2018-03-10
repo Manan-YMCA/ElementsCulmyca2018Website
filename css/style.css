@@ -702,11 +702,14 @@ a:link, a:visited, a:hover, a:active {
 	height: 100% !important;
 }
 
-#team > div {
+#team-div {
 	width: 100%;
-	height: 80%;
+	height: 70%;
 	position: absolute;
-	padding: 4% 0%;
+}
+
+.backstageborder {
+ 	margin-top: 5% !important
 }
 
 #team img {
@@ -748,7 +751,7 @@ a:link, a:visited, a:hover, a:active {
 	overflow: visible;
 	font-size: 18px !important;
 	display: inline-block;
-	margin: 3% !important;
+	margin: 1% !important;
 }
 
 
@@ -1089,5 +1092,6 @@ a:link, a:visited, a:hover, a:active {
 @media screen and (max-width: 460px){
   #team-div{
     padding-top: 45px !important;
+    height: 65%
   }
 }

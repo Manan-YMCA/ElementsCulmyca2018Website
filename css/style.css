@@ -1103,9 +1103,13 @@ a:link, a:visited, a:hover, a:active {
 	position: fixed;
 	width: 180px;
 	height: 100%;
-	background: #151719;
+	background: #15171982;
 		left:-200px;
 		transition: all 300ms linear;
+}
+
+#sidebar ul {
+	padding-left: 0px;
 }
 
 #sidebar.active{

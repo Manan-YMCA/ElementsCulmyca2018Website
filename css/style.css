@@ -71,6 +71,7 @@ a:link, a:visited, a:hover, a:active {
 	padding: 10px 20px;
 	font-size: 18px;
 	margin: 0px 4px;
+  cursor: pointer;
 }
 
 .nav a  {

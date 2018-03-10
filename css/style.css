@@ -97,6 +97,7 @@ a:link, a:visited, a:hover, a:active {
 #home {
 	width: 100%;
 	height: 100%;
+	background-color: #00000042;
 }
 
 #eclogo {

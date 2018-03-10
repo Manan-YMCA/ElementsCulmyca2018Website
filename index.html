@@ -54,7 +54,7 @@
 <div class="reveal">
   <div class="slides">
     <!-- The Home -->
-    <section id="home" data-background-video='images/videoplayback.mp4' data-background-video-muted >
+    <section id="home" data-background-video='images/videoplayback.mp4' data-background-video-muted data-background-video-loop>
       <!-- Layer 1 the icons -->
       <div class="layer1">
         <i class="fa fa-camera-retro fa-3x rb" aria-hidden="true"></i>
@@ -550,6 +550,12 @@
             <img src="images/team/t6.jpg">
             Darshita Aggarwal
             <div class="team-card-deptt">Web Developer
+            </div>
+          </div>
+          <div class="team-card">
+            <img src="images/team/t7.jpg">
+            Pranav Mahajan
+            <div class="team-card-deptt">Senior Web Developer
             </div>
           </div>
           
@@ -1077,10 +1083,8 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
           upactivate = 0;
         });
     });
-    if (hors == 2 && upactivate == 1)
+    if (hors == 2 && upactivate == 0)
       {
-        
-      } else {
         $(".navigate-up").off('click');
       }
   } else {

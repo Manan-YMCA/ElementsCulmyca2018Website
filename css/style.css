@@ -574,6 +574,7 @@ a:link, a:visited, a:hover, a:active {
 	background-color:transparent;
  	border-radius: 40px;
  	display:inline-block;
+ 	cursor: pointer;
 }
 
 .e-wosh * {
@@ -693,7 +694,7 @@ a:link, a:visited, a:hover, a:active {
 	border: 2px solid white;
 	background-color:transparent;
  	border-radius: 40px;
-
+ 	cursor: pointer;
 
 }
 

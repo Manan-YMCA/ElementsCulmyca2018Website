@@ -1089,6 +1089,10 @@ a:link, a:visited, a:hover, a:active {
     height: 300px;
     margin-bottom: 15px;
   }
+
+  #home {
+  	background-color: transparent;
+  }
 }
 
 @media screen and (max-width: 460px){
@@ -1149,10 +1153,10 @@ a:link, a:visited, a:hover, a:active {
 		height: 100%;
 		position: fixed;
 		z-index: +2;
-		background-color: rgba(10, 10, 10, 0.30);
+		background-color: rgba(10, 10, 10, 0.80);
 		color: white;
 		padding: 2%;
-		font-size: 32px;
+		font-size: 24px;
 		display: block;
 		text-align: center;
 	}

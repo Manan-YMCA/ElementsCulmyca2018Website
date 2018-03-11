@@ -1093,12 +1093,13 @@ a:link, a:visited, a:hover, a:active {
   #home {
   	background-color: transparent;
   }
+
 }
 
 @media screen and (max-width: 460px){
   #team-div{
     padding-top: 15px !important;
-    height: 65%
+    height: 62%
   }
 }
 

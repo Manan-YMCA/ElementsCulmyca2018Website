@@ -35,9 +35,15 @@
       <link rel="icon" href="images/logox.png">
 </head>
 <body>
+<!-- the overlay -->
+<div class="overlay">
+  Tablet portrait mode is not supported, please rotate your device to switch to landscape mode.<br>
+  Thankx :)
+</div>
+
 <!--preloader-->
 <div id="preloader">
-<div id="status">
+  <div id="status">
 
   </div>
 </div>
@@ -400,48 +406,6 @@
         }
       }
 
-      /* Getting already registered events of user
-      function geteventsbyuser() {
-          var phone = $("#phone").val().trim();
-          if (phone.length != 10)
-          {
-            alert("Please enter phone number");
-            return 0;
-          }
-          $.ajax({
-            url: 'https://elementsculmyca2018.herokuapp.com/api/v1/events/gettickets/'+phone,
-            type: 'GET',
-            data: {phone: phone},
-          })
-          .done(function(msg) {
-            msg = JSON.parse(msg);
-            console.log(msg);
-            var tickets = "";
-            for (var i = 0; i < msg.data.length; i++)
-            {
-              tickets = tickets + msg.data[i].eventname + "\n";
-            }
-            console.log(tickets);
-            if (tickets == "")
-            {
-              swal({
-                title: "No events found :(",
-                text: "Sorry, but you are not registered in any events.",
-                icon: "error",
-              });
-            } else {
-              swal({
-                title: "Your Events",
-                text: "You are registered in: \n" + tickets,
-                icon: "info",
-              });
-            }
-
-          })
-          .fail(function() {
-            console.log("error");
-          })
-      }*/
     </script>
 
     <!-- team section -->
@@ -1299,7 +1263,5 @@ autoplaySpeed: 3000,
 });
 });
 </script>
-
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7rJmV_1a3RHlDEGThAFmyMIUdwOBVQJ8&callback=myMap"></script>
-<script src="reponsive.js"></script>
 </html>

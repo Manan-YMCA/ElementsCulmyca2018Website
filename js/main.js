@@ -4,7 +4,7 @@
 
 }
 
-
+var count = 0;
 function deviceOrientation(event) {
   if(count%3 != 0)
     {
@@ -30,6 +30,38 @@ function deviceOrientation(event) {
     });
 }
 $(function(){
+  // The parallax
+  var count = 0;
+  if ($(window).width() < 600)
+  {
+    if (window.DeviceOrientationEvent)
+      {
+        window.addEventListener("deviceorientation", deviceOrientation)
+      }
+  } else {
+    $("body").mousemove(function( event ) {
+      if(count%3 != 0)
+      {
+        count++;
+        return 0;
+      }
+      count++;
+      var top  = $(window).scrollTop();
+      var parX = event.pageX/100;
+      var parY = event.pageY/100;
+      $("#eclogo").css({
+        'transform': 'translate('+(-(parX + 50))+'%,'+(-(parY + 50)) +'%)'
+      });
+      $(".layer1 > *").css({
+        'transform': 'translate(-'+parX*2+'%,-'+parY*2+'%)'
+      });
+    })
+  }
+
+  if ($(window).width() < 600) 
+  {
+      $("#eclogo").css('transform', 'translate(-50%, -50%) scale(1)');  
+  }
   setTimeout(function(){
     $(".layer1 > *").each(function(i, el) {
       setTimeout(function(){
@@ -247,7 +279,7 @@ $(function(){
         if ($(window).width() < 600)
         {
           $('#eclogo').css({
-            'top' : '7.5%',
+            'top' : '5%',
             'transform': 'translate(-50%,-50%) scale(.4)'
           });
         } else {
@@ -281,30 +313,3 @@ $(function(){
     console.log("complete");
   });
 })
-// The parallax
-var count = 0;
-if ($(window).width() < 600)
-{
-  if (window.DeviceOrientationEvent)
-    {
-      window.addEventListener("deviceorientation", deviceOrientation)
-    }
-} else {
-  $("body").mousemove(function( event ) {
-    if(count%3 != 0)
-    {
-      count++;
-      return 0;
-    }
-    count++;
-    var top  = $(window).scrollTop();
-    var parX = event.pageX/100;
-    var parY = event.pageY/100;
-    $("#eclogo").css({
-      'transform': 'translate('+(-(parX + 50))+'%,'+(-(parY + 50)) +'%)'
-    });
-    $(".layer1 > *").css({
-      'transform': 'translate(-'+parX*2+'%,-'+parY*2+'%)'
-    });
-  })
-}

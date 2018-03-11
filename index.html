@@ -742,7 +742,7 @@ $(function(){
           case "Microbird":
             $("#cat-microbird").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+
               '<div  id="mytitle'+msg.data[i]._id+'">"'+
-              msg.data[i].desc.substr(0,Math.min(msg.data[i].desc.length,200))+
+              msg.data[i].desc.substr(0,Math.min(msg.data[i].desc.length,150))+((msg.data[i].desc.length>150)?"...":" ")+
               '</div>'+
               '<div id="mytitle1'+msg.data[i]._id+'"></div>'+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div>'+
                '<div class="hid-data" id="coordinators'+msg.data[i]._id+'">'+msg.data[i].coordinators[0].name+" "+msg.data[i].coordinators[0].phone+"  "+"<br>"+((msg.data[i].coordinators[1].phone != 0) ? msg.data[i].coordinators[1].name+" "+msg.data[i].coordinators[1].phone+" ":" ")+'</div>'+
@@ -1142,7 +1142,7 @@ function showevent(id) {
   var months = ["January","Feburary","March","April","May","June","July","August","September","October","November","December"];
   var d1 = new Date(parseInt(arrayOfTime[0]));
   var d2 = new Date(parseInt(arrayOfTime[1]));
-  var main = "Date -"+" "+d1.getDate() + " "+months[d1.getMonth()] + "'18" +"  "+ "From "+d1.getHours()%12+":"+((d1.getMinutes()<10)? "0"+d1.getMinutes():d1.getMinutes())+((d1.getHours()>=12)? "PM":"AM") + " To "+ d2.getHours()%12+":"+((d2.getMinutes()<10)? "0"+d2.getMinutes():d2.getMinutes())+((d2.getHours()>=12)?"PM":"AM");
+  var main = "Date -"+" "+d1.getDate() + " "+months[d1.getMonth()] + "'18" +"  "+ "From "+((d1.getHours()>12)? d1.getHours()%12:d1.getHours())+":"+((d1.getMinutes()<10)? "0"+d1.getMinutes():d1.getMinutes())+((d1.getHours()>=12)? "PM":"AM") + " To "+((d2.getHours()>12)?d2.getHours()%12 : d2.getHours())+":"+((d2.getMinutes()<10)? "0"+d2.getMinutes():d2.getMinutes())+((d2.getHours()>=12)?"PM":"AM");
 
 var arrayOfCoordinators = coordinators.split("  ");
 console.log(arrayOfCoordinators);

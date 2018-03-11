@@ -95,7 +95,7 @@
       <div class="footer">
         <a href="https://www.facebook.com/culmyca/" aria-hidden="true" target="blank"><i class="fa fa-facebook-square"></i></a>
         <a href="https://www.instagram.com/elementsculmyca/" aria-hidden="true" target="blank"><i class="fa fa-instagram"></i></a>
-        <a href="https://twitter.com/elementsculmyca" aria-hidden="true" target="blank"><i class="fa fa-twitter"></i></a>
+        <!--<a href="https://twitter.com/elementsculmyca" aria-hidden="true" target="blank"><i class="fa fa-twitter"></i></a>-->
 
       </div>
     </section>
@@ -693,8 +693,13 @@ $(function(){
   },500)
 //get string after hash
   var afterhashi= window.location.hash.substr(1);
-  var afterhash=afterhashi.toUpperCase();
+   var replaced = afterhashi.replace(/%20/g, " ");
+   console.log(replaced);
+  var afterhash=replaced.toUpperCase();
   console.log("type "+afterhash);
+  
+ 
+  console.log(replaced);
   
 
   // Get the events

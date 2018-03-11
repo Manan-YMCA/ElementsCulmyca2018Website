@@ -29,15 +29,18 @@ function deviceOrientation(event) {
       'transform': 'translate('+(-(parX*2))+'%,'+(-(parY*2))+'%)'
     });
 }
+
 $(function(){
   // The parallax
   var count = 0;
   if ($(window).width() < 600)
   {
+
     if (window.DeviceOrientationEvent)
       {
         window.addEventListener("deviceorientation", deviceOrientation)
       }
+      
   } else {
     $("body").mousemove(function( event ) {
       if(count%3 != 0)
@@ -74,6 +77,9 @@ $(function(){
     setTimeout(function(){
       $(".layer1 > *").css('transition', 'transform ease-out .2s');
     },800)
+    $("#eclogo").css({
+      'transform': 'translate(-50%,-50%)'
+    });
   },500)
 //get string after hash
   var afterhashi= window.location.hash.substr(1);

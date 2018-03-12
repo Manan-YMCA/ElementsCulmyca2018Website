@@ -76,7 +76,7 @@
 			history: false,
 
 			// Enable keyboard shortcuts for navigation
-			keyboard: true,
+			keyboard: false,
 
 			// Optional function that blocks keyboard events when retuning false
 			keyboardCondition: null,

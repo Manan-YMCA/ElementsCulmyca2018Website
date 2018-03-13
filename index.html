@@ -602,7 +602,8 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
   {
       setTimeout(function(){
         $('#eclogo').css({
-          'top' : '50%'
+          'top' : '50%',
+          'cursor':'auto'
         });
         setTimeout(function(){
           $("#eclogo").css('transform', 'translate(-50%,-50%) scale(1)');
@@ -657,7 +658,8 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
           var parX = event.pageX/100;
           var parY = event.pageY/100;
           $("#eclogo").css({
-            'transform': 'translate('+(-(parX + 40))+'%,'+(-(parY + 45)) +'%) scale(.4)'
+            'transform': 'translate('+(-(parX + 40))+'%,'+(-(parY + 45)) +'%) scale(.4)',
+            'cursor':'pointer'
           });
           $(".ar1").css({
             'transform': 'translate('+(-(parX*3 + 50))+'%,'+(-(parY*3 + 50)) +'%) scale(1)'
@@ -682,12 +684,14 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
         {
           $('#eclogo').css({
             'top' : '5%',
-            'transform': 'translate(-50%,-50%) scale(.4)'
+            'transform': 'translate(-50%,-50%) scale(.4)',
+            'cursor':'pointer'
           });
         } else {
           $('#eclogo').css({
           'top' : '10%',
-          'transform': 'translate(-50%,-50%) scale(.4)'
+          'transform': 'translate(-50%,-50%) scale(.4)',
+          'cursor':'pointer'
         });
         }
       },500)
@@ -723,12 +727,14 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
       {
         $('#eclogo').css({
           'top' : '5%',
-          'transform': 'translate(-50%,-50%) scale(.4)'
+          'transform': 'translate(-50%,-50%) scale(.4)',
+          'cursor':'pointer'
         });
       } else {
         $('#eclogo').css({
           'top' : '10%',
-          'transform': 'translate(-50%,-50%) scale(.4)'
+          'transform': 'translate(-50%,-50%) scale(.4)',
+          'cursor':'pointer'
         });
       }
     },500)
@@ -746,7 +752,8 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
         var parX = event.pageX/100;
         var parY = event.pageY/100;
         $("#eclogo").css({
-          'transform': 'translate('+(-(parX + 40))+'%,'+(-(parY + 45)) +'%) scale(.4)'
+          'transform': 'translate('+(-(parX + 40))+'%,'+(-(parY + 45)) +'%) scale(.4)',
+          'cursor':'pointer'
         });
       })
   }

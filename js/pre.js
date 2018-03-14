@@ -7,7 +7,7 @@ $.preload(images,{
   eachOnLoad: function(){
     x1++;
     percent = (x1/(images.length))*100;
-   	$("#percent").text(percent.toFixed(1)+'%');
+   	$("#percent").text(percent.toFixed(0)+'%');
    	switch (x1){
    		case 1:
    		 $("#uptrap").css('opacity', '1');break;

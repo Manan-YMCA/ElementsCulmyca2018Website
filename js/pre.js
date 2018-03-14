@@ -10,21 +10,21 @@ $.preload(images,{
    	$("#percent").text(percent+'%');
    	switch (x1){
    		case 1:
-   		 $(".ecparts:eq(0)").css('opacity', '1');
+   		 $("#uptrap").css('opacity', '1');
    		case 4:
-   		 $(".ecparts:eq(1)").css('opacity', '1');
+   		 $("#eside").css('opacity', '1');
    		case 8:
-   		 $(".ecparts:eq(2)").css('opacity', '1');
+   		 $("#reside").css('opacity', '1');
    		case 11:
-   		 $(".ecparts:eq(3)").css('opacity', '1');
+   		 $("#ebot").css('opacity', '1');
    		case 14:
-   		 $(".ecparts:eq(4)").css('opacity', '1');
+   		 $("#upc").css('opacity', '1');
    		case 18:
-   		 $(".ecparts:eq(5)").css('opacity', '1');
+   		 $("#lupc").css('opacity', '1');
    		case 21:
-   		 $(".ecparts:eq(6)").css('opacity', '1');
+   		 $("#brc").css('opacity', '1');
    		case 25:
-   		 $(".ecparts:eq(7)").css('opacity', '1'); 
+   		 $("#blrc").css('opacity', '1'); 
    	}
     if (x1 == images.length)
     {

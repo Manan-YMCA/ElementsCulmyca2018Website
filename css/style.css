@@ -774,16 +774,127 @@ a:link, a:visited, a:hover, a:active {
 }
 
 #status {
-	width:200px;
+	width:400px;
 	height:200px;
 	position:absolute;
 	left:50%; /* centers the loading animation horizontally on the screen */
 	top:50%; /* centers the loading animation vertically on the screen */
-	background-image:url(../images/status.gif);
-	background-repeat:no-repeat;
-	background-position:center;
-	margin:-100px 0 0 -100px;
+	transform: translate(-50%,-50%);
+	color: black;
+	text-align: center;
 }
+
+#loading {
+	position: absolute;
+	bottom: 0px;
+	color: inherit;
+	left: 35%;
+}
+
+#percent {
+	color: black
+}
+
+.ecparts {
+	position: absolute;
+	transition: all ease-out .3s;
+	opacity: 0;
+}
+
+#uptrap {
+	border-top: 25px solid #dd4c34;
+	border-left: 0px solid transparent;
+	border-right: 20px solid transparent;
+	height: 0;
+	width: 80px;
+	top: 0%;
+	left: 0%;
+}
+
+#eside {
+	width: 25px;
+	background-color: #dd4c34;
+	height: 60px;
+}
+
+#reside {
+	border-bottom: 25px solid #dd4c34;
+	border-left: 0px solid transparent;
+	border-right: 20px solid transparent;
+	height: 0;
+	width: 50px;
+	top: 40px;
+	left: 0%;
+}
+
+#ebot {
+	border-bottom: 25px solid #dd4c34;
+	border-left: 0px solid transparent;
+	border-right: 20px solid transparent;
+	height: 0;
+	width: 80px;
+	top: 80px;
+	left: 0%;
+}
+
+#logoe {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	top: 0px;
+	left: 70px
+}
+
+#logoc {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	top: 0px;
+	right: 70px
+}
+
+#upc {
+	border-top: 25px solid #dd4c34;
+	border-left: 15px solid transparent;
+	border-right: 20px solid transparent;
+	height: 0;
+	width: 50px;
+	top: 0%;
+	right: 15%;
+}
+
+
+#lupc {
+	border-top: 28px solid #dd4c34;
+	border-left: 31px solid transparent;
+	border-right: 6px solid transparent;
+	height: 0;
+	width: 40px;
+	top: 0%;
+	left: 0%;
+	transform: translate(30px,23px) rotate(-45deg)
+}
+
+#brc {
+	border-bottom: 28px solid #dd4c34;
+	border-left: 25px solid transparent;
+	border-right: 28px solid transparent;
+	height: 0;
+	width: 40px;
+	top: 40px;
+	left: 0%;
+	transform: translate(29px,22.5px) rotate(45deg)
+}
+
+#blrc {
+	height: 28px;
+	width: 58px;
+	top: 80px;
+	background-color: #dd4c34;
+	left: 10%;
+	transform: translate(69.5px,-14.5px) rotate(-45deg) skew(-45deg)
+}
+
 
 .simplebar-scrollbar {
 	background-color: #ffffff8c !important;

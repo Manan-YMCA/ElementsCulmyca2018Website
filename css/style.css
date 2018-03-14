@@ -797,6 +797,11 @@ a:link, a:visited, a:hover, a:active {
 	.nav > li {
 		display: none;
 	}
+	#ehome
+	{
+	background-image: url("images/events/events3.jpg");
+	
+	}
 
 	.navbar-left {
 		margin-left: 0px;

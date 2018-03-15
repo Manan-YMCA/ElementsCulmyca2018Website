@@ -691,6 +691,7 @@ a:link, a:visited, a:hover, a:active {
 .register-event{
   font-size:26px;
 	padding: 4px 40px;
+	margin-right: 40px;
 	border: 2px solid white;
 	background-color:transparent;
  	border-radius: 40px;
@@ -1213,6 +1214,36 @@ a:link, a:visited, a:hover, a:active {
   	background-color: transparent;
   }
 
+  .register-event {
+  	 font-size:20px;
+	padding: 4px 40px;
+	border: 2px solid white;
+	background-color:transparent;
+ 	border-radius: 30px;
+ 	cursor: pointer;
+ 	width: 50%;
+ 	margin-bottom: 20px;
+ 
+
+  }
+  #container {
+  	display: flex;
+  	flex-direction: column;
+  }
+.cat-act-venue {
+	font-size: 20px;
+
+}
+.cat-act-timing {
+	font-size: 20px;
+}
+.cat-act-coordinators1 {
+	font-size:20px;
+}
+.cat-act-coordinators2 {
+	font-size:20px;
+}
+
 }
 
 @media screen and (max-width: 460px){
@@ -1280,4 +1311,11 @@ a:link, a:visited, a:hover, a:active {
 		display: block;
 		text-align: center;
 	}
+}
+
+#container {
+    
+    
+    display: flex;
+    justify-content: space-between;
 }

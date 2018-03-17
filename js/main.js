@@ -85,6 +85,11 @@ $(function(){
   var afterhashi= window.location.hash.substr(1);
    var replaced = afterhashi.replace(/%20/g, " ");
    console.log(replaced);
+   if (afterhashi != "/home")
+   {
+      Reveal.prev();
+      Reveal.next();
+   }
   var afterhash=replaced.toUpperCase();
   console.log("type "+afterhash);
   

@@ -790,6 +790,11 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
 } );
 // Function for full view
 function showevent(id) {
+  //Hide the arrow
+  $(".controls-arrow").fadeOut('fast');
+  //Disable keyboard
+  Reveal.configure({ keyboard: false });
+
   var visible = []
   var desc = $("#desc"+ id).text();
   var title = $("#title"+id).text();
@@ -852,6 +857,7 @@ if( eventtype.length > 0) {
       var t = $(this);
       setTimeout(function(){ t.css({'transform': 'translate3d(0px, 0px, 0px)','opacity':'1'}); }, (i+1) * 50);
   });
+
 }
 
 
@@ -874,6 +880,11 @@ function closewosh() {
     $(".e-wosh").css('z-index', '-1');
     $('.e-wosh *').css({'transform': 'translate3d(-10px, 0px, 0px)','opacity':'0'})
   },350)
+
+  //Hide the arrow
+  $(".controls-arrow").fadeIn('fast');
+  //Disable keyboard
+  Reveal.configure({ keyboard: true });
 }
 function openPdf(e,path) {
     e = e || window.event;

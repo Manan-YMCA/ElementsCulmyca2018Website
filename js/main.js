@@ -324,3 +324,64 @@ $(function(){
     console.log("complete");
   });
 })
+
+ function myFunction() {
+  var modal = document.getElementById('myModal');
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+
+$("#myModal").css("visibility","visible");
+ $(".centerclass").css("display","block");
+
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    $("#myModal").css("visibility","hidden");
+        $("#eclogo").fadeTo(1000,1);
+        $(".centerclass").css("display","none");
+
+      
+}
+$("#eclogo").css("opacity",0);
+
+
+// When the user clicks anywhere outside of the modal, close it
+
+
+
+}
+
+$(document).ready(function() {
+
+
+ 
+$('.container').slick({
+  centerMode: true,
+  centerPadding: '60px',
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1,
+        mobileFirst:true
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1,
+        mobileFirst:true
+      }
+    }
+  ]
+});
+});

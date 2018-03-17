@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>Elements Culmyca 2018</title>
@@ -13,6 +13,8 @@
   <script src="js/slick.js"></script>
   <script src="js/register.js"></script>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+   <link rel="stylesheet" type="text/css" href="css/slick.css">
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <!-- for Google -->
@@ -98,13 +100,30 @@
     <section id="home" data-background-image='images/home.jpg'>
       <!-- Layer 1 the icons -->
       <div class="layer1">
-        <i class="fa fa-camera-retro fa-3x rb" aria-hidden="true"></i>
+        <i class="fa fa-camera-retro fa-3x rb" aria-hidden="true" onclick="myFunction()"></i>
         <i class="fa fa-code fa-3x lb" aria-hidden="true"></i>
         <i class="fa fa-film fa-3x rb" aria-hidden="true"></i>
         <p id="timer" class="lb">
           <span id='pg'></span>
         </p>
       </div>
+
+      <div id="myModal" class="modal">
+  
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="centerclass">
+      <div class="container">
+    <div><img src="images/team/t3.jpg"></div>
+    <div><img src="images/team/t1.jpg"></div>
+    <div><img src ="images/team/t4.jpg"></div>
+    <div><img src="images/team/t6.jpg"></div>
+  </div>
+  </div>
+  </div>
+  </div>
+
 
       <!-- The social links -->
       <div class="footer">
@@ -114,6 +133,8 @@
 
       </div>
     </section>
+
+    
 
     <!-- About -->
     <section id="about" data-background-image='images/about/wallpaper.jpg'>

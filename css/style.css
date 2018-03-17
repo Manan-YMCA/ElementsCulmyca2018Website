@@ -1223,26 +1223,29 @@ a:link, a:visited, a:hover, a:active {
  	cursor: pointer;
  	width: 50%;
  	margin-bottom: 20px;
- 
-
   }
+
   #container {
   	display: flex;
   	flex-direction: column;
   }
-.cat-act-venue {
-	font-size: 20px;
 
-}
-.cat-act-timing {
+  .cat-act-venue {
+    font-size: 20px;
+
+  }
+
+  .cat-act-timing {
 	font-size: 20px;
-}
-.cat-act-coordinators1 {
+  }
+
+  .cat-act-coordinators1 {
 	font-size:20px;
-}
-.cat-act-coordinators2 {
+  }
+
+  .cat-act-coordinators2 {
 	font-size:20px;
-}
+  }
 
 }
 
@@ -1251,6 +1254,13 @@ a:link, a:visited, a:hover, a:active {
     padding-top: 15px !important;
     height: 62%
   }
+}
+
+@media screen and (max-width: 1500px)
+{
+	.cat-head {
+		bottom: 7%;
+	}
 }
 
 

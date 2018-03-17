@@ -1132,11 +1132,15 @@ a:link, a:visited, a:hover, a:active {
 	}
 
 	.cat-data-head {
-		font-size: 26px;
+		font-size: 24px;
 	}
 
 	.cat-data-desc-head{
-		font-size: 24px;
+		font-size: 20px;
+	}
+
+	.cat-act-venue {
+		font-size: 18px;
 	}
 
 	#register {

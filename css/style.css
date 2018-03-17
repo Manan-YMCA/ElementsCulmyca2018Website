@@ -811,12 +811,14 @@ a:link, a:visited, a:hover, a:active {
 	width: 80px;
 	top: 0%;
 	left: 0%;
+	transform: translate(40px,-40px) rotate(90deg);
 }
 
 #eside {
 	width: 25px;
 	background-color: #dd4c34;
 	height: 60px;
+	transform: translate(40px,-40px) rotate(90deg);
 }
 
 #reside {
@@ -827,6 +829,7 @@ a:link, a:visited, a:hover, a:active {
 	width: 50px;
 	top: 40px;
 	left: 0%;
+	transform: translate(40px,40px) rotate(90deg);
 }
 
 #ebot {
@@ -837,6 +840,7 @@ a:link, a:visited, a:hover, a:active {
 	width: 80px;
 	top: 80px;
 	left: 0%;
+	transform: translate(-40px,-40px) rotate(90deg);
 }
 
 #logoe {
@@ -852,7 +856,7 @@ a:link, a:visited, a:hover, a:active {
 	width: 50%;
 	height: 100%;
 	top: 0px;
-	right: 70px
+	right: 70px;
 }
 
 #upc {
@@ -863,6 +867,7 @@ a:link, a:visited, a:hover, a:active {
 	width: 50px;
 	top: 0%;
 	right: 15%;
+	transform: translate(-40px,-50px);
 }
 
 
@@ -874,7 +879,6 @@ a:link, a:visited, a:hover, a:active {
 	width: 40px;
 	top: 0%;
 	left: 0%;
-	transform: translate(30px,23px) rotate(-45deg)
 }
 
 #brc {
@@ -885,7 +889,6 @@ a:link, a:visited, a:hover, a:active {
 	width: 40px;
 	top: 40px;
 	left: 0%;
-	transform: translate(29px,22.5px) rotate(45deg)
 }
 
 #blrc {
@@ -894,7 +897,6 @@ a:link, a:visited, a:hover, a:active {
 	top: 80px;
 	background-color: #dd4c34;
 	left: 10%;
-	transform: translate(69.5px,-14.5px) rotate(-45deg) skew(-45deg)
 }
 
 .simplebar-scrollbar {

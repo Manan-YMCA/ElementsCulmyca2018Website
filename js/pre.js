@@ -10,21 +10,29 @@ $.preload(images,{
    	$("#percent").text(percent.toFixed(0)+'%');
    	switch (x1){
    		case 1:
-   		 $("#uptrap").css('opacity', '1');break;
+   		 $("#uptrap").css({'opacity': '1', 'transform': 'translate(0px,0px)'});
+       break;
    		case 4:
-   		 $("#eside").css('opacity', '1');break;
+   		 $("#eside").css({'opacity': '1', 'transform': 'translate(0px,0px)'});
+       break;
    		case 8:
-   		 $("#reside").css('opacity', '1');break;
+   		 $("#reside").css({'opacity': '1', 'transform': 'translate(0px,0px)'});
+       break;
    		case 11:
-   		 $("#ebot").css('opacity', '1');break;
+   		 $("#ebot").css({'opacity': '1', 'transform': 'translate(0px,0px)'});
+       break;
    		case 14:
-   		 $("#upc").css('opacity', '1');break;
+   		 $("#upc").css({'opacity': '1', 'transform': 'translate(0px,0px)'});
+       break;
    		case 18:
-   		 $("#lupc").css('opacity', '1');break;
+   		 $("#lupc").css({'opacity': '1', 'transform': 'translate(30px,23px) rotate(-45deg)'});
+       break;
    		case 21:
-   		 $("#brc").css('opacity', '1');break;
+   		 $("#brc").css({'opacity': '1', 'transform': 'translate(29px,22.5px) rotate(45deg)'});
+       break;
    		case 25:
-   		 $("#blrc").css('opacity', '1');break;
+   		 $("#blrc").css({'opacity': '1', 'transform': 'translate(69.5px,-14.5px) rotate(-45deg) skew(-45deg)'});
+       break;
    	}
     if (x1 == images.length)
     {

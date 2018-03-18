@@ -386,20 +386,25 @@ $('.container').slick({
 // full screen carousel
 $(document).ready(function(){
   $('.fsCarousel').slick({
-  slidesToShow: 3,
-  dots:true,
-  centerMode: true,
+    slidesToShow: 3,
+    dots:true,
+    centerMode: true,
+    variableWidth: true,
+    adaptiveHeight: true,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 3000
   });
 });
 
 function displayFsCarousel() {
   console.log('fsCarousel unhidden!');
   $('.fsCarouselWrapper').css('display', 'block');
-  $("#eclogo").css("opacity", 0.2);
+  $("#eclogo").css("display", 'none');
 }
 
 function hideFsCarousel() {
   console.log('fsCarousel hidden!');
   $('.fsCarouselWrapper').css('display', 'none');
-  $("#eclogo").css("opacity", 1);
+  $("#eclogo").css("display", 'block');
 }

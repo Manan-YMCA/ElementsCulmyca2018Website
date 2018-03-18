@@ -187,6 +187,11 @@ a:link, a:visited, a:hover, a:active {
 }
 .fsCarousel{
   width:90%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
 }
 .fsCarousel .slick-slide{
   margin:10px;

@@ -40,7 +40,7 @@
       <link rel="icon" href="images/logo.png">
 </head>
 <body>
-<!-- the overlay 
+<!-- the overlay
 <div class="overlay">
   Phone Landscape mode is not supported, please rotate your device to switch to Portrait mode.<br>
   Thankx :)
@@ -83,9 +83,9 @@
     <li onclick="goToSlide(6,0);toggleSidebar()"><a>Sponsors</a></li>
   </ul>
 
- 
+
 </div>
-  
+
 </ul>
 <!--right navigation bar-->
 <ul class="nav navbar-nav navbar-right" >
@@ -102,27 +102,41 @@
       <div class="layer1">
         <i class="fa fa-camera-retro fa-3x rb" aria-hidden="true" onclick="myFunction()"></i>
         <i class="fa fa-code fa-3x lb" aria-hidden="true"></i>
-        <i class="fa fa-film fa-3x rb" aria-hidden="true"></i>
+        <i class="fa fa-film fa-3x rb" onclick="displayFsCarousel()" aria-hidden="true"></i>
         <p id="timer" class="lb">
           <span id='pg'></span>
         </p>
       </div>
 
       <div id="myModal" class="modal">
-  
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <div class="centerclass">
-      <div class="container">
-    <div><img src="images/team/t3.jpg"></div>
-    <div><img src="images/team/t1.jpg"></div>
-    <div><img src ="images/team/t4.jpg"></div>
-    <div><img src="images/team/t6.jpg"></div>
-  </div>
-  </div>
-  </div>
-  </div>
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="centerclass">
+            <div class="container">
+              <div><img src="images/team/t3.jpg"></div>
+              <div><img src="images/team/t1.jpg"></div>
+              <div><img src="images/team/t4.jpg"></div>
+              <div><img src="images/team/t6.jpg"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- full screen carousel -->
+      <div class="fsCarouselWrapper" align='middle'>
+        <div class="fsCarouselContainer" align='middle'>
+          <button type="button" id="closeFsCarouselWrapper" onclick="hideFsCarousel()">&times</button>
+          <div class="fsCarousel">
+            <div><img src="./assets/BOWLING ALLEY.jpg"></div>
+            <div><img src="./assets/BOWLING ALLEY.jpg"></div>
+            <div><img src="./assets/BOWLING ALLEY.jpg"></div>
+            <div><img src="./assets/BOWLING ALLEY.jpg"></div>
+            <div><img src="./assets/BOWLING ALLEY.jpg"></div>
+            <div><img src="./assets/BOWLING ALLEY.jpg"></div>
+          </div>
+        </div>
+      </div>
 
 
       <!-- The social links -->
@@ -134,7 +148,7 @@
       </div>
     </section>
 
-    
+
 
     <!-- About -->
     <section id="about" data-background-image='images/about/wallpaper.jpg'>
@@ -394,7 +408,7 @@
           <img src="images/register/icon.png" style="width: 90%">
         </div>
     </section>
-   
+
     <!-- team section -->
     <section id="team" data-background-image="images/events/bg.jpg" data-prevent-swipe>
      <div class="backstageborder">
@@ -450,7 +464,7 @@
             Hiteshwar
             <div class="team-card-deptt">Designers
             </div>
-          </div> 
+          </div>
           <div class="team-card">
             <img src="images/team/t9.jpg">
             Lakshay
@@ -474,7 +488,7 @@
           </div>
           <div class="team-card">
             <img src="images/team/a1.jpg">
-            Anuj Raj Sharma 
+            Anuj Raj Sharma
             <div class="team-card-deptt">Marketing
             </div>
           </div>
@@ -531,7 +545,7 @@
             Payal Malik
             <div class="team-card-deptt">Hospitality
             </div>
-          </div>  
+          </div>
           <div class="team-card">
             <img src="images/team/a2.jpg">
             Kshitiz Manocha
@@ -544,11 +558,11 @@
             <div class="team-card-deptt">Security
             </div>
           </div>
-          
-          
-          
-          
-          
+
+
+
+
+
       </div>
     </section>
 
@@ -593,7 +607,7 @@
   <div class="wosh-data">
     <div id="container">
     <div class="cat-data-head cat-act-title">Event heading</div><br>
-  
+
 
      <button type="button" class="register-event" onclick="register_open()" id="register-btn" style="visibility: hidden ; float: right;">Register</button></div>
     <div class="cat-data-desc-head">Description</div>
@@ -613,7 +627,7 @@
     <!--<div class="cat-data-desc-head"><span class="cat-data-tandd cat-act-prizes"></span></div><br>-->
     <div class="myclass cat-data-desc-head" style="visibility: hidden;">Coordinators:<br></div>
     <div class="cat-data-desc-head"><span class="cat-data-tandd cat-act-coordinators1"></span></div>
-    
+
     <div class="cat-data-desc-head"><span class="cat-data-tandd cat-act-coordinators2"></span></div>
     <br>
 
@@ -624,7 +638,7 @@
 
 </body>
 <script>
-  
+
 </script>
 
 <!-- navbar navigation -->
@@ -841,7 +855,7 @@ if(arrayOfCoordinators[0].indexOf(" 0")<0) {
 else {
   main1 = " ";
 }
- 
+
 
 
   main2 = arrayOfCoordinators[1];
@@ -863,7 +877,7 @@ if( eventtype.length > 0) {
   //$(".cat-act-prizes").text(prizes);
   $(".cat-act-coordinators1").text(main1);
   $(".cat-act-coordinators2").text(main2);
-  
+
   $("#register-btn").attr('onclick', "register_open('"+id+"')");
   $(".cat-right").css({
     'transform': 'translateY(-50%) scale(.9)',
@@ -919,7 +933,7 @@ function openPdf(e,path) {
 
 </script>
 <script>
- 
+
    function initMap() {
         // Styles a map in night mode.
         var map = new google.maps.Map(document.getElementById('googleMap'), {
@@ -1011,7 +1025,7 @@ function openPdf(e,path) {
      marker.setMap(map);
       }
 
- 
+
 $(document).ready(function(event) {
 $(".slider").slick({
     dots: true,

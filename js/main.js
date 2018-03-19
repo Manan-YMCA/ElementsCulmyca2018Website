@@ -40,7 +40,7 @@ $(function(){
       {
         window.addEventListener("deviceorientation", deviceOrientation)
       }
-      
+
   } else {
     $("body").mousemove(function( event ) {
       if(count%3 != 0)
@@ -61,9 +61,9 @@ $(function(){
     })
   }
 
-  if ($(window).width() < 600) 
+  if ($(window).width() < 600)
   {
-      $("#eclogo").css('transform', 'translate(-50%, -50%) scale(1)');  
+      $("#eclogo").css('transform', 'translate(-50%, -50%) scale(1)');
   }
   setTimeout(function(){
     $(".layer1 > *").each(function(i, el) {
@@ -92,11 +92,11 @@ $(function(){
    }
   var afterhash=replaced.toUpperCase();
   console.log("type "+afterhash);
-  
- 
+
+
   console.log(replaced);
-  
-  
+
+
 
   // Get the events
   $.ajax({
@@ -182,7 +182,7 @@ $(function(){
                '<div class="hid-data" id="coordinators'+msg.data[i]._id+'">'+msg.data[i].coordinators[0].name+" "+msg.data[i].coordinators[0].phone+"  "+"<br>"+((msg.data[i].coordinators[1].phone != 0) ? msg.data[i].coordinators[1].name+" "+msg.data[i].coordinators[1].phone+" ":" ")+'</div>'+
                 '<div class="hid-data" id="eventtype'+msg.data[i]._id+'">'+ ( (msg.data[i].eventtype == "NA") ? "": msg.data[i].eventtype )+'</div>'
               +'</div>'
-            
+
               )
               events.push({
                 "eventname": msg.data[i].title,
@@ -325,66 +325,30 @@ $(function(){
   });
 })
 
- function myFunction() {
-  var modal = document.getElementById('myModal');
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
 
 
-$("#myModal").css("visibility","visible");
- $(".centerclass").css("display","block");
+// full screen carousel
+$(document).ready(function(){
+  $('.fsCarousel').slick({
+    slidesToShow: 3,
+    dots:true,
+    centerMode: true,
+    variableWidth: true,
+    adaptiveHeight: true,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 3000
+  });
+});
 
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    $("#myModal").css("visibility","hidden");
-        $("#eclogo").fadeTo(1000,1);
-        $(".centerclass").css("display","none");
-
-      
-}
-$("#eclogo").css("opacity",0);
-
-
-// When the user clicks anywhere outside of the modal, close it
-
-
-
+function displayFsCarousel() {
+  console.log('fsCarousel unhidden!');
+  $('.fsCarouselWrapper').css('display', 'block');
+  $("#eclogo").css("display", 'none');
 }
 
-$(document).ready(function() {
-
-
- 
-$('.container').slick({
-  centerMode: true,
-  centerPadding: '60px',
-  slidesToShow: 3,
-  infinite:true
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: true,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 1,
-        mobileFirst:true,
-        infinite:true
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        arrows: true,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 1,
-        mobileFirst:true
-        infinite:true;
-      }
-    }
-  ]
-});
-});
+function hideFsCarousel() {
+  console.log('fsCarousel hidden!');
+  $('.fsCarouselWrapper').css('display', 'none');
+  $("#eclogo").css("display", 'block');
+}

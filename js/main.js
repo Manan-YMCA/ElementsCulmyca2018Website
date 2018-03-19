@@ -361,6 +361,7 @@ $('.container').slick({
   centerMode: true,
   centerPadding: '60px',
   slidesToShow: 3,
+  infinite:true
   responsive: [
     {
       breakpoint: 768,
@@ -369,7 +370,8 @@ $('.container').slick({
         centerMode: true,
         centerPadding: '40px',
         slidesToShow: 1,
-        mobileFirst:true
+        mobileFirst:true,
+        infinite:true
       }
     },
     {
@@ -380,6 +382,7 @@ $('.container').slick({
         centerPadding: '40px',
         slidesToShow: 1,
         mobileFirst:true
+        infinite:true;
       }
     }
   ]

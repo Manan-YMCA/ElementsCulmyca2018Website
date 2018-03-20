@@ -613,7 +613,7 @@
     <div class="cat-data-desc-head"><span class="cat-data-tandd"></span></span><span class="cat-data-desc-head">
       <span class="cat-data-tandd cat-act-timing">00:00 AM</span></div>
 
-    <div class="cat-data-desc-head">Venue - <span class="cat-data-tandd cat-act-venue">Electrical Chowk</span></div><br>
+    <div class="cat-data-desc-head">Venue :  <span class="cat-data-tandd cat-act-venue">Electrical Chowk</span></div><br>
     <!--<div class="cat-data-desc-head"><span class="cat-data-tandd cat-act-prizes"></span></div><br>-->
     <div class="myclass cat-data-desc-head" style="visibility: hidden;">Coordinators:<br></div>
     <div class="cat-data-desc-head"><span class="cat-data-tandd cat-act-coordinators1"></span></div>
@@ -829,9 +829,16 @@ function showevent(id) {
   var months = ["January","Feburary","March","April","May","June","July","August","September","October","November","December"];
   var d1 = new Date(parseInt(arrayOfTime[0]));
   var d2 = new Date(parseInt(arrayOfTime[1]));
+  if(d1.getDate() == d2.getDate()) {
   var main = "Date -"+" "+d1.getDate() + " "+months[d1.getMonth()] + "'18" +"  "+ "<br>From "+((d1.getHours()>12)? d1.getHours()%12:d1.getHours())+":"+((d1.getMinutes()<10)? "0"+d1.getMinutes():d1.getMinutes())+((d1.getHours()>=12)? "PM":"AM") + " To "+((d2.getHours()>12)?d2.getHours()%12 : d2.getHours())+":"+((d2.getMinutes()<10)? "0"+d2.getMinutes():d2.getMinutes())+((d2.getHours()>=12)?"PM":"AM");
+}
+
+else {
+var main = d1.getDate() + " "+months[d1.getMonth()] + "'18" + ","+((d1.getHours()>12)? d1.getHours()%12:d1.getHours())+":"+((d1.getMinutes()<10)? "0"+d1.getMinutes():d1.getMinutes())+((d1.getHours()>=12)? "PM":"AM") + " To "+
+" " +d2.getDate()+" "+months[d2.getMonth()]+"'18"+ ","+ ((d2.getHours()>12)?d2.getHours()%12 : d2.getHours())+":"+((d2.getMinutes()<10)? "0"+d2.getMinutes():d2.getMinutes())+((d2.getHours()>=12)?"PM":"AM");
+}
 var arrayOfCoordinators = coordinators.split("  ");
-console.log(arrayOfCoordinators);
+
 $(".myclass").css("visibility","hidden");
 if(arrayOfCoordinators[0].indexOf(" 0")<0) {
   main1 = arrayOfCoordinators[0];

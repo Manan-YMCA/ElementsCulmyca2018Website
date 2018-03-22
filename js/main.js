@@ -330,14 +330,12 @@ $(function(){
 // full screen carousel
 $(document).ready(function(){
   $('.fsCarousel').slick({
-    slidesToShow: 3,
-    dots:true,
-    centerMode: true,
-    variableWidth: true,
-    adaptiveHeight: true,
-    speed: 500,
+     dots: true,
+  speed: 500,
+  fade: true,
+  cssEase: 'linear',
     autoplay: true,
-    autoplaySpeed: 3000
+    autoplaySpeed: 1500
   });
 });
 

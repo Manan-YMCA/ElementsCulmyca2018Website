@@ -97,7 +97,6 @@ a:link, a:visited, a:hover, a:active {
 #home {
 	width: 100%;
 	height: 100%;
-	background-color: #00000042;
 }
 
 #eclogo {
@@ -169,52 +168,53 @@ a:link, a:visited, a:hover, a:active {
 }
 
 /* full screen carousel */
-.fsCarouselWrapper{
-  height: 100%;
-  width: 100%;
-  position: relative;
-  z-index: 11;
-  display: none;
-}
-.fsCarouselContainer{
-  margin: auto;
-  width:90%;
-  height: 90%;
-  background-color: rgba(100, 100, 100, 0.8);
-  box-shadow: 0px 0px 20px #111;
-  position: relative;
-  top: 3%;
-  box-sizing: border-box;
-  padding: 20px !important;
-}
-.fsCarousel{
-  width: 90%;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-}
-
-.fsCarousel .slick-slide{
-  margin: 100px;
-}
-.fsCarousel .slick-slide img{
-  min-width: 900px;
-  max-width: 1000px;
-}
-#closeFsCarouselWrapper{
-  font-size: 30px;
-  float: right;
-  background: transparent;
-  cursor: pointer;
-}
 
 #about {
 	width: 100%;
 	height: 100%;
 }
 
+.siema {
+	height: 90%;
+	width: 90%;
+	overflow: hidden;
+	left: 50%;
+	top: 50%;
+	background-color: #00000042;
+	border-radius: 5px;
+	z-index: -1;
+	position: fixed;
+	transition: all ease-in-out .5s;
+	transform: translate(-50%,-50%) scale(1.1);
+	opacity: 0
+}
+
+#closebtn {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	z-index: +1;
+	background-color: #0000001c;
+	border: 1px solid white;
+	font-size: 24px;
+}
+
+#owl-demo {
+	height: 100%
+}
+
+.owl-controls {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
 
 .imageymca { float:left;
   box-shadow: 0px 0px 5px 2px #ff4d4d;
@@ -1312,10 +1312,15 @@ a:link, a:visited, a:hover, a:active {
     background-color: blue; /* Black w/ opacity */
     padding-top:40px;
 
-}
-.centerclass > div img {
-	padding-right: 40px;
-}
+
+	}
+	.centerclass > div img {
+		padding-right: 40px;
+	}
+
+	.owl-carousel .owl-wrapper-outer {
+		top: 30%;
+	}
 
 }
 

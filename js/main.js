@@ -325,22 +325,6 @@ $(function(){
   });
 })
 
-
-
-// full screen carousel
-$(document).ready(function(){
-  $('.fsCarousel').slick({
-    slidesToShow: 3,
-    dots:true,
-    centerMode: true,
-    variableWidth: true,
-    adaptiveHeight: true,
-    speed: 500,
-    autoplay: true,
-    autoplaySpeed: 5000
-  });
-});
-
 function displayFsCarousel() {
   $('.fsCarouselWrapper').css('display', 'block');
   $("#eclogo").css("display", 'none');

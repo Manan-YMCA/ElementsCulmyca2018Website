@@ -337,18 +337,16 @@ $(document).ready(function(){
     adaptiveHeight: true,
     speed: 500,
     autoplay: true,
-    autoplaySpeed: 3000
+    autoplaySpeed: 5000
   });
 });
 
 function displayFsCarousel() {
-  console.log('fsCarousel unhidden!');
   $('.fsCarouselWrapper').css('display', 'block');
   $("#eclogo").css("display", 'none');
 }
 
 function hideFsCarousel() {
-  console.log('fsCarousel hidden!');
   $('.fsCarouselWrapper').css('display', 'none');
   $("#eclogo").css("display", 'block');
 }

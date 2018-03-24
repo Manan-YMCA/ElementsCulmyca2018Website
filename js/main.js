@@ -145,7 +145,7 @@ $(function(){
                 '<div class="hid-data" id="eventtype'+msg.data[i]._id+'">'+ ( (msg.data[i].eventtype == "NA") ? "": msg.data[i].eventtype )+'</div>'+'</div>');
                 events.push({
                   "eventname": msg.data[i].title,
-                  "index": 14
+                  "index": 10
                 });
               break;
           case "Mechnext":
@@ -163,7 +163,7 @@ $(function(){
               '<div class="hid-data" id="eventtype'+msg.data[i]._id+'">'+ ( (msg.data[i].eventtype == "NA") ? "": msg.data[i].eventtype )+'</div>'+'</div>');
               events.push({
                 "eventname": msg.data[i].title,
-                "index": 10
+                "index": 14
               });
               break;
           case "Vividha":

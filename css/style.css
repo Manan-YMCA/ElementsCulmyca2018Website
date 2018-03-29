@@ -108,6 +108,36 @@ a:link, a:visited, a:hover, a:active {
 	margin: auto;
 	transition: transform ease-out .2s, top ease-out .5s;
 }
+#rishabh1{
+	position: absolute;
+	color : #ec4a3b;
+	z-index: +1;
+	left: 39.5%;
+	top: 58%;
+	 font-size: 23px;
+	box-shadow: 0px 0px 0px 0px;
+	text-shadow: 0px 0px 3px black;
+	transform: translate(-50%,-50%);
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	margin: auto;
+	transition: transform ease-out .2s, top ease-out .5s;
+	font-weight: bold;
+}
+#rishabh2{
+	position: absolute;
+	color : #ec4a3b;
+	z-index: +1;
+	left: 44%;
+	top: 62.5%;
+	font-size: 18px;
+ font-family: "Comic Sans MS", cursive, sans-serif;
+	box-shadow: 0px 0px 0px 0px;
+	text-shadow: 0px 0px 3px black;
+	transform: translate(-50%,-50%);
+	margin: auto;
+	transition: transform ease-out .2s, top ease-out .5s;
+
+}
 
 .layer1 > * {
 	transform: scale(1.2);
@@ -957,11 +987,7 @@ a:link, a:visited, a:hover, a:active {
 	.nav > li {
 		display: none;
 	}
-	#ehome
-	{
-	background-image: url("images/events/events3.jpg");
-
-	}
+	
 
 	.navbar-left {
 		margin-left: 0px;
@@ -992,6 +1018,27 @@ a:link, a:visited, a:hover, a:active {
 		position: absolute;
 		color : #ec4a3b;
 	}
+	#rishabh1
+	{
+		left:20.5%;
+		top:55%;
+		font-size: 23px;
+		position: absolute;
+		text-shadow: 0px 0px 3px black;
+		color : #ec4a3b;
+		font-family: "Comic Sans MS", cursive, sans-serif;
+		font-weight: bold;
+	}
+#rishabh2
+	{
+		left:34%;
+		top:58.5%;
+		position: absolute;
+		font-size: 19px;
+		text-shadow: 0px 0px 3px black;
+		color : #ec4a3b;
+		font-family: "Comic Sans MS", cursive, sans-serif;
+	}
 	.fa.fa-film{
 		border-radius: 50%;
 		border-width: 5px;
@@ -1003,6 +1050,7 @@ a:link, a:visited, a:hover, a:active {
 		color : #ec4a3b;
 	}
 
+
 	#timer {
 		color : #ec4a3b;
 		width: auto;
@@ -1012,7 +1060,7 @@ a:link, a:visited, a:hover, a:active {
 		border-radius: 50%;
 		position: absolute;
 		left: 2%;
-		top: 54%;
+		top: 62%;
 		min-height: 160px;
 		min-width: 160px;
 	}

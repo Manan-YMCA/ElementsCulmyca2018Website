@@ -145,7 +145,7 @@ $(function(){
                 '<div class="hid-data" id="eventtype'+msg.data[i]._id+'">'+ ( (msg.data[i].eventtype == "NA") ? "": msg.data[i].eventtype )+'</div>'+'</div>');
                 events.push({
                   "eventname": msg.data[i].title,
-                  "index": 14
+                  "index": 10
                 });
               break;
           case "Mechnext":
@@ -163,7 +163,7 @@ $(function(){
               '<div class="hid-data" id="eventtype'+msg.data[i]._id+'">'+ ( (msg.data[i].eventtype == "NA") ? "": msg.data[i].eventtype )+'</div>'+'</div>');
               events.push({
                 "eventname": msg.data[i].title,
-                "index": 10
+                "index": 14
               });
               break;
           case "Vividha":
@@ -325,86 +325,12 @@ $(function(){
   });
 })
 
- function myFunction() {
-  var modal = document.getElementById('myModal');
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-
-$("#myModal").css("visibility","visible");
- $(".centerclass").css("display","block");
-
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    $("#myModal").css("visibility","hidden");
-        $("#eclogo").fadeTo(1000,1);
-        $(".centerclass").css("display","none");
-
-
-}
-$("#eclogo").css("opacity",0);
-
-
-// When the user clicks anywhere outside of the modal, close it
-
-
-
-}
-
-$(document).ready(function() {
-$('.container').slick({
-  centerMode: true,
-  centerPadding: '60px',
-  slidesToShow: 3,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: true,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 1,
-        mobileFirst:true
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        arrows: true,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 1,
-        mobileFirst:true
-      }
-    }
-  ]
-});
-});
-
-// full screen carousel
-$(document).ready(function(){
-  $('.fsCarousel').slick({
-    slidesToShow: 3,
-    dots:true,
-    centerMode: true,
-    variableWidth: true,
-    adaptiveHeight: true,
-    speed: 500,
-    autoplay: true,
-    autoplaySpeed: 3000
-  });
-});
-
 function displayFsCarousel() {
-  console.log('fsCarousel unhidden!');
   $('.fsCarouselWrapper').css('display', 'block');
   $("#eclogo").css("display", 'none');
 }
 
 function hideFsCarousel() {
-  console.log('fsCarousel hidden!');
   $('.fsCarouselWrapper').css('display', 'none');
   $("#eclogo").css("display", 'block');
 }

@@ -10,13 +10,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="js/timer.js"></script>
   <script src="js/reveal.js"></script>
-  <script src="js/slick.js"></script>
   <script src="js/register.js"></script>
   <link rel="stylesheet" type="text/css" href="css/style.css">
-   <link rel="stylesheet" type="text/css" href="css/slick.css">
-  <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/owl.carousel.css">
+  <link rel="stylesheet" href="css/owl.theme.css">
+  <script src="js/owl.carousel.js"></script>
+
   <!-- for Google -->
       <meta name="description" content="Annual Cultural Cum Technical Fest Of YMCA University Of Science And Technology, Faridabad" />
       <meta name="keywords" content="college,fest,elements,culmyca,ymca,2018" />
@@ -39,12 +41,27 @@
       <link rel="apple-touch-icon" href="images/logo.png">
       <link rel="icon" href="images/logo.png">
 </head>
+<style>
+[data-simplebar] {
+  position: absolute !important;
+}
+</style>
 <body>
 <!-- the overlay
 <div class="overlay">
   Phone Landscape mode is not supported, please rotate your device to switch to Portrait mode.<br>
   Thankx :)
 </div -->
+<div class="siema">
+  <button onclick="hidesiema();" id="closebtn">&times;</button>
+  <div id="owl-demo" class="owl-carousel owl-theme">
+ 
+    <div class="item"><img src="images/a1.png" alt="The Last of us"></div>
+    <div class="item"><img src="images/a2.png" alt="GTA V"></div>
+    <div class="item"><img src="images/a3.png" alt="Mirror Edge"></div>
+   
+  </div>
+</div>
 
 <!--preloader-->
 <div id="preloader">
@@ -97,45 +114,15 @@
 <div class="reveal">
   <div class="slides">
     <!-- The Home -->
-    <section id="home" data-background-image='images/home.jpg'>
+    <section id="home" data-background-image='images/home.jpg' data-prevent-swipe>
       <!-- Layer 1 the icons -->
       <div class="layer1">
-        <i class="fa fa-camera-retro fa-3x rb" aria-hidden="true" onclick="myFunction()"></i>
+        <i class="fa fa-camera-retro fa-3x rb" aria-hidden="true"></i>
         <i class="fa fa-code fa-3x lb" aria-hidden="true"></i>
-        <i class="fa fa-film fa-3x rb" onclick="displayFsCarousel()" aria-hidden="true"></i>
+        <i class="fa fa-film fa-3x rb" onclick="showsiema()" aria-hidden="true"></i>
         <p id="timer" class="lb">
           <span id='pg'></span>
         </p>
-      </div>
-
-      <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <div class="centerclass">
-            <div class="container">
-              <div><img src="images/team/t3.jpg"></div>
-              <div><img src="images/team/t1.jpg"></div>
-              <div><img src="images/team/t4.jpg"></div>
-              <div><img src="images/team/t6.jpg"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- full screen carousel -->
-      <div class="fsCarouselWrapper" align='middle'>
-        <div class="fsCarouselContainer" align='middle'>
-          <button type="button" id="closeFsCarouselWrapper" onclick="hideFsCarousel()">&times</button>
-          <div class="fsCarousel">
-            <div><img src="./assets/BOWLING ALLEY.jpg"></div>
-            <div><img src="./assets/BLACK OUT.jpg"></div>
-            <div><img src="./assets/BOWLING ALLEY.jpg"></div>
-            <div><img src="./assets/BLACK OUT.jpg"></div>
-            <div><img src="./assets/BOWLING ALLEY.jpg"></div>
-            <div><img src="./assets/BLACK OUT.jpg"></div>
-          </div>
-        </div>
       </div>
 
 
@@ -390,7 +377,7 @@
          <br>
           <form action="" onsubmit="return false;" id="regform">
             <label>Phone No.</label><br>
-            <input type="number" maxlength="10" minlength="10" name="pnone" required id="phone"><br><br>
+            <input type="number"  name="phone" required id="phone"><br><br>
             <label>Name(s)</label><br>
             <input type="text" name="name" required id="name"><br><br>
             <label>Email ID</label><br>
@@ -480,7 +467,7 @@
           <div class="team-card">
             <img src="images/team/a6.jpg">
             Kartik Singla
-            <div class="team-card-deptt">Lead Web Designer
+            <div class="team-card-deptt">UI & Head Designer
             </div>
           </div>
           <div class="team-card">
@@ -592,6 +579,7 @@
         By Bus: Ballabgarh : 3km <br/>
         By Metro: Escorts Mujesar : 0.2km <br/><br/><br/>
       </div>
+      <!-- <div id="googleMap"></div> -->
     </section>
     <section id="sponsors" data-background-image='images/background.jpg'>
       <p style="margin: auto;color:white;font-family: 'open sans'; font-weight: bold;text-shadow: 2.5px 3px black; letter-spacing: 0.9px;"><a href="https://ocul.in/proposalEC18" target="blank">Interested in sponsoring this extravaganza??   Click here to see the sponsorship proposal ! </a></p>
@@ -626,7 +614,7 @@
     <div class="cat-data-desc-head"><span class="cat-data-tandd"></span></span><span class="cat-data-desc-head">
       <span class="cat-data-tandd cat-act-timing">00:00 AM</span></div>
 
-    <div class="cat-data-desc-head">Venue - <span class="cat-data-tandd cat-act-venue">Electrical Chowk</span></div><br>
+    <div class="cat-data-desc-head">Venue :  <span class="cat-data-tandd cat-act-venue">Electrical Chowk</span></div><br>
     <!--<div class="cat-data-desc-head"><span class="cat-data-tandd cat-act-prizes"></span></div><br>-->
     <div class="myclass cat-data-desc-head" style="visibility: hidden;">Coordinators:<br></div>
     <div class="cat-data-desc-head"><span class="cat-data-tandd cat-act-coordinators1"></span></div>
@@ -641,7 +629,6 @@
 
 </body>
 <script>
-
 </script>
 
 <!-- navbar navigation -->
@@ -746,7 +733,6 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
           });
         })
       }
-
       setTimeout(function(){
         if ($(window).width() < 600)
         {
@@ -763,7 +749,6 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
         });
         }
       },500)
-
     //hover effects
     $(".arcs").hover(function() {
       var sid = $(this).attr('sid');
@@ -832,7 +817,6 @@ function showevent(id) {
   $(".controls-arrow").fadeOut('fast');
   //Disable keyboard
   Reveal.configure({ keyboard: false });
-
   var visible = []
   var desc = $("#desc"+ id).text();
   var title = $("#title"+id).text();
@@ -846,10 +830,16 @@ function showevent(id) {
   var months = ["January","Feburary","March","April","May","June","July","August","September","October","November","December"];
   var d1 = new Date(parseInt(arrayOfTime[0]));
   var d2 = new Date(parseInt(arrayOfTime[1]));
-  var main = "Date -"+" "+d1.getDate() + " "+months[d1.getMonth()] + "'18" +"  "+ "From "+((d1.getHours()>12)? d1.getHours()%12:d1.getHours())+":"+((d1.getMinutes()<10)? "0"+d1.getMinutes():d1.getMinutes())+((d1.getHours()>=12)? "PM":"AM") + " To "+((d2.getHours()>12)?d2.getHours()%12 : d2.getHours())+":"+((d2.getMinutes()<10)? "0"+d2.getMinutes():d2.getMinutes())+((d2.getHours()>=12)?"PM":"AM");
+  if(d1.getDate() == d2.getDate()) {
+  var main = "Date -"+" "+d1.getDate() + " "+months[d1.getMonth()] + "'18" +"  "+ "<br>From "+((d1.getHours()>12)? d1.getHours()%12:d1.getHours())+":"+((d1.getMinutes()<10)? "0"+d1.getMinutes():d1.getMinutes())+((d1.getHours()>=12)? "PM":"AM") + " To "+((d2.getHours()>12)?d2.getHours()%12 : d2.getHours())+":"+((d2.getMinutes()<10)? "0"+d2.getMinutes():d2.getMinutes())+((d2.getHours()>=12)?"PM":"AM");
+}
 
+else {
+var main = d1.getDate() + " "+months[d1.getMonth()] + "'18" + ","+((d1.getHours()>12)? d1.getHours()%12:d1.getHours())+":"+((d1.getMinutes()<10)? "0"+d1.getMinutes():d1.getMinutes())+((d1.getHours()>=12)? "PM":"AM") + " To "+
+" " +d2.getDate()+" "+months[d2.getMonth()]+"'18"+ ","+ ((d2.getHours()>12)?d2.getHours()%12 : d2.getHours())+":"+((d2.getMinutes()<10)? "0"+d2.getMinutes():d2.getMinutes())+((d2.getHours()>=12)?"PM":"AM");
+}
 var arrayOfCoordinators = coordinators.split("  ");
-console.log(arrayOfCoordinators);
+
 $(".myclass").css("visibility","hidden");
 if(arrayOfCoordinators[0].indexOf(" 0")<0) {
   main1 = arrayOfCoordinators[0];
@@ -858,29 +848,19 @@ if(arrayOfCoordinators[0].indexOf(" 0")<0) {
 else {
   main1 = " ";
 }
-
-
-
   main2 = arrayOfCoordinators[1];
-
-
 $("#register-btn").css("visibility","hidden");
 if( eventtype.length > 0) {
-
-
       $("#register-btn").css("visibility","visible");
 }
-
-
   $(".cat-act-desc").text(desc);
   $(".cat-act-title").text(title);
   $(".cat-act-rules").text(rules);
   $(".cat-act-venue").text(venue);
-  $(".cat-act-timing").text(main);
+  $(".cat-act-timing").html(main);
   //$(".cat-act-prizes").text(prizes);
   $(".cat-act-coordinators1").text(main1);
   $(".cat-act-coordinators2").text(main2);
-
   $("#register-btn").attr('onclick', "register_open('"+id+"')");
   $(".cat-right").css({
     'transform': 'translateY(-50%) scale(.9)',
@@ -895,11 +875,7 @@ if( eventtype.length > 0) {
       var t = $(this);
       setTimeout(function(){ t.css({'transform': 'translate3d(0px, 0px, 0px)','opacity':'1'}); }, (i+1) * 50);
   });
-
 }
-
-
-
 function register_open(id) {
   closewosh();
   $("#events-list").val(id);
@@ -918,25 +894,18 @@ function closewosh() {
     $(".e-wosh").css('z-index', '-1');
     $('.e-wosh *').css({'transform': 'translate3d(-10px, 0px, 0px)','opacity':'0'})
   },350)
-
-  //Hide the arrow
+  //Show the arrow
   $(".controls-arrow").fadeIn('fast');
-  //Disable keyboard
+  //Enable keyboard
   Reveal.configure({ keyboard: true });
 }
 function openPdf(e,path) {
     e = e || window.event;
     e.preventDefault();
     window.open(path,'ecpdf');
-
-
 }
-
-
-
 </script>
 <script>
-
    function initMap() {
         // Styles a map in night mode.
         var map = new google.maps.Map(document.getElementById('googleMap'), {
@@ -1028,40 +997,36 @@ function openPdf(e,path) {
      marker.setMap(map);
       }
 
+$(function(){
+  $("#owl-demo").owlCarousel({
+ 
+      navigation : true, // Show next and prev buttons
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem : true,
+      autoPlay : 3000
+ 
+  });
+ })
 
-$(document).ready(function(event) {
-$(".slider").slick({
-    dots: true,
-slidesToShow: 5,
-slidesToScroll: 1,
-cssEase: "ease",
-autoplay: true,
-autoplaySpeed: 3000,
- responsive: [
-    {
-      breakpoint: 1080,
-      settings: {
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        dots: true,
-        cssEase :"ease",
-        autoplay:true,
-        autoplaySpeed: 3000
-      }
-    },
-    {
-      breakpoint: 720,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-         cssEase :"ease",
-        autoplay:true,
-        autoplaySpeed: 3000
-      }
-    }
-    ]
-});
-});
+function showsiema() {
+  $(".siema").css({'opacity':'1','z-index': '+2','transform':'translate(-50%,-50%) scale(1)'});
+  //Hide the arrow
+  $(".controls-arrow").fadeOut('fast');
+  //Disable keyboard
+  Reveal.configure({ keyboard: false });
+}
+
+function hidesiema() {
+  $(".siema").css({'opacity':'0','transform':'translate(-50%,-50%) scale(1.1)'})
+  setTimeout(function(){
+    $(".siema").css('z-index','0')
+  },500);
+  //Show the arrow
+  $(".controls-arrow").fadeIn('fast');
+  //Enable keyboard
+  Reveal.configure({ keyboard: true });
+}
 </script>
 <script src="js/main.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7rJmV_1a3RHlDEGThAFmyMIUdwOBVQJ8&callback=initMap"async defer></script>

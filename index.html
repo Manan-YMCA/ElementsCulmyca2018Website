@@ -52,14 +52,35 @@
   Phone Landscape mode is not supported, please rotate your device to switch to Portrait mode.<br>
   Thankx :)
 </div -->
-<div class="siema">
+<div class="siema" id="infoevent">
   <button onclick="hidesiema();" id="closebtn">&times;</button>
   <div id="owl-demo" class="owl-carousel owl-theme">
  
-    <div class="item"><img src="images/a1.png" alt="The Last of us"></div>
-    <div class="item"><img src="images/a2.png" alt="GTA V"></div>
-    <div class="item"><img src="images/a3.png" alt="Mirror Edge"></div>
-   
+    <div class="item c-wrap"><img src="images/home-events/dj.JPG" alt="DJ Night"><div class="c-text">DJ Night</div></div>
+    <div class="item c-wrap"><img src="images/home-events/rangriti.JPG" alt="Rangriti"><div class="c-text">Rangriti</div></div>
+    <div class="item c-wrap"><img src="images/home-events/sn.JPG" alt="Star Night"><div class="c-text">Star Night</div></div>
+    <div class="item c-wrap"><img src="images/home-events/mnm.JPG" alt="Star Night"><div class="c-text">Mr &amp; Mrs Culmyca</div></div>
+  </div>
+</div>
+
+<div class="siema" id="clubevent">
+  <button onclick="hidesiema2();" id="closebtn">&times;</button>
+  <div id="owl-demo2" class="owl-carousel owl-theme">
+ 
+    <div class="item c-wrap"><img src="images/home-events/ana.JPG"><div class="c-text">Literature</div></div>
+    <div class="item c-wrap"><img src="images/home-events/natw.JPG"><div class="c-text">Dance - Western</div></div>
+    <div class="item c-wrap"><img src="images/home-events/natb.JPG"><div class="c-text">Dance - Bhangra</div></div>
+    <div class="item c-wrap"><img src="images/home-events/man.JPG"><div class="c-text">Coding</div></div>
+    <div class="item c-wrap"><img src="images/home-events/ek.JPG"><div class="c-text">Fun Events</div></div>
+    <div class="item c-wrap"><img src="images/home-events/ieee.JPG"><div class="c-text">Techno Fun</div></div>
+    <div class="item c-wrap"><img src="images/home-events/jha.JPG"><div class="c-text">Photography &amp; Designing</div></div>
+    <div class="item c-wrap"><img src="images/home-events/mb.JPG"><div class="c-text">Electronics</div></div>
+    <div class="item c-wrap"><img src="images/home-events/mech.JPG"><div class="c-text">Mechanical</div></div>
+    <div class="item c-wrap"><img src="images/home-events/sam.JPG"><div class="c-text">Electrical</div></div>
+    <div class="item c-wrap"><img src="images/home-events/sri.JPG"><div class="c-text">Arts</div></div>
+    <div class="item c-wrap"><img src="images/home-events/tar.JPG"><div class="c-text">Music</div></div>
+    <div class="item c-wrap"><img src="images/home-events/vivek.JPG"><div class="c-text">Social-Cultural</div></div>
+    <div class="item c-wrap"><img src="images/home-events/vivid.JPG"><div class="c-text">Drama</div></div>
   </div>
 </div>
 
@@ -117,14 +138,15 @@
     <section id="home" data-background-image='images/home.jpg' data-prevent-swipe>
       <!-- Layer 1 the icons -->
       <div class="layer1">
-        <i class="fa fa-camera-retro fa-3x rb" aria-hidden="true"></i>
+        <i class="fa fa-camera-retro fa-3x rb" onclick="showsiema2()" aria-hidden="true"></i>
         <i class="fa fa-code fa-3x lb" aria-hidden="true"></i>
-        <p id="rishabh1">ELEMENTS CULMYCA</p>
-         <p id="rishabh2">April 12-13-14 </p>
         <i class="fa fa-film fa-3x rb" onclick="showsiema()" aria-hidden="true"></i>
         <p id="timer" class="lb">
           <span id='pg'></span>
         </p>
+      </div>
+      <div id="site-title">
+        <br>Elements Culmyca<br>
       </div>
 
 
@@ -996,7 +1018,7 @@ function openPdf(e,path) {
       }
 
 $(function(){
-  $("#owl-demo").owlCarousel({
+  $("#owl-demo, #owl-demo2").owlCarousel({
  
       navigation : true, // Show next and prev buttons
       slideSpeed : 300,
@@ -1008,7 +1030,7 @@ $(function(){
  })
 
 function showsiema() {
-  $(".siema").css({'opacity':'1','z-index': '+2','transform':'translate(-50%,-50%) scale(1)'});
+  $("#infoevent").css({'opacity':'1','z-index': '+2','transform':'translate(-50%,-50%) scale(1)'});
   //Hide the arrow
   $(".controls-arrow").fadeOut('fast');
   //Disable keyboard
@@ -1016,9 +1038,28 @@ function showsiema() {
 }
 
 function hidesiema() {
-  $(".siema").css({'opacity':'0','transform':'translate(-50%,-50%) scale(1.1)'})
+  $("#infoevent").css({'opacity':'0','transform':'translate(-50%,-50%) scale(1.1)'})
   setTimeout(function(){
-    $(".siema").css('z-index','0')
+    $("#infoevent").css('z-index','0')
+  },500);
+  //Show the arrow
+  $(".controls-arrow").fadeIn('fast');
+  //Enable keyboard
+  Reveal.configure({ keyboard: true });
+}
+
+function showsiema2() {
+  $("#clubevent").css({'opacity':'1','z-index': '+2','transform':'translate(-50%,-50%) scale(1)'});
+  //Hide the arrow
+  $(".controls-arrow").fadeOut('fast');
+  //Disable keyboard
+  Reveal.configure({ keyboard: false });
+}
+
+function hidesiema2() {
+  $("#clubevent").css({'opacity':'0','transform':'translate(-50%,-50%) scale(1.1)'})
+  setTimeout(function(){
+    $("#clubevent").css('z-index','0')
   },500);
   //Show the arrow
   $(".controls-arrow").fadeIn('fast');

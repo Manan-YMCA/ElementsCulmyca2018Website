@@ -108,35 +108,29 @@ a:link, a:visited, a:hover, a:active {
 	margin: auto;
 	transition: transform ease-out .2s, top ease-out .5s;
 }
-#rishabh1{
-	position: absolute;
-	color : #ec4a3b;
-	z-index: +1;
-	left: 42%;
-	top: 58%;
-	 font-size: 23px;
-	box-shadow: 0px 0px 0px 0px;
-	text-shadow: 0px 0px 3px black;
-	transform: translate(-50%,-50%);
-	font-family: "Comic Sans MS", cursive, sans-serif;
-	margin: auto;
-	transition: transform ease-out .2s, top ease-out .5s;
-	font-weight: bold;
-}
-#rishabh2{
-	position: absolute;
-	color : #ec4a3b;
-	z-index: +1;
-	left: 46%;
-	top: 62.5%;
-	font-size: 18px;
- font-family: "Comic Sans MS", cursive, sans-serif;
-	box-shadow: 0px 0px 0px 0px;
-	text-shadow: 0px 0px 3px black;
-	transform: translate(-50%,-50%);
-	margin: auto;
-	transition: transform ease-out .2s, top ease-out .5s;
 
+#site-title {
+	font-size: 40px;
+	color: white;
+	margin-top: 1%
+}
+
+.c-text {
+	position: absolute;
+	z-index: +1;
+	top: 76%;
+	font-size: 32px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #0000004d;
+	min-width: 40%;
+	text-align: center;
+	padding: 2%;
+	border-radius: 10px;
+}
+
+.c-wrap {
+	position: relative;
 }
 
 .layer1 > * {
@@ -229,7 +223,7 @@ a:link, a:visited, a:hover, a:active {
 	font-size: 24px;
 }
 
-#owl-demo {
+#owl-demo, #owl-demo2 {
 	height: 100%
 }
 
@@ -240,7 +234,7 @@ a:link, a:visited, a:hover, a:active {
 	transform: translateX(-50%);
 }
 
-#owl-demo .item img{
+#owl-demo .item img, #owl-demo2 img{
     display: block;
     width: 100%;
     height: auto;
@@ -1066,7 +1060,7 @@ a:link, a:visited, a:hover, a:active {
 	}
 
 	#pg {
-		font-size: 16px
+		font-size: 15px
 	}
 
 	.imageymca {
@@ -1368,6 +1362,14 @@ a:link, a:visited, a:hover, a:active {
 
 	.owl-carousel .owl-wrapper-outer {
 		top: 30%;
+	}
+
+	#site-title {
+		font-size: 16px;
+	}
+
+	.c-text {
+		font-size: 16px;
 	}
 
 }

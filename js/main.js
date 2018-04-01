@@ -22,7 +22,7 @@ function deviceOrientation(event) {
       } else if (parY < -30) {
         parY = -30;
       }
-    $("#eclogo").css({
+    $("#eclogo, #site-title").css({
       'transform': 'translate('+(-(parX*2.5 + 50))+'%,'+(-(parY*2 + 50)) +'%)'
     });
     $(".layer1 > *").css({
@@ -52,7 +52,7 @@ $(function(){
       var top  = $(window).scrollTop();
       var parX = event.pageX/100;
       var parY = event.pageY/100;
-      $("#eclogo").css({
+      $("#eclogo, #site-title").css({
         'transform': 'translate('+(-(parX + 50))+'%,'+(-(parY + 50)) +'%)'
       });
       $(".layer1 > *").css({

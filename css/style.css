@@ -110,9 +110,16 @@ a:link, a:visited, a:hover, a:active {
 }
 
 #site-title {
-	font-size: 40px;
-	color: white;
-	margin-top: 1%
+	position: fixed;
+	z-index: +1;
+	left: 50%;
+	top: 75%;
+	font-size: 32px;
+	transform: translate(-50%,-50%);
+	margin: auto;
+	transition: transform ease-out .2s, top ease-out .5s;
+	color: #ec4a3b;
+	height: 250px;
 }
 
 .c-text {
@@ -1366,6 +1373,8 @@ a:link, a:visited, a:hover, a:active {
 
 	#site-title {
 		font-size: 16px;
+		top: 65%;
+		left: 47%
 	}
 
 	.c-text {

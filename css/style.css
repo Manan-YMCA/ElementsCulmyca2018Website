@@ -1374,9 +1374,9 @@ a:link, a:visited, a:hover, a:active {
 	#site-title {
 		font-size: 16px;
 		top: initial;
-		bottom: 10%;
-		left: 48%;
-		height: 250px;
+		bottom: 6%;
+		left: 50%;
+		height: auto;
 	}
 
 	.c-text {

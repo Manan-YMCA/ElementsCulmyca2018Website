@@ -110,7 +110,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 #site-title {
-	position: fixed;
+	position: absolute;
 	z-index: +1;
 	left: 50%;
 	top: 75%;
@@ -1373,8 +1373,10 @@ a:link, a:visited, a:hover, a:active {
 
 	#site-title {
 		font-size: 16px;
-		top: 65%;
-		left: 47%
+		top: initial;
+		bottom: 6%;
+		left: 47%;
+		height: auto;
 	}
 
 	.c-text {

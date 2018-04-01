@@ -144,6 +144,9 @@
           <span id='pg'></span>
         </p>
       </div>
+      <div id="site-title">
+          Elements Culmyca<br>
+      </div>
 
 
       <!-- The social links -->
@@ -603,9 +606,6 @@
 
 <!-- Layer 2 EC logo -->
 <img id="eclogo" src="images/logo.png" onclick="goToSlide(0,0)">
-<div id="site-title">
-  <br>Elements Culmyca<br>
-</div>
 
 
 <!-- The modals for every event category -->
@@ -697,7 +697,7 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
           var top  = $(window).scrollTop();
           var parX = event.pageX/100;
           var parY = event.pageY/100;
-          $("#eclogo").css({
+          $("#eclogo, #site-title").css({
             'transform': 'translate('+(-(parX + 50))+'%,'+(-(parY + 50)) +'%)'
           });
           $(".layer1 > *").css({

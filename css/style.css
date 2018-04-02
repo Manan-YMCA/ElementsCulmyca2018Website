@@ -800,8 +800,8 @@ a:link, a:visited, a:hover, a:active {
 
 .team-card {
 	width: 200px;
-	height: 200px;
-	overflow: hidden;
+	height: 250px;
+	overflow: visible;
 	font-size: 24px !important;
 	display: inline-block;
 	margin: 2% !important;
@@ -826,7 +826,7 @@ a:link, a:visited, a:hover, a:active {
  }
 
 .team-card-deptt {
-	width: 170px;
+	width: 190px;
 	height: 170px;
 	overflow: visible;
 	font-size: 18px !important;
@@ -849,6 +849,9 @@ a:link, a:visited, a:hover, a:active {
 	bottom:0;
 	background-color:#fff;
 	z-index:99;
+}
+.team-card-deptt.contact {
+	margin: 3% !important;
 }
 
 
@@ -1390,6 +1393,10 @@ a:link, a:visited, a:hover, a:active {
   #team-div{
     padding-top: 15px !important;
     height: 62%
+  }
+  
+  .team-card{
+  	margin-bottom: 30px;
   }
 }
 

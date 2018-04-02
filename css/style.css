@@ -1018,7 +1018,7 @@ a:link, a:visited, a:hover, a:active {
 		border-width: 5px;
 		border-style: solid;
 		padding: 4px;
-		left:3%;
+		left:4%;
 		top:10%;
 		position: absolute;
 		color : #ec4a3b;
@@ -1050,7 +1050,7 @@ a:link, a:visited, a:hover, a:active {
 		border-style: solid;
 		padding: 20px;
 		right:16%;
-		top:18%;
+		top:15%;
 		position: absolute;
 		color : #ec4a3b;
 	}

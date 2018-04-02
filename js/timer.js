@@ -23,7 +23,7 @@ var x = setInterval(function() {
     
     // Output the result in an element with id="demo"
     document.getElementById("pg").innerHTML = days + ":" + hours + ":" + 
-    + minutes + ":" + seconds + "<br><br>12 13 14<br><br>April" ;
+    + minutes + ":" + seconds + "<br><br>12-13-14<br><br>April" ;
     
     // If the count down is over, write some text 
     if (remaining < 0) {

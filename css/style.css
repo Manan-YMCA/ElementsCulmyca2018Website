@@ -160,7 +160,7 @@ a:link, a:visited, a:hover, a:active {
 	border-radius: 50%;
 	border-width: 5px;
 	border-style: solid;
-	padding: 20px;
+	padding: 6px;
 	right: 22%;
 	top: 72%;
 	position: absolute;
@@ -172,7 +172,7 @@ a:link, a:visited, a:hover, a:active {
 	border-radius: 50%;
 	border-width: 5px;
 	border-style: solid;
-	padding: 5px;
+	padding: 15px;
 	left:10%;
 	top:21%;
 	position: absolute;
@@ -189,7 +189,7 @@ a:link, a:visited, a:hover, a:active {
 	border-style: solid;
 	padding: 20px;
 	right:16%;
-	top:35%;
+	top:29%;
 	position: absolute;
 	color : #ec4a3b;
 }

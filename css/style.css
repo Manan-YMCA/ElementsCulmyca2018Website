@@ -800,13 +800,13 @@ a:link, a:visited, a:hover, a:active {
 
 .team-card {
 	width: 200px;
-	height: 250px;
+	height: 200px;
 	overflow: visible;
 	font-size: 24px !important;
 	display: inline-block;
-	margin: 2% !important;
+	margin: 3% !important ;
 }
-
+ 
 .backstage{
 	font-size:37px !important;
 	font-family:geomanistregular !important;
@@ -1386,18 +1386,20 @@ a:link, a:visited, a:hover, a:active {
 	.c-text {
 		font-size: 16px;
 	}
+	
+	 .team-card{
+  	padding-bottom : 50px;
+  }
 
 }
 
 @media screen and (max-width: 460px){
   #team-div{
-    padding-top: 15px !important;
-    height: 62%
+    padding-top: 35px !important;
+    height: 70%
   }
   
-  .team-card{
-  	margin-bottom: 30px;
-  }
+ 
 }
 
 @media screen and (max-width: 1500px)

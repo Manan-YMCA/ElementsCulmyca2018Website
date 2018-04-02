@@ -161,7 +161,7 @@ a:link, a:visited, a:hover, a:active {
 	border-width: 5px;
 	border-style: solid;
 	padding: 6px;
-	right: 22%;
+	right: 18%;
 	top: 72%;
 	position: absolute;
 	color : #ec4a3b;
@@ -188,8 +188,8 @@ a:link, a:visited, a:hover, a:active {
 	border-width: 5px;
 	border-style: solid;
 	padding: 20px;
-	right:16%;
-	top:29%;
+	right:14%;
+	top:27%;
 	position: absolute;
 	color : #ec4a3b;
 }

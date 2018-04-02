@@ -165,6 +165,7 @@ a:link, a:visited, a:hover, a:active {
 	top: 72%;
 	position: absolute;
 	color : #ec4a3b;
+	cursor: pointer;
 
 }
 
@@ -177,6 +178,7 @@ a:link, a:visited, a:hover, a:active {
 	top:21%;
 	position: absolute;
 	color : #ec4a3b;
+	cursor: pointer;
 }
 
 .progress {
@@ -192,6 +194,7 @@ a:link, a:visited, a:hover, a:active {
 	top:27%;
 	position: absolute;
 	color : #ec4a3b;
+	cursor: pointer;
 }
 
 .layer1 > i{

@@ -248,7 +248,7 @@ $(function(){
                 "index": 6
               });
             break;
-          case "SAE/BAJA":
+          case "SAE":
             $("#cat-sae").append('<div class="cat-card" onclick="showevent('+"'"+msg.data[i]._id+"'"+')"><span class="e-name" id="title'+msg.data[i]._id+'">'+msg.data[i].title+'</span><hr>'+'<div  id="mytitle'+msg.data[i]._id+'">'+msg.data[i].desc.substr(0,Math.min(msg.data[i].desc.length,150))+((msg.data[i].desc.length > 150)?" ...":" ")+'</div>'+'<div id="mytitle1'+msg.data[i]._id+'"></div>'+'<div class="hid-data" id="desc'+msg.data[i]._id+'">'+msg.data[i].desc+'</div><div class="hid-data" id="rules'+msg.data[i]._id+'">'+msg.data[i].rules+'</div><div class="hid-data" id="venue'+msg.data[i]._id+'">'+msg.data[i].venue+'</div><div class="hid-data" id="timing'+msg.data[i]._id+'">'+msg.data[i].timing.from+' To '+msg.data[i].timing.to+'</div>'
                 + '<div class="hid-data" id="coordinators'+msg.data[i]._id+'">'+msg.data[i].coordinators[0].name+" "+msg.data[i].coordinators[0].phone+"  "+"<br>"+((msg.data[i].coordinators[1].phone != 0) ? msg.data[i].coordinators[1].name+" "+msg.data[i].coordinators[1].phone+" ":" ")+'</div>'+
                                  '<div class="hid-data" id="eventtype'+msg.data[i]._id+'">'+ ( (msg.data[i].eventtype == "NA") ? "": msg.data[i].eventtype )+'</div>'+'</div>');

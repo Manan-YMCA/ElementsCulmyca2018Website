@@ -29,7 +29,6 @@ function deviceOrientation(event) {
       'transform': 'translate('+(-(parX*2))+'%,'+(-(parY*2))+'%)'
     });
 }
-
 $(function(){
   // The parallax
   var count = 0;
@@ -87,8 +86,8 @@ $(function(){
    console.log(replaced);
    if (afterhashi != "/home")
    {
-      Reveal.prev();
       Reveal.next();
+      Reveal.prev();
    }
   var afterhash=replaced.toUpperCase();
   console.log("type "+afterhash);
@@ -276,6 +275,7 @@ $(function(){
     //function to search event which is typed after #
      function searchevents (afterhash, events) {
     for (var j=0; j<events.length; j++) {
+       console.log("searching " + afterhash)
         if (events[j].eventname.match(afterhash)) return events[j].index ;
     }
     return -1;
@@ -301,18 +301,6 @@ $(function(){
         }
        }
    }
-     if(afterhash.length!=0)
-     {
-     var indexx=searchevents (afterhash, events);
-     console.log("indexxx after hash "+indexx);
-     if(indexx!=-1)
-     {
-     Reveal.slide( 2, indexx);
-      }}
-      //for events with index in console
-       for (var i = events.length - 1; i >= 0; i--) {
-              console.log("EventName: " + events[i].eventname + " Index: " + events[i].index);
-            }
     $(".cat-right,.wosh-data").attr('data-simplebar', '');
     // Getting the script
     $.getScript("https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.js");
@@ -323,6 +311,9 @@ $(function(){
   .always(function() {
     console.log("complete");
   });
+
+  Reveal.configure({ history: true });
+
 })
 
 function displayFsCarousel() {

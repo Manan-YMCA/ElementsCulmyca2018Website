@@ -1,0 +1,226 @@
+
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<style>
+.siema1{
+
+
+  height: 50%;
+  width: 50%;
+  overflow: hidden;
+  margin: auto;
+  background-color: rgb(167, 196, 243);
+  border-radius: 5px;
+  z-index: 10;
+  position: fixed;
+  transition: all ease-in-out .5s;
+  opacity: 1;
+  left: 25%;
+  top:20%;
+
+
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.container {
+    padding: 2px 16px;
+}
+.card {
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 25%;
+    height: 35%;
+    border-radius: 5px;
+    display: inline-block;
+  margin: 3% !important ;
+  overflow: hidden;
+}
+.card > img {
+  margin-top: 10px; 
+}
+
+#mobnumber {
+
+   height: 36px;
+  border: 3px solid #efefef;
+  border-radius: 3px;
+  background-color: #fafafa;
+  width:50%;
+  font-size:12px;
+ 
+  padding: 9px 10px 7px 8px;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+  color: black;
+}
+.myTickets > div{
+margin: 10px;
+}
+
+
+#otp {
+  height: 36px;
+  border: 3px solid #efefef;
+  border-radius: 3px;
+  background-color: #fafafa;
+  width:50%;
+  font-size:12px;
+ 
+  padding: 9px 10px 7px 8px;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+  color: black;
+}
+.btn {
+  cursor: pointer;
+  width: 20%;
+  padding:0 8px; 
+  background: #3897f0;
+  border:1px solid #3897f0;
+  color:#fff;
+  border-radius:3px;
+  font-weight:600;
+  font-size: 14px;
+  height: 28px;
+  line-height: 26px;
+  outline: none;
+  white-space: nowrap;
+  
+   
+}
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  text-align: center;
+}
+
+.flex-container > div {
+  margin: 10px;
+}
+
+.myTickets {
+ 
+ display: flex;
+ flex-wrap: wrap;
+}
+
+
+.container1 {
+  display: flex;
+  direction: row;
+}
+#logoutbtn {
+  position: absolute;
+  top: 6%;
+  left: 80%;
+
+}
+
+
+@media screen and (max-width: 786px)
+{
+  .myTickets {
+  display: block;
+  margin-left: 90px;
+
+}
+#mobnumber {
+  width:100%;
+}
+.btn {
+  width:100% !important;
+}
+#otp {
+  width : 100%;
+}
+
+ 
+   .card{
+    width: 70% !important;
+    padding-bottom : 50px;
+  }
+.container1 {
+    display: flex;
+    flex-direction: wrap;
+    padding-bottom: 50px;
+}
+#logoutbtn {
+  position: absolute;
+  top: 10%;
+  left: 8%;
+}
+h1 {
+  margin :15px;
+  padding-bottom: 15px;
+}
+
+
+}
+
+
+</style>
+
+
+
+
+
+
+<body>
+
+
+
+<div class="container1">
+<h1 style="float: left;">Your tickets here</h1>
+<button onclick="logout()" id="logoutbtn" style="float: right; display: none;font-size: 20px;background-color: #008CBA;">Log Out</button>
+</div>
+<div class="siema1">
+
+  <p style="padding-top: 30px;color: blue; text-align: center; ">Log In With OTP To Continue</p>
+
+  <form action="" onsubmit="return false" id="numberform" style="padding-top: 50px; margin: auto">
+    <div class="flex-container">
+      <div>
+    <input type="number" name="number" id="mobnumber" placeholder="Enter Mobile Number" >
+  </div>
+  <div>
+    <input type="submit" onclick=" sendotp() " class="btn" value="Send OTP" >
+  </div>
+  </div>
+  </form>
+  <form action="" onsubmit ="return false" id="otpverify" style="display: none">
+    
+     <div class="flex-container">
+      <div>
+    <input type="number" id="otp" placeholder="Enter OTP"><br>
+  </div>
+  <div>
+    <input typ
+e="submit" onclick="verifyotp()" class="btn" value="Submit OTP" style="text-align: center;">
+</div>
+
+</div>
+  </form>
+</div>
+<div class="myTickets"></div>
+
+
+
+
+<script src="otp.js"> 
+</script>
+
+</html>

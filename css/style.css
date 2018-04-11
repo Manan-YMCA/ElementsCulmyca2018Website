@@ -1395,6 +1395,9 @@ a:link, a:visited, a:hover, a:active {
 	 .team-card{
   	padding-bottom : 50px;
   }
+	.sponsers-card {
+		padding-bottom : 50px;
+	}
 
 }
 
@@ -1403,6 +1406,10 @@ a:link, a:visited, a:hover, a:active {
     padding-top: 35px !important;
     height: 62%
   }
+	#sponser-div {
+		padding-top : 35px !important;
+		height :57%;
+	}
   
  
 }
